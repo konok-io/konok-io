@@ -41,14 +41,14 @@
                         <span class="terminal-path">index.blade.php</span>
                     </div>
                     <div class="terminal-content">
-                        <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
-  <span style="color: var(--terminal-syntax-amber);">name</span>: <span style="color: var(--terminal-syntax-green);">"KONOK.IO"</span>,
-  <span style="color: var(--terminal-syntax-amber);">services</span>: [<span style="color: var(--terminal-syntax-green);">"Web Dev"</span>, <span style="color: var(--terminal-syntax-green);">"IT Support"</span>],
-  <span style="color: var(--terminal-syntax-amber);">focus</span>: <span style="color: var(--terminal-syntax-green);">"Business Solutions"</span>,
-  <span style="color: var(--terminal-syntax-amber);">mission</span>: <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>
+                        <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: #cba6f7;">const</span> <span style="color: #89b4fa;">konok</span> = {
+  <span style="color: #f9e2af;">name</span>: <span style="color: #a6e3a1;">"KONOK.IO"</span>,
+  <span style="color: #f9e2af;">services</span>: [<span style="color: #a6e3a1;">"Web Dev"</span>, <span style="color: #a6e3a1;">"IT Support"</span>],
+  <span style="color: #f9e2af;">focus</span>: <span style="color: #a6e3a1;">"Business Solutions"</span>,
+  <span style="color: #f9e2af;">mission</span>: <span style="color: #a6e3a1;">"Key Of Next Online Knowledge"</span>
 };
 
-<span style="color: var(--terminal-text-muted);">// Ready to transform?</span>
+<span style="color: #6c7086;">// Ready to transform?</span>
 <span class="cursor-blink"></span></code></pre>
                     </div>
                 </div>
