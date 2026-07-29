@@ -445,9 +445,11 @@ a:hover {
 }
 
 .feature-description {
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     color: var(--terminal-text-secondary);
     margin-bottom: 0;
+    line-height: 1.7;
 }
 
 /* Pricing Card */
@@ -703,10 +705,12 @@ a:hover {
 }
 
 .section-subtitle {
-    font-size: 1.125rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
     color: var(--terminal-text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* Grid Layouts */
