@@ -6,58 +6,50 @@
     <aside class="admin-sidebar" id="adminSidebar">
         <div class="sidebar-header">
             <div class="sidebar-brand">
-                <div class="terminal-window" style="box-shadow: none; border: none; background: transparent;">
-                    <div class="terminal-titlebar" style="padding: 4px 6px; background: transparent; border: none;">
-                        <div class="terminal-dots">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                        </div>
-                    </div>
+                <div class="terminal-dots-inline">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
                 </div>
                 <span class="brand-text">&lt;KONOK.IO/&gt;</span>
             </div>
-            <button class="sidebar-collapse-btn" onclick="toggleSidebar()" aria-label="Toggle sidebar">
-                <span id="collapseIcon">‹</span>
-                <span id="expandIcon" style="display: none;">›</span>
-            </button>
         </div>
         
         <nav class="sidebar-nav">
-            <div class="nav-section-title"><span>// Main</span></div>
+            <div class="nav-section-title"><span>// main</span></div>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                        <span class="nav-icon">📊</span>
-                        <span>Dashboard</span>
+                        <span class="nav-icon">$</span>
+                        <span>dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.portfolios.index') }}" class="nav-link {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
-                        <span class="nav-icon">💼</span>
-                        <span>Portfolios</span>
+                        <span class="nav-icon">$</span>
+                        <span>portfolios</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.services.index') }}" class="nav-link {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
-                        <span class="nav-icon">🛠️</span>
-                        <span>Services</span>
+                        <span class="nav-icon">$</span>
+                        <span>services</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.skills.index') }}" class="nav-link {{ request()->routeIs('admin.skills.*') ? 'active' : '' }}">
-                        <span class="nav-icon">⚡</span>
-                        <span>Skills</span>
+                        <span class="nav-icon">$</span>
+                        <span>skills</span>
                     </a>
                 </li>
             </ul>
             
-            <div class="nav-section-title"><span>// Communications</span></div>
+            <div class="nav-section-title"><span>// communications</span></div>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.contacts.index') }}" class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
-                        <span class="nav-icon">📧</span>
-                        <span>Contacts</span>
+                        <span class="nav-icon">$</span>
+                        <span>contacts</span>
                         @if(isset($unreadCount) && $unreadCount > 0)
                             <span class="badge">{{ $unreadCount }}</span>
                         @endif
@@ -68,27 +60,29 @@
         
         <div class="sidebar-footer">
             <a href="{{ url('/') }}" target="_blank" class="sidebar-link">
-                <span class="nav-icon">🌐</span>
-                <span>View Site</span>
+                <span class="nav-icon">&lt;</span>
+                <span>view_site /&gt;</span>
             </a>
             <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
                 <button type="submit" class="sidebar-link">
-                    <span class="nav-icon">🚪</span>
-                    <span>Logout</span>
+                    <span class="nav-icon">×</span>
+                    <span>logout</span>
                 </button>
             </form>
         </div>
+        
+        <!-- Collapse Button at bottom of sidebar -->
+        <button class="sidebar-collapse-btn" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+            <span id="collapseIcon">&lt;</span>
+            <span id="expandIcon" style="display: none;">&gt;</span>
+        </button>
     </aside>
     
     <!-- Admin Main Content -->
     <div class="admin-content">
         <!-- Topbar -->
         <header class="admin-topbar">
-            <button class="sidebar-toggle-btn" onclick="toggleSidebar()" aria-label="Toggle sidebar">
-                <span class="toggle-icon">☰</span>
-            </button>
-            
             <div class="topbar-breadcrumb">
                 <span class="breadcrumb-path">$</span>
                 <span class="breadcrumb-text">admin</span>
@@ -115,7 +109,7 @@
 
 @push('styles')
 <style>
-    /* Admin Layout - macOS Dark Mode */
+    /* Admin Layout */
     .admin-wrapper {
         display: flex;
         min-height: 100vh;
@@ -140,13 +134,13 @@
         width: var(--sidebar-collapsed);
     }
     
+    /* Sidebar Header - Same as topbar height */
     .sidebar-header {
-        padding: var(--space-md);
+        padding: 0 var(--space-md);
         border-bottom: 1px solid var(--admin-border);
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        min-height: 56px;
+        min-height: 48px;
     }
     
     .sidebar-brand {
@@ -156,78 +150,55 @@
         overflow: hidden;
     }
     
+    /* macOS dots inline */
+    .terminal-dots-inline {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .terminal-dots-inline .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    
+    .terminal-dots-inline .dot.red { background: #ff5f57; }
+    .terminal-dots-inline .dot.yellow { background: #ffbd2e; }
+    .terminal-dots-inline .dot.green { background: #28c840; }
+    
     .brand-text {
         font-family: var(--font-mono);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
         color: var(--admin-text);
         white-space: nowrap;
     }
     
-    .sidebar-collapse-btn {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--admin-border);
-        border: none;
-        border-radius: 4px;
-        color: var(--admin-text-muted);
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        flex-shrink: 0;
-    }
-    
-    .sidebar-collapse-btn:hover {
-        background: var(--admin-hover);
-        color: var(--admin-text);
-    }
-    
-    .admin-sidebar.collapsed .sidebar-brand span,
-    .admin-sidebar.collapsed .nav-section-title > span,
-    .admin-sidebar.collapsed .nav-link > span,
-    .admin-sidebar.collapsed .badge,
-    .admin-sidebar.collapsed .brand-text,
-    .admin-sidebar.collapsed .nav-section-title {
-        display: none;
-    }
-    
-    .admin-sidebar.collapsed .sidebar-header {
-        justify-content: center;
-        padding: var(--space-md) var(--space-sm);
-    }
-    
-    .admin-sidebar.collapsed .sidebar-nav {
-        padding: var(--space-sm) 0;
-    }
-    
-    .admin-sidebar.collapsed .nav-link {
-        justify-content: center;
-        padding: var(--space-sm);
-    }
-    
-    .admin-sidebar.collapsed .sidebar-footer {
-        padding: var(--space-sm);
-    }
-    
-    .admin-sidebar.collapsed .sidebar-link {
-        justify-content: center;
-        padding: var(--space-sm);
-    }
-    
-    /* Navigation */
+    /* Navigation - Scrollable */
     .sidebar-nav {
         flex: 1;
-        padding: var(--space-sm) 0;
         overflow-y: auto;
+        padding: var(--space-sm) 0;
+    }
+    
+    .sidebar-nav::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .sidebar-nav::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .sidebar-nav::-webkit-scrollbar-thumb {
+        background: var(--admin-border);
+        border-radius: 2px;
     }
     
     .nav-section-title {
         padding: var(--space-sm) var(--space-md);
         font-family: var(--font-mono);
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--admin-text-muted);
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -236,11 +207,11 @@
     .nav-list {
         list-style: none;
         padding: 0;
-        margin: 0 0 var(--space-md) 0;
+        margin: 0 0 var(--space-sm) 0;
     }
     
     .nav-item {
-        margin: 2px var(--space-sm);
+        margin: 1px var(--space-sm);
     }
     
     .nav-link {
@@ -251,8 +222,8 @@
         color: var(--admin-text-secondary);
         text-decoration: none;
         font-family: var(--font-mono);
-        font-size: 0.85rem;
-        border-radius: 6px;
+        font-size: 0.8rem;
+        border-radius: 4px;
         transition: all 0.2s ease;
     }
     
@@ -264,23 +235,23 @@
     .nav-link.active {
         background: var(--admin-active-bg);
         color: var(--terminal-accent);
-        border-left: 3px solid var(--terminal-accent);
-        margin-left: -3px;
     }
     
     .nav-icon {
-        font-size: 1rem;
-        width: 20px;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        width: 16px;
         text-align: center;
         flex-shrink: 0;
+        color: var(--terminal-syntax-purple);
     }
     
     .badge {
         background: var(--terminal-syntax-red);
         color: white;
-        font-size: 0.65rem;
-        padding: 2px 6px;
-        border-radius: 10px;
+        font-size: 0.6rem;
+        padding: 2px 5px;
+        border-radius: 8px;
         margin-left: auto;
         font-family: var(--font-mono);
     }
@@ -295,11 +266,11 @@
         display: flex;
         align-items: center;
         gap: var(--space-sm);
-        padding: var(--space-sm);
+        padding: var(--space-xs) var(--space-sm);
         color: var(--admin-text-secondary);
         text-decoration: none;
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         transition: all 0.2s ease;
         background: none;
         border: none;
@@ -317,6 +288,54 @@
         margin-top: var(--space-xs);
     }
     
+    /* Collapse Button at sidebar bottom */
+    .sidebar-collapse-btn {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--admin-border);
+        border: none;
+        border-radius: 4px;
+        color: var(--admin-text);
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .sidebar-collapse-btn:hover {
+        background: var(--admin-active-bg);
+        color: var(--terminal-accent);
+    }
+    
+    .admin-sidebar.collapsed .sidebar-brand .brand-text,
+    .admin-sidebar.collapsed .nav-section-title > span,
+    .admin-sidebar.collapsed .nav-link > span,
+    .admin-sidebar.collapsed .badge,
+    .admin-sidebar.collapsed .sidebar-link > span:not(.nav-icon) {
+        display: none;
+    }
+    
+    .admin-sidebar.collapsed .nav-link {
+        justify-content: center;
+        padding: var(--space-sm);
+    }
+    
+    .admin-sidebar.collapsed .sidebar-link {
+        justify-content: center;
+        padding: var(--space-xs);
+    }
+    
+    .admin-sidebar.collapsed .sidebar-collapse-btn {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
     /* Main Content */
     .admin-content {
         flex: 1;
@@ -331,28 +350,18 @@
         margin-left: var(--sidebar-collapsed);
     }
     
-    /* Topbar */
+    /* Topbar - Same height as sidebar header */
     .admin-topbar {
         background: var(--admin-sidebar-bg);
         border-bottom: 1px solid var(--admin-border);
-        padding: var(--space-sm) var(--space-lg);
+        padding: 0 var(--space-lg);
         display: flex;
         align-items: center;
-        gap: var(--space-md);
+        justify-content: space-between;
+        min-height: 48px;
         position: sticky;
         top: 0;
         z-index: 50;
-        min-height: 48px;
-    }
-    
-    .sidebar-toggle-btn {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--admin-text);
-        font-size: 1.25rem;
-        cursor: pointer;
-        padding: var(--space-xs);
     }
     
     .topbar-breadcrumb {
@@ -380,7 +389,6 @@
     }
     
     .topbar-actions {
-        margin-left: auto;
         display: flex;
         align-items: center;
         gap: var(--space-sm);
@@ -392,7 +400,7 @@
         gap: var(--space-xs);
         padding: var(--space-xs) var(--space-sm);
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: var(--admin-text-secondary);
         text-decoration: none;
         border-radius: 4px;
@@ -407,12 +415,12 @@
     /* Admin Main */
     .admin-main {
         flex: 1;
+        background: var(--admin-content-bg);
         padding: var(--space-lg);
     }
     
-    /* CSS Variables for Admin - macOS Dark Mode */
+    /* CSS Variables */
     :root {
-        /* Dark Sidebar & Topbar */
         --admin-sidebar-bg: #121218;
         --admin-border: #2a2a35;
         --admin-hover: rgba(255, 255, 255, 0.05);
@@ -420,39 +428,13 @@
         --admin-text: #e4e4e7;
         --admin-text-secondary: #a1a1aa;
         --admin-text-muted: #71717a;
-        
-        /* Light Content Area */
         --admin-bg: #f8f9fc;
         --admin-content-bg: #ffffff;
         --admin-content-border: #e2e8f0;
         --admin-content-text: #0f172a;
         --admin-content-text-secondary: #64748b;
-        
-        --sidebar-width: 240px;
-        --sidebar-collapsed: 60px;
-    }
-    
-    /* Content Area - Light Mode */
-    .admin-content {
-        background: var(--admin-bg);
-    }
-    
-    .admin-main {
-        background: var(--admin-content-bg);
-        border-radius: 8px;
-        margin: var(--space-md);
-        padding: var(--space-lg);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Topbar stays dark */
-    .admin-topbar {
-        background: var(--admin-sidebar-bg);
-    }
-    
-    /* Sidebar stays dark */
-    .admin-sidebar {
-        background: var(--admin-sidebar-bg);
+        --sidebar-width: 220px;
+        --sidebar-collapsed: 56px;
     }
     
     /* Responsive */
@@ -469,17 +451,8 @@
             margin-left: 0;
         }
         
-        .sidebar-toggle-btn {
-            display: flex;
-        }
-        
         .admin-sidebar.collapsed + .admin-content {
             margin-left: 0;
-        }
-        
-        .admin-main {
-            margin: var(--space-sm);
-            padding: var(--space-md);
         }
     }
 </style>
@@ -509,7 +482,6 @@
         }
     }
     
-    // Restore sidebar state
     document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('adminSidebar');
         const collapseIcon = document.getElementById('collapseIcon');
