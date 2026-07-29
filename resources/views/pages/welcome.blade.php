@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home | KONOK.IO - Professional Web Development & IT Solutions')
+@section('title', 'KONOK.IO - Professional Web Development & IT Solutions')
 
 @section('content')
 
