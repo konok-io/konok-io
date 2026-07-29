@@ -38,7 +38,7 @@
                             <span class="terminal-dot yellow"></span>
                             <span class="terminal-dot green"></span>
                         </div>
-                        <span class="terminal-path">~/konok.io/company.blade.php</span>
+                        <span class="terminal-path">~/www/konok/index.blade.php</span>
                     </div>
                     <div class="terminal-content">
                         <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
@@ -76,7 +76,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/services/web_dev.sh</span>
+                    <span class="terminal-path">~/www/konok/services.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -105,7 +105,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/services/it_support.sh</span>
+                    <span class="terminal-path">~/www/konok/services.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -134,7 +134,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/services/design.sh</span>
+                    <span class="terminal-path">~/www/konok/services.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -184,7 +184,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/ai.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -202,7 +202,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/support.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -220,7 +220,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/scale.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -238,7 +238,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/speed.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -256,7 +256,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/secure.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -274,7 +274,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/features/cost.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -307,7 +307,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/projects/ecommerce/</span>
+                    <span class="terminal-path">~/www/konok/projects/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -340,7 +340,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/projects/saas_dashboard/</span>
+                    <span class="terminal-path">~/www/konok/projects/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -373,7 +373,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/projects/portal/</span>
+                    <span class="terminal-path">~/www/konok/projects/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -418,7 +418,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/stats.blade.php</span>
+                <span class="terminal-path">~/www/konok/index.blade.php</span>
             </div>
             <div class="terminal-content">
                 <div class="grid grid-4">
@@ -454,7 +454,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">~/start.blade.php</span>
+                <span class="terminal-path" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">~/www/konok/contact.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow" style="color: white;">// start_project</span>
@@ -494,7 +494,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/testimonials/review_01.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -522,7 +522,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/testimonials/review_02.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -550,7 +550,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">~/testimonials/review_03.sh</span>
+                    <span class="terminal-path">~/www/konok/index.blade.php</span>
                 </div>
                 <div class="terminal-content">
                     <div style="padding: var(--space-md);">
@@ -590,7 +590,7 @@
                 <span class="terminal-dot yellow"></span>
                 <span class="terminal-dot green"></span>
             </div>
-            <span class="terminal-path">~/partners.log</span>
+            <span class="terminal-path">~/www/konok/index.blade.php</span>
         </div>
         <div class="terminal-content" style="padding: var(--space-lg) 0; overflow: hidden;">
             <div style="display: flex; animation: slide 20s linear infinite; width: max-content;">
