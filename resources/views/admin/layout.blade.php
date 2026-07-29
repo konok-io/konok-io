@@ -20,25 +20,25 @@
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                        <span class="nav-icon">$</span>
+                        <span class="nav-icon">&lt;/&gt;</span>
                         <span>dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.portfolios.index') }}" class="nav-link {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
-                        <span class="nav-icon">$</span>
+                        <span class="nav-icon">[&gt;]</span>
                         <span>portfolios</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.services.index') }}" class="nav-link {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
-                        <span class="nav-icon">$</span>
+                        <span class="nav-icon">{...}</span>
                         <span>services</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.skills.index') }}" class="nav-link {{ request()->routeIs('admin.skills.*') ? 'active' : '' }}">
-                        <span class="nav-icon">$</span>
+                        <span class="nav-icon">@*</span>
                         <span>skills</span>
                     </a>
                 </li>
@@ -48,7 +48,7 @@
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.contacts.index') }}" class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
-                        <span class="nav-icon">$</span>
+                        <span class="nav-icon">(**)</span>
                         <span>contacts</span>
                         @if(isset($unreadCount) && $unreadCount > 0)
                             <span class="badge">{{ $unreadCount }}</span>
@@ -62,7 +62,7 @@
             <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
                 <button type="submit" class="sidebar-link">
-                    <span class="nav-icon">×</span>
+                    <span class="nav-icon">[x]</span>
                     <span>logout</span>
                 </button>
             </form>
@@ -173,6 +173,7 @@
         flex: 1;
         overflow-y: auto;
         padding: var(--space-sm) 0;
+        background: var(--admin-sidebar-bg);
     }
     
     .sidebar-nav::-webkit-scrollbar {
