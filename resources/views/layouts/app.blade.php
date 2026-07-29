@@ -109,7 +109,7 @@
                 </div>
                 
                 <div class="footer-links-group">
-                    <h4 class="footer-title">// Quick_Links</h4>
+                    <h4 class="footer-title">/ Quick_Links</h4>
                     <ul class="footer-links">
                         <li><a href="/" class="footer-link">&gt; home()</a></li>
                         <li><a href="/about" class="footer-link">&gt; about()</a></li>
@@ -120,7 +120,7 @@
                 </div>
                 
                 <div class="footer-links-group">
-                    <h4 class="footer-title">// Services</h4>
+                    <h4 class="footer-title">/ Services</h4>
                     <ul class="footer-links">
                         <li><a href="{{ route('services') }}" class="footer-link">&gt; Web Development</a></li>
                         <li><a href="{{ route('services') }}" class="footer-link">&gt; IT Support</a></li>
@@ -130,7 +130,7 @@
                 </div>
                 
                 <div class="footer-links-group">
-                    <h4 class="footer-title">// Get_In_Touch</h4>
+                    <h4 class="footer-title">/ Get_In_Touch</h4>
                     <ul class="footer-links">
                         <li><span class="footer-link">📧 hello@konok.io</span></li>
                         <li><span class="footer-link">📱 +880 1700 000000</span></li>

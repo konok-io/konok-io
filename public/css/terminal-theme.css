@@ -834,7 +834,7 @@ a:hover {
 }
 
 .footer-title::before {
-    content: '// ';
+    content: '/ ';
     color: var(--terminal-text-muted);
 }
 
