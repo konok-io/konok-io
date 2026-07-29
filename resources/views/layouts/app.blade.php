@@ -90,8 +90,8 @@
             <div class="footer-columns">
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
-                        <div class="terminal-titlebar">
-                            <span class="terminal-path">~/konok.io/about.blade.php</span>
+                        <div class="terminal-titlebar-dark">
+                            <span class="terminal-path" style="color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1);">~/konok.io/about.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <pre style="font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
@@ -104,13 +104,13 @@
                 
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
-                        <div class="terminal-titlebar">
+                        <div class="terminal-titlebar-dark">
                             <div class="terminal-dots">
                                 <span class="terminal-dot red"></span>
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/routes.blade.php</span>
+                            <span class="terminal-path" style="color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1);">~/routes.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <ul class="footer-links">
@@ -126,13 +126,13 @@
                 
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
-                        <div class="terminal-titlebar">
+                        <div class="terminal-titlebar-dark">
                             <div class="terminal-dots">
                                 <span class="terminal-dot red"></span>
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/services.blade.php</span>
+                            <span class="terminal-path" style="color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1);">~/services.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <ul class="footer-links">
@@ -147,13 +147,13 @@
                 
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
-                        <div class="terminal-titlebar">
+                        <div class="terminal-titlebar-dark">
                             <div class="terminal-dots">
                                 <span class="terminal-dot red"></span>
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/subscribe.blade.php</span>
+                            <span class="terminal-path" style="color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1);">~/subscribe.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-text-secondary); margin-bottom: 12px;">
