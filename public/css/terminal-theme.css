@@ -779,7 +779,7 @@ a:hover {
 }
 
 .footer-header {
-    background: var(--terminal-bg-secondary);
+    background: var(--terminal-bg-tertiary);
     border: 1px solid var(--terminal-border);
     border-radius: var(--radius);
     padding: var(--space-md) var(--space-lg);
