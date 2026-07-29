@@ -20,25 +20,25 @@
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                        <span class="nav-icon">&lt;/&gt;</span>
+                        <span class="nav-icon">$</span>
                         <span>dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.portfolios.index') }}" class="nav-link {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
-                        <span class="nav-icon">[&gt;]</span>
+                        <span class="nav-icon">$</span>
                         <span>portfolios</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.services.index') }}" class="nav-link {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
-                        <span class="nav-icon">{...}</span>
+                        <span class="nav-icon">$</span>
                         <span>services</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.skills.index') }}" class="nav-link {{ request()->routeIs('admin.skills.*') ? 'active' : '' }}">
-                        <span class="nav-icon">@*</span>
+                        <span class="nav-icon">$</span>
                         <span>skills</span>
                     </a>
                 </li>
@@ -48,7 +48,7 @@
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="{{ route('admin.contacts.index') }}" class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
-                        <span class="nav-icon">(**)</span>
+                        <span class="nav-icon">$</span>
                         <span>contacts</span>
                         @if(isset($unreadCount) && $unreadCount > 0)
                             <span class="badge">{{ $unreadCount }}</span>
@@ -62,7 +62,7 @@
             <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
                 <button type="submit" class="sidebar-link">
-                    <span class="nav-icon">[x]</span>
+                    <span class="nav-icon">×</span>
                     <span>logout</span>
                 </button>
             </form>
@@ -193,7 +193,7 @@
         padding: var(--space-sm) var(--space-md);
         font-family: var(--font-mono);
         font-size: 0.65rem;
-        color: #1e293b;
+        color: var(--admin-text-muted);
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -241,8 +241,7 @@
         width: 16px;
         text-align: center;
         flex-shrink: 0;
-        margin-right: 8px;
-        color: #1e293b;
+        color: var(--admin-text-muted);
     }
     
     .badge {
@@ -301,7 +300,7 @@
         background: var(--admin-hover);
         border: 1px solid var(--admin-border);
         border-radius: 4px;
-        color: #1e293b;
+        color: var(--admin-text-muted);
         font-family: var(--font-mono);
         font-size: 0.9rem;
         cursor: pointer;
@@ -382,7 +381,7 @@
     }
     
     .breadcrumb-sep {
-        color: #1e293b;
+        color: var(--admin-text-muted);
     }
     
     .breadcrumb-current {
@@ -418,7 +417,7 @@
     }
     
     .topbar-btn .terminal-syntax-purple {
-        color: #1e293b;
+        color: var(--admin-text-muted);
     }
     
     /* Admin Main */
