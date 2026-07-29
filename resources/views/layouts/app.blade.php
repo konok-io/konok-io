@@ -141,10 +141,10 @@
                         </div>
                         <div class="terminal-content">
                             <ul class="footer-links">
-                                <li><a href="{{ route('services') }}" class="footer-link">&gt; Web Development</a></li>
-                                <li><a href="{{ route('services') }}" class="footer-link">&gt; IT Support</a></li>
-                                <li><a href="{{ route('services') }}" class="footer-link">&gt; Network Solutions</a></li>
-                                <li><a href="{{ route('services') }}" class="footer-link">&gt; Cloud Services</a></li>
+                                <li><a href="{{ route('services') }}" class="footer-link">&gt; npm install web-dev</a></li>
+                                <li><a href="{{ route('services') }}" class="footer-link">&gt; sudo it-support</a></li>
+                                <li><a href="{{ route('services') }}" class="footer-link">&gt; ping network</a></li>
+                                <li><a href="{{ route('services') }}" class="footer-link">&gt; aws deploy cloud</a></li>
                             </ul>
                         </div>
                     </div>
