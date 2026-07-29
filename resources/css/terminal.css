@@ -858,6 +858,24 @@ textarea.form-input {
     margin-bottom: var(--space-2xl);
 }
 
+.section-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-2xl);
+    gap: var(--space-lg);
+}
+
+.section-header-left {
+    text-align: left;
+    flex: 1;
+}
+
+.section-header-right {
+    text-align: right;
+    flex-shrink: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
