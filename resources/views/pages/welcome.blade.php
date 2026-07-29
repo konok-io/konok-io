@@ -6,51 +6,55 @@
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <span class="section-eyebrow">$ whoami</span>
-            <h1 class="hero-title">KONOK.IO</h1>
-            <p class="hero-subtitle">
-                <span style="color: var(--syntax-purple);">&lt;</span>
-                Professional Web Development
-                <span style="color: var(--text-muted);"> | </span>
-                IT Solutions
-                <span style="color: var(--text-muted);"> | </span>
-                Digital Excellence
-                <span style="color: var(--syntax-purple);">/&gt;</span>
-            </p>
-            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 1.125rem;">
-                Transforming your ideas into powerful digital experiences. We help businesses grow with custom web applications, IT infrastructure, and comprehensive digital solutions.
-            </p>
-            <div class="hero-actions">
-                <a href="{{ route('services') }}" class="btn btn-primary">
-                    <span>$</span> explore_services
-                </a>
-                <a href="{{ route('contact') }}" class="btn btn-command">
-                    &gt; get_free_quote
-                </a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="terminal-window">
-                <div class="terminal-titlebar">
-                    <div class="terminal-dots">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <span class="terminal-path">~/konok.io/company.js</span>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="section-eyebrow">$ whoami</span>
+                <h1 class="hero-title">
+                    KONOK.IO
+                </h1>
+                <p class="hero-subtitle">
+                    <span style="color: var(--terminal-syntax-purple);">&lt;</span>
+                    Professional Web Development
+                    <span style="color: var(--terminal-text-muted);"> | </span>
+                    IT Solutions
+                    <span style="color: var(--terminal-text-muted);"> | </span>
+                    Digital Excellence
+                    <span style="color: var(--terminal-syntax-purple);">/&gt;</span>
+                </p>
+                <p style="color: var(--terminal-text-secondary); margin-bottom: 24px; font-size: 1.125rem;">
+                    Transforming your ideas into powerful digital experiences. We help businesses grow with custom web applications, IT infrastructure, and comprehensive digital solutions.
+                </p>
+                <div class="hero-actions">
+                    <a href="{{ route('services') }}" class="btn btn-primary">
+                        <span>$</span> explore_services
+                    </a>
+                    <a href="{{ route('contact') }}" class="btn btn-command">
+                        &gt; get_free_quote
+                    </a>
                 </div>
-                <div class="terminal-content">
-                    <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: var(--syntax-purple);">const</span> <span style="color: var(--syntax-blue);">konok</span> = {
-  <span style="color: var(--syntax-amber);">name</span>: <span style="color: var(--syntax-green);">"KONOK.IO"</span>,
-  <span style="color: var(--syntax-amber);">services</span>: [<span style="color: var(--syntax-green);">"Web Dev"</span>, <span style="color: var(--syntax-green);">"IT Support"</span>],
-  <span style="color: var(--syntax-amber);">focus</span>: <span style="color: var(--syntax-green);">"Business Solutions"</span>,
-  <span style="color: var(--syntax-amber);">mission</span>: <span style="color: var(--syntax-green);">"Digital Excellence"</span>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window hero-window">
+                    <div class="terminal-titlebar">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                        <span class="terminal-path">~/konok.io/company.js</span>
+                    </div>
+                    <div class="terminal-content">
+                        <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
+  <span style="color: var(--terminal-syntax-amber);">name</span>: <span style="color: var(--terminal-syntax-green);">"KONOK.IO"</span>,
+  <span style="color: var(--terminal-syntax-amber);">services</span>: [<span style="color: var(--terminal-syntax-green);">"Web Dev"</span>, <span style="color: var(--terminal-syntax-green);">"IT Support"</span>],
+  <span style="color: var(--terminal-syntax-amber);">focus</span>: <span style="color: var(--terminal-syntax-green);">"Business Solutions"</span>,
+  <span style="color: var(--terminal-syntax-amber);">mission</span>: <span style="color: var(--terminal-syntax-green);">"Digital Excellence"</span>
 };
 
-<span style="color: var(--text-muted);">// Ready to transform?</span>
+<span style="color: var(--terminal-text-muted);">// Ready to transform?</span>
 <span class="cursor-blink"></span></code></pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,7 +62,7 @@
 </section>
 
 <!-- Services Preview -->
-<section class="section">
+<section class="section section-light">
     <div class="container">
         <div class="section-header">
             <span class="section-eyebrow">// services</span>
@@ -68,81 +72,109 @@
             </p>
         </div>
         
-        <div class="cards-grid">
-            <div class="card">
+        <div class="grid grid-3">
+            <div class="card feature-card">
                 <div class="card-header">
                     <div class="terminal-dots">
                         <span class="terminal-dot red"></span>
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="card-title">~/services/web-dev.json</span>
+                    <span class="badge">// web_dev</span>
                 </div>
                 <div class="card-body">
-                    <div class="card-icon">&#127760;</div>
-                    <h3 class="card-name">Custom Web Development</h3>
-                    <p class="card-description">Build powerful custom websites tailored to your business needs with modern technologies.</p>
-                    <div class="card-tags">
-                        <span class="tag blue">Laravel</span>
-                        <span class="tag blue">PHP</span>
-                        <span class="tag green">MySQL</span>
+                    <div class="feature-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
                     </div>
-                    <a href="{{ route('services') }}" class="btn btn-outline">
+                    <h3 class="feature-title">Web Development</h3>
+                    <p class="feature-description">
+                        Custom websites, web applications, and e-commerce solutions built with modern technologies.
+                    </p>
+                    <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
             </div>
             
-            <div class="card">
+            <div class="card feature-card">
                 <div class="card-header">
                     <div class="terminal-dots">
                         <span class="terminal-dot red"></span>
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="card-title">~/services/it-support.json</span>
+                    <span class="badge badge-primary">// it_support</span>
                 </div>
                 <div class="card-body">
-                    <div class="card-icon">&#128736;</div>
-                    <h3 class="card-name">IT Support & Maintenance</h3>
-                    <p class="card-description">24/7 IT support to keep your business running smoothly with fast response times.</p>
-                    <div class="card-tags">
-                        <span class="tag purple">Network</span>
-                        <span class="tag amber">Security</span>
-                        <span class="tag green">Cloud</span>
+                    <div class="feature-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
                     </div>
-                    <a href="{{ route('services') }}" class="btn btn-outline">
+                    <h3 class="feature-title">IT Support</h3>
+                    <p class="feature-description">
+                        Network setup, hardware troubleshooting, server administration, and 24/7 technical support.
+                    </p>
+                    <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
+                        <span class="tag">Networking</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
             </div>
             
-            <div class="card">
+            <div class="card feature-card">
                 <div class="card-header">
                     <div class="terminal-dots">
                         <span class="terminal-dot red"></span>
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="card-title">~/services/ecommerce.json</span>
+                    <span class="badge badge-success">// design</span>
                 </div>
                 <div class="card-body">
-                    <div class="card-icon">&#128722;</div>
-                    <h3 class="card-name">E-commerce Solutions</h3>
-                    <p class="card-description">Launch and grow your online store with complete e-commerce solutions.</p>
-                    <div class="card-tags">
-                        <span class="tag blue">Stripe</span>
-                        <span class="tag green">Payment</span>
-                        <span class="tag purple">Inventory</span>
+                    <div class="feature-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
                     </div>
-                    <a href="{{ route('services') }}" class="btn btn-outline">
+                    <h3 class="feature-title">Creative Design</h3>
+                    <p class="feature-description">
+                        Professional UI/UX design, brand identity, and graphic design for digital products.
+                    </p>
+                    <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="text-center mt-5">
+        <div class="text-center mt-4">
             <a href="{{ route('services') }}" class="btn btn-primary">
                 <span>$</span> view_all_services
             </a>
@@ -151,7 +183,7 @@
 </section>
 
 <!-- Stats Section -->
-<section class="section section-light">
+<section class="section">
     <div class="container">
         <div class="terminal-window">
             <div class="terminal-titlebar">
@@ -163,83 +195,23 @@
                 <span class="terminal-path">~/stats.json</span>
             </div>
             <div class="terminal-content">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">100+</div>
-                        <p class="stat-label">// projects_completed</p>
+                <div class="grid grid-4">
+                    <div class="text-center">
+                        <div style="font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent);">100+</div>
+                        <p style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">// projects_completed</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <p class="stat-label">// happy_clients</p>
+                    <div class="text-center">
+                        <div style="font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent);">50+</div>
+                        <p style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">// happy_clients</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <p class="stat-label">// years_experience</p>
+                    <div class="text-center">
+                        <div style="font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent);">5+</div>
+                        <p style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">// years_experience</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">99%</div>
-                        <p class="stat-label">// satisfaction_rate</p>
+                    <div class="text-center">
+                        <div style="font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent);">99%</div>
+                        <p style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">// satisfaction_rate</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-eyebrow">// why_us</span>
-            <h2 class="section-title">Why Choose KONOK.IO</h2>
-        </div>
-        
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-header">
-                    <div class="terminal-dots">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <span class="card-title">// expertise</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-icon">&#9889;</div>
-                    <h3 class="card-name">Expert Team</h3>
-                    <p class="card-description">Skilled professionals with years of experience in web development and IT solutions.</p>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div class="terminal-dots">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <span class="card-title">// reliability</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-icon">&#128274;</div>
-                    <h3 class="card-name">Reliable Solutions</h3>
-                    <p class="card-description">Secure, scalable, and maintainable code that stands the test of time.</p>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div class="terminal-dots">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <span class="card-title">// support</span>
-                </div>
-                <div class="card-body">
-                    <div class="card-icon">&#127919;</div>
-                    <h3 class="card-name">24/7 Support</h3>
-                    <p class="card-description">Round-the-clock support to ensure your business never stops.</p>
                 </div>
             </div>
         </div>
@@ -264,11 +236,11 @@
                 <p class="cta-subtitle">
                     Let's collaborate and build something amazing together. Get started with a free consultation today.
                 </p>
-                <div class="cta-buttons">
-                    <a href="{{ route('contact') }}" class="btn btn-white">
-                        <span>$</span> get_in_touch
+                <div class="cta-actions">
+                    <a href="{{ route('contact') }}" class="btn btn-primary">
+                        <span style="color: var(--terminal-accent);">$</span> get_in_touch
                     </a>
-                    <a href="{{ route('portfolio') }}" class="btn btn-outline-white">
+                    <a href="{{ route('portfolio') }}" class="btn btn-command">
                         &gt; view_portfolio
                     </a>
                 </div>

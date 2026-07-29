@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/terminal-theme.css') }}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     
     @stack('styles')
 </head>
@@ -23,11 +23,18 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
-            <!-- Logo -->
+            <!-- Logo with macOS dots and path badge -->
             <a href="/" class="navbar-brand">
-                <span class="terminal-path">
-                    <span style="color: var(--syntax-blue);">&lt;</span>KONOK<span style="color: var(--syntax-blue);">.IO</span><span style="color: var(--syntax-blue);">/&gt;</span>
-                </span>
+                <div class="terminal-window" style="box-shadow: none; border: none;">
+                    <div class="terminal-titlebar" style="padding: 6px 8px; background: transparent; border: none;">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                    </div>
+                </div>
+                <span class="terminal-path">&lt;KONOK.IO/&gt;</span>
             </a>
             
             <!-- Navigation Links -->
@@ -66,7 +73,7 @@
             
             <!-- Mobile Toggler -->
             <button class="navbar-toggler" type="button" id="navbarToggler" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">☰</span>
+                <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
@@ -81,11 +88,9 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <span class="terminal-path">
-                        <span style="color: var(--syntax-blue);">&lt;</span>KONOK<span style="color: var(--syntax-blue);">.IO</span><span style="color: var(--syntax-blue);">/&gt;</span>
-                    </span>
+                    <span class="terminal-path" style="margin-bottom: 8px; display: inline-block;">&lt;KONOK.IO/&gt;</span>
                     <p class="footer-copyright">© {{ date('Y') }} KONOK.IO. All rights reserved.</p>
-                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-text-muted); margin-top: 4px;">
                         Professional Web Development & IT Solutions
                     </p>
                 </div>
@@ -110,13 +115,10 @@
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="footer-title">// Follow</h4>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="btn-icon" title="LinkedIn">IN</a>
-                        <a href="#" class="btn-icon" title="Facebook">FB</a>
-                        <a href="#" class="btn-icon" title="Twitter">TW</a>
-                    </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn-icon" title="LinkedIn">IN</a>
+                    <a href="#" class="btn-icon" title="Facebook">FB</a>
+                    <a href="#" class="btn-icon" title="GitHub">GH</a>
                 </div>
             </div>
         </div>
