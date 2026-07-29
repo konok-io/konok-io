@@ -871,6 +871,7 @@ a:hover {
 
 .footer-bottom {
     width: 100%;
+    background: transparent !important;
     border-top: 1px solid var(--terminal-border);
     padding: var(--space-lg) 0;
 }
@@ -887,6 +888,16 @@ a:hover {
     font-family: var(--font-mono);
     font-size: 0.875rem;
     color: var(--terminal-text-secondary);
+}
+
+.footer-column .terminal-window .terminal-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column .terminal-window .terminal-titlebar .terminal-path {
+    margin-left: auto;
 }
 
 /* ============================================
