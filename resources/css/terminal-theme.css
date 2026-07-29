@@ -192,6 +192,8 @@ a:hover {
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-sm);
     border: 1px solid var(--terminal-border);
+    margin-left: auto;
+    white-space: nowrap;
 }
 
 .terminal-content {
