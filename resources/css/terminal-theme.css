@@ -871,7 +871,6 @@ a:hover {
 
 .footer-bottom {
     width: 100%;
-    background: var(--terminal-bg-primary);
     border-top: 1px solid var(--terminal-border);
     padding: var(--space-lg) 0;
 }
