@@ -840,7 +840,9 @@ a:hover {
 
 .footer-bottom {
     padding-top: var(--space-lg);
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid var(--terminal-border);
     margin-top: var(--space-lg);
 }
@@ -849,6 +851,20 @@ a:hover {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
     color: var(--terminal-text-muted);
+}
+
+.footer-creator {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--terminal-text-muted);
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+    }
 }
 
 @media (max-width: 992px) {

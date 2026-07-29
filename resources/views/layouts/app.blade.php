@@ -96,18 +96,15 @@
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/konok.io/config.js</span>
+                            <span class="terminal-path">~/konok.io/about.js</span>
                         </div>
                         <div class="terminal-content" style="padding: 12px;">
                             <pre style="font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
   <span style="color: var(--terminal-syntax-amber);">name</span>: <span style="color: var(--terminal-syntax-green);">"KONOK.IO"</span>,
-  <span style="color: var(--terminal-syntax-amber);">status</span>: <span style="color: var(--terminal-syntax-green);">"Online"</span>
+  <span style="color: var(--terminal-syntax-amber);">description</span>: <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>
 };</code></pre>
                         </div>
                     </div>
-                    <p style="font-size: 0.875rem; color: var(--terminal-text-secondary); max-width: 300px;">
-                        Professional Web Development & IT Solutions. Building powerful digital experiences for businesses worldwide.
-                    </p>
                 </div>
                 
                 <div class="footer-links-group">
@@ -155,7 +152,8 @@
             
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. Built with <span style="color: var(--terminal-syntax-red);">❤</span> in Bangladesh */</p>
+                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
+                <p class="footer-creator">// Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
             </div>
         </div>
     </footer>
