@@ -779,7 +779,7 @@ a:hover {
 }
 
 .footer-header {
-    background: var(--terminal-bg-tertiary);
+    background: var(--terminal-bg-primary);
     border: 1px solid var(--terminal-border);
     border-radius: var(--radius);
     padding: var(--space-md) var(--space-lg);
@@ -810,13 +810,16 @@ a:hover {
     margin-bottom: 0;
 }
 
-.footer-path {
+.footer-header .terminal-path {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--terminal-accent);
     margin-left: auto;
     flex-shrink: 0;
     margin-bottom: 0;
+    background: var(--terminal-bg-secondary);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
 }
 
 .footer-columns {

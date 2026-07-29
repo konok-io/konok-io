@@ -94,7 +94,7 @@
                     <span class="terminal-dot green"></span>
                 </div>
                 <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */ // Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
-                <span class="footer-path">[~/copyright.js]</span>
+                <span class="terminal-path">~/copyright.js</span>
             </div>
             
             <!-- Footer Columns -->
