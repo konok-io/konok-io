@@ -88,19 +88,15 @@
         <div class="container">
             <!-- Footer Header (Copyright) -->
             <div class="footer-header">
-                <div class="terminal-window footer-header-window">
-                    <div class="terminal-titlebar">
-                        <div class="terminal-dots">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                        </div>
-                        <span class="terminal-path">~/copyright.js</span>
-                    </div>
-                </div>
                 <div class="footer-header-content">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                    </div>
                     <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
                     <p class="footer-creator">// Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
+                    <span class="footer-path">[~/copyright.js]</span>
                 </div>
             </div>
             
