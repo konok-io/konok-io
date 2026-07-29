@@ -161,10 +161,11 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     }
     
     .terminal-dots-inline .dot.red { background: #ff5f57; }
-    .terminal-dots-inline .dot.yellow { background: #ffbd2e; }
+    .terminal-dots-inline .dot.yellow { background: var(--admin-accent); }
     .terminal-dots-inline .dot.green { background: #28c840; }
     
     .brand-text {
@@ -234,26 +235,31 @@
     
     .nav-link.active {
         background: var(--admin-active-bg);
-        color: var(--terminal-accent);
+        color: var(--admin-accent);
+    }
+    
+    .nav-link.active .nav-icon {
+        color: var(--admin-accent);
     }
     
     .nav-icon {
         font-family: var(--font-mono);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         width: 16px;
         text-align: center;
         flex-shrink: 0;
-        color: var(--terminal-syntax-purple);
+        color: var(--admin-text-muted);
     }
     
     .badge {
-        background: var(--terminal-syntax-red);
-        color: white;
+        background: var(--admin-accent);
+        color: var(--admin-sidebar-bg);
         font-size: 0.6rem;
         padding: 2px 5px;
         border-radius: 8px;
         margin-left: auto;
         font-family: var(--font-mono);
+        font-weight: 600;
     }
     
     /* Sidebar Footer */
@@ -298,19 +304,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--admin-border);
-        border: none;
+        background: var(--admin-hover);
+        border: 1px solid var(--admin-border);
         border-radius: 4px;
-        color: var(--admin-text);
+        color: var(--admin-text-muted);
         font-family: var(--font-mono);
-        font-size: 1rem;
+        font-size: 0.9rem;
         cursor: pointer;
         transition: all 0.2s ease;
     }
     
     .sidebar-collapse-btn:hover {
-        background: var(--admin-active-bg);
-        color: var(--terminal-accent);
+        background: var(--admin-accent);
+        border-color: var(--admin-accent);
+        color: var(--admin-sidebar-bg);
     }
     
     .admin-sidebar.collapsed .sidebar-brand .brand-text,
@@ -373,7 +380,7 @@
     }
     
     .breadcrumb-path {
-        color: var(--terminal-syntax-purple);
+        color: var(--admin-accent);
     }
     
     .breadcrumb-text {
@@ -412,6 +419,14 @@
         color: var(--admin-text);
     }
     
+    .topbar-btn:hover .terminal-syntax-purple {
+        color: var(--admin-accent);
+    }
+    
+    .topbar-btn .terminal-syntax-purple {
+        color: var(--admin-text-muted);
+    }
+    
     /* Admin Main */
     .admin-main {
         flex: 1;
@@ -424,7 +439,8 @@
         --admin-sidebar-bg: #121218;
         --admin-border: #2a2a35;
         --admin-hover: rgba(255, 255, 255, 0.05);
-        --admin-active-bg: rgba(37, 99, 235, 0.15);
+        --admin-active-bg: rgba(255, 189, 46, 0.15);
+        --admin-accent: #ffbd2e;
         --admin-text: #e4e4e7;
         --admin-text-secondary: #a1a1aa;
         --admin-text-muted: #71717a;
