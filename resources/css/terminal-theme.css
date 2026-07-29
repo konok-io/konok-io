@@ -867,6 +867,27 @@ a:hover {
     content: '// ';
 }
 
+.footer-bottom {
+    width: 100%;
+    background: var(--terminal-bg-primary);
+    border-top: 1px solid var(--terminal-border);
+    padding: var(--space-lg) 0;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.footer-creator {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--terminal-text-secondary);
+}
+
 /* ============================================
    TESTIMONIALS
    ============================================ */
