@@ -235,11 +235,11 @@
     
     .nav-link.active {
         background: var(--admin-active-bg);
-        color: var(--admin-accent);
+        color: #3b82f6;
     }
     
     .nav-link.active .nav-icon {
-        color: var(--admin-accent);
+        color: #3b82f6;
     }
     
     .nav-icon {
@@ -440,7 +440,7 @@
         --admin-sidebar-bg: #ffffff;
         --admin-border: #e5e7eb;
         --admin-hover: #f3f4f6;
-        --admin-active-bg: rgba(255, 189, 46, 0.1);
+        --admin-active-bg: rgba(59, 130, 246, 0.15);
         --admin-accent: #f59e0b;
         --admin-text: #1f2937;
         --admin-text-secondary: #6b7280;

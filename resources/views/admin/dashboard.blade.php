@@ -16,7 +16,7 @@
                 <span class="terminal-path">dashboard.blade.php</span>
             </div>
             <div class="terminal-content">
-                <pre style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; margin: 0; padding: var(--space-md);"><code><span style="color: var(--admin-accent);">$</span> <span style="color: var(--admin-content-text);">./dashboard.sh</span>
+                <pre style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; margin: 0; padding: var(--space-md);"><code><span style="color: var(--admin-accent);">$</span> <span style="color: var(--admin-content-text);">./dashboard.blade.php</span>
 <span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Loading system metrics...</span>
 <span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Connected to database</span>
 <span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Ready</span> <span style="color: var(--admin-content-text-muted);">_</span></code></pre>
