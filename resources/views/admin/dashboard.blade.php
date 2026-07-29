@@ -224,12 +224,12 @@
     }
     
     .terminal-titlebar {
-        background: linear-gradient(to bottom, #f6f6f6, #e8e8e8);
+        background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
         padding: 8px 12px;
         display: flex;
         align-items: center;
         gap: 8px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #dee2e6;
     }
     
     .terminal-dots {
@@ -241,12 +241,13 @@
         width: 12px;
         height: 12px;
         border-radius: 50%;
+        background: #1e293b;
     }
     
-    .terminal-dot.red { background: #ff5f57; }
-    .terminal-dot.yellow { background: #ffbd2e; }
-    .terminal-dot.green { background: #28c840; }
-    .terminal-dot.blue { background: #3b82f6; }
+    .terminal-dot.red { background: #1e293b; }
+    .terminal-dot.yellow { background: #1e293b; }
+    .terminal-dot.green { background: #1e293b; }
+    .terminal-dot.blue { background: #1e293b; }
     
     .terminal-path {
         font-family: var(--font-mono);
@@ -286,12 +287,12 @@
     }
     
     .stat-card-header {
-        background: linear-gradient(to bottom, #fafafa, #f0f0f0);
+        background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
         padding: 6px 10px;
         display: flex;
         align-items: center;
         gap: 6px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid #dee2e6;
     }
     
     .terminal-dots-mini {
@@ -303,12 +304,13 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
+        background: #1e293b;
     }
     
-    .terminal-dots-mini .dot.red { background: #ff5f57; }
-    .terminal-dots-mini .dot.yellow { background: #ffbd2e; }
-    .terminal-dots-mini .dot.green { background: #28c840; }
-    .terminal-dots-mini .dot.blue { background: #3b82f6; }
+    .terminal-dots-mini .dot.red { background: #1e293b; }
+    .terminal-dots-mini .dot.yellow { background: #1e293b; }
+    .terminal-dots-mini .dot.green { background: #1e293b; }
+    .terminal-dots-mini .dot.blue { background: #1e293b; }
     
     .stat-file {
         font-family: var(--font-mono);

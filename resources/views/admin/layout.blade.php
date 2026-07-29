@@ -157,12 +157,8 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        background: #1e293b;
     }
-    
-    .terminal-dots-inline .dot.red { background: #ff5f57; }
-    .terminal-dots-inline .dot.yellow { background: var(--admin-accent); }
-    .terminal-dots-inline .dot.green { background: #28c840; }
     
     .brand-text {
         font-family: var(--font-mono);
