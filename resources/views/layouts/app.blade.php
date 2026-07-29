@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/terminal-theme.css') }}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='15' fill='%23ff5f57'/><circle cx='50' cy='50' r='15' fill='%23ffbd2e'/><circle cx='75' cy='50' r='15' fill='%2328ca41'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='35' fill='%23ffbd2e'/></svg>">
     
     @stack('styles')
 </head>
