@@ -436,19 +436,24 @@
     
     /* CSS Variables */
     :root {
-        --admin-sidebar-bg: #121218;
-        --admin-border: #2a2a35;
-        --admin-hover: rgba(255, 255, 255, 0.05);
-        --admin-active-bg: rgba(255, 189, 46, 0.15);
-        --admin-accent: #ffbd2e;
-        --admin-text: #e4e4e7;
-        --admin-text-secondary: #a1a1aa;
-        --admin-text-muted: #71717a;
-        --admin-bg: #f8f9fc;
+        /* Light Sidebar & Topbar */
+        --admin-sidebar-bg: #ffffff;
+        --admin-border: #e5e7eb;
+        --admin-hover: #f3f4f6;
+        --admin-active-bg: rgba(255, 189, 46, 0.1);
+        --admin-accent: #f59e0b;
+        --admin-text: #1f2937;
+        --admin-text-secondary: #6b7280;
+        --admin-text-muted: #9ca3af;
+        
+        /* Light Content Area */
+        --admin-bg: #f9fafb;
         --admin-content-bg: #ffffff;
-        --admin-content-border: #e2e8f0;
-        --admin-content-text: #0f172a;
-        --admin-content-text-secondary: #64748b;
+        --admin-content-border: #e5e7eb;
+        --admin-content-text: #1f2937;
+        --admin-content-text-secondary: #6b7280;
+        --admin-content-text-muted: #9ca3af;
+        
         --sidebar-width: 220px;
         --sidebar-collapsed: 56px;
     }

@@ -141,30 +141,21 @@
                     <span class="terminal-path">contacts.sh</span>
                     <a href="{{ route('admin.contacts.index') }}" class="terminal-action">&gt; view_all</a>
                 </div>
-                <div class="terminal-content">
+                <div class="terminal-content" style="max-height: 180px; overflow-y: auto;">
                     @if($recentContacts->isEmpty())
                         <div class="terminal-empty">
                             <span style="color: var(--admin-content-text-muted);"># No contacts found</span>
                         </div>
                     @else
-                        <ul class="data-list">
+                        <ul class="data-list compact">
                             @foreach($recentContacts as $contact)
-                                <li class="data-item">
-                                    <div class="data-info">
-                                        <span class="data-key">name:</span>
-                                        <span class="data-value">{{ $contact->name }}</span>
-                                    </div>
-                                    <div class="data-info">
-                                        <span class="data-key">email:</span>
-                                        <span class="data-value">{{ $contact->email }}</span>
-                                    </div>
-                                    <div class="data-meta">
+                                <li class="data-item compact">
+                                    <div class="data-row">
+                                        <span class="data-name">{{ $contact->name }}</span>
+                                        <span class="data-email">{{ $contact->email }}</span>
                                         @if($contact->status === 'new')
-                                            <span class="data-status new"><span style="color: #ef4444;">[NEW]</span></span>
-                                        @else
-                                            <span class="data-status read"><span style="color: #22c55e;">[READ]</span></span>
+                                            <span class="data-badge new">NEW</span>
                                         @endif
-                                        <span class="data-time">{{ $contact->created_at->diffForHumans() }}</span>
                                     </div>
                                 </li>
                             @endforeach
@@ -186,28 +177,21 @@
                     <span class="terminal-path">portfolios.sh</span>
                     <a href="{{ route('admin.portfolios.index') }}" class="terminal-action">&gt; view_all</a>
                 </div>
-                <div class="terminal-content">
+                <div class="terminal-content" style="max-height: 180px; overflow-y: auto;">
                     @if($recentPortfolios->isEmpty())
                         <div class="terminal-empty">
                             <span style="color: var(--admin-content-text-muted);"># No portfolios found</span>
                         </div>
                     @else
-                        <ul class="data-list">
+                        <ul class="data-list compact">
                             @foreach($recentPortfolios as $portfolio)
-                                <li class="data-item">
-                                    <div class="data-info">
-                                        <span class="data-key">title:</span>
-                                        <span class="data-value">{{ $portfolio->title }}</span>
-                                    </div>
-                                    <div class="data-info">
-                                        <span class="data-key">cat:</span>
-                                        <span class="data-value">{{ $portfolio->category ?? 'null' }}</span>
-                                    </div>
-                                    <div class="data-meta">
+                                <li class="data-item compact">
+                                    <div class="data-row">
+                                        <span class="data-name">{{ $portfolio->title }}</span>
                                         @if($portfolio->status === 'published')
-                                            <span class="data-status published"><span style="color: #22c55e;">[PUBLISHED]</span></span>
+                                            <span class="data-badge published">PUBLISHED</span>
                                         @else
-                                            <span class="data-status draft"><span style="color: var(--admin-accent);">[DRAFT]</span></span>
+                                            <span class="data-badge draft">DRAFT</span>
                                         @endif
                                     </div>
                                 </li>
@@ -407,12 +391,25 @@
     /* Content Grid - Terminal Style Lists */
     .content-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-lg);
     }
     
     .content-card {
         background: transparent;
+    }
+    
+    .content-card .terminal-content::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .content-card .terminal-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .content-card .terminal-content::-webkit-scrollbar-thumb {
+        background: var(--admin-content-border);
+        border-radius: 2px;
     }
     
     .terminal-action {
@@ -458,6 +455,64 @@
     
     .data-item:hover {
         background: #fafafa;
+    }
+    
+    /* Compact List Items */
+    .data-item.compact {
+        padding: 6px var(--space-md);
+    }
+    
+    .data-list.compact .data-item {
+        padding: 6px var(--space-md);
+    }
+    
+    .data-row {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+    
+    .data-name {
+        color: var(--admin-content-text);
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .data-email {
+        color: var(--admin-content-text-secondary);
+        font-size: 0.7rem;
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .data-badge {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+    
+    .data-badge.new {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+    }
+    
+    .data-badge.published {
+        background: rgba(34, 197, 94, 0.1);
+        color: #22c55e;
+    }
+    
+    .data-badge.draft {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--admin-accent);
     }
     
     .data-info {
