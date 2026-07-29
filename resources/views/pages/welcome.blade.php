@@ -60,12 +60,19 @@
 <!-- Services Preview -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
-        <div class="section-header">
-            <span class="section-eyebrow">// services</span>
-            <h2 class="section-title">What We Offer</h2>
-            <p class="section-subtitle">
-                Comprehensive web development and IT solutions tailored to your business needs.
-            </p>
+        <div class="section-header-custom">
+            <div class="section-header-left">
+                <span class="section-eyebrow">// services</span>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">
+                    Comprehensive web development and IT solutions tailored to your business needs.
+                </p>
+            </div>
+            <div class="section-header-right">
+                <a href="{{ route('services') }}" class="btn btn-card">
+                    &gt; view_all
+                </a>
+            </div>
         </div>
         
         <div class="grid grid-3">
@@ -156,24 +163,20 @@
                 </div>
             </div>
         </div>
-        
-        <div class="text-center mt-4">
-            <a href="{{ route('services') }}" class="btn btn-primary">
-                <span>$</span> view_all_services
-            </a>
-        </div>
     </div>
 </section>
 
 <!-- Why Choose Us Section -->
 <section class="section" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
-        <div class="section-header">
-            <span class="section-eyebrow">// why_konok</span>
-            <h2 class="section-title">Why Choose KONOK.IO?</h2>
-            <p class="section-subtitle">
-                We combine technical expertise with innovative solutions to deliver exceptional results.
-            </p>
+        <div class="section-header-custom">
+            <div class="section-header-left">
+                <span class="section-eyebrow">// why_konok</span>
+                <h2 class="section-title">Why Choose KONOK.IO?</h2>
+                <p class="section-subtitle">
+                    We combine technical expertise with innovative solutions to deliver exceptional results.
+                </p>
+            </div>
         </div>
         
         <div class="grid grid-3">
@@ -291,12 +294,19 @@
 <!-- Featured Projects Section -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
-        <div class="section-header">
-            <span class="section-eyebrow">// projects</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">
-                Showcasing our recent work and successful client collaborations.
-            </p>
+        <div class="section-header-custom">
+            <div class="section-header-left">
+                <span class="section-eyebrow">// projects</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Showcasing our recent work and successful client collaborations.
+                </p>
+            </div>
+            <div class="section-header-right">
+                <a href="{{ route('projects') }}" class="btn btn-card">
+                    &gt; view_all
+                </a>
+            </div>
         </div>
         
         <div class="grid grid-3">
@@ -399,12 +409,6 @@
                 </div>
             </div>
         </div>
-        
-        <div class="text-center mt-4">
-            <a href="{{ route('projects') }}" class="btn btn-primary">
-                <span>$</span> view_all_projects
-            </a>
-        </div>
     </div>
 </section>
 
@@ -478,12 +482,14 @@
 <!-- Testimonials Section -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
-        <div class="section-header">
-            <span class="section-eyebrow">// testimonials</span>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">
-                Don't just take our word for it - hear from our satisfied clients.
-            </p>
+        <div class="section-header-custom">
+            <div class="section-header-left">
+                <span class="section-eyebrow">// testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">
+                    Don't just take our word for it - hear from our satisfied clients.
+                </p>
+            </div>
         </div>
         
         <div class="grid grid-3">

@@ -701,6 +701,25 @@ a:hover {
     margin-bottom: var(--space-2xl);
 }
 
+.section-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+.section-header-left {
+    flex: 1;
+}
+
+.section-header-right {
+    flex-shrink: 0;
+    margin-left: var(--space-lg);
+    padding-top: var(--space-md);
+}
+
 .section-title {
     font-size: 2rem;
     margin-bottom: var(--space-md);
@@ -710,7 +729,6 @@ a:hover {
     font-size: 1.125rem;
     color: var(--terminal-text-secondary);
     max-width: 600px;
-    margin: 0 auto;
 }
 
 /* Grid Layouts */
