@@ -192,8 +192,20 @@
             
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
-                <p class="footer-creator">// Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
+                <div class="terminal-window footer-bottom-window">
+                    <div class="terminal-titlebar">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                        </div>
+                        <span class="terminal-path">~/copyright.js</span>
+                    </div>
+                </div>
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
+                    <p class="footer-creator">// Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
+                </div>
             </div>
         </div>
     </footer>

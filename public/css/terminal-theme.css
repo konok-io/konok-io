@@ -924,10 +924,19 @@ a:hover {
 .footer-bottom {
     padding-top: var(--space-lg);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--terminal-border);
+    gap: var(--space-md);
     margin-top: var(--space-lg);
+}
+
+.footer-bottom-window {
+    max-width: 200px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
 }
 
 .footer-copyright {
@@ -976,6 +985,12 @@ a:hover {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: var(--space-md);
+    }
+    
+    .footer-bottom-window {
+        max-width: 100%;
+        width: 100%;
     }
     
     .footer-bottom-content {
