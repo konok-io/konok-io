@@ -417,6 +417,7 @@ a:hover {
     padding: var(--space-md) var(--space-lg);
     border-top: 1px solid var(--terminal-border);
     background: var(--terminal-bg-tertiary);
+    text-align: center;
 }
 
 /* Feature Card */
@@ -1344,4 +1345,17 @@ a:hover {
 
 .hero-window .cursor-blink::after {
     color: #89b4fa;
+}
+
+/* Card Button Light Version */
+.btn-card {
+    background: #89b4fa;
+    color: #1e1e2e;
+    border: 1px solid #89b4fa;
+}
+
+.btn-card:hover {
+    background: #b4befe;
+    border-color: #b4befe;
+    color: #1e1e2e;
 }

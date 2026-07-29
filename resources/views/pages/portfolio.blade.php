@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
@@ -246,7 +246,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-command btn-sm">
+                    <a href="#" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>

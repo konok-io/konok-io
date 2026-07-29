@@ -91,8 +91,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
@@ -120,8 +120,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
@@ -149,8 +149,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('services') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
                 </div>
@@ -326,8 +326,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('projects') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
                 </div>
@@ -359,8 +359,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('projects') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
                 </div>
@@ -392,8 +392,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: var(--terminal-bg-secondary); padding: var(--space-sm) var(--space-md); border-top: 1px solid var(--terminal-border);">
-                    <a href="{{ route('projects') }}" class="btn btn-command btn-sm">
+                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                    <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
                 </div>
