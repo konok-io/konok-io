@@ -6,29 +6,30 @@ use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\Skill;
 use App\Models\Testimonial;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $featuredPortfolios = Portfolio::published()->featured()->orderBy('sort_order')->limit(6)->get();
-        $services = Service::active()->orderBy('sort_order')->get();
-        $skills = Skill::active()->orderBy('sort_order')->get()->groupBy('category');
-        $testimonials = Testimonial::active()->orderBy('sort_order')->limit(3)->get();
+        $featuredPortfolios = Portfolio::where('status', 'published')->where('featured', true)->orderBy('sort_order')->limit(6)->get();
+        $services = Service::where('status', 'active')->orderBy('sort_order')->get();
+        $skills = Skill::orderBy('sort_order')->get()->groupBy('category');
+        $testimonials = Testimonial::orderBy('sort_order')->limit(3)->get();
 
         return view('pages.welcome', compact('featuredPortfolios', 'services', 'skills', 'testimonials'));
     }
 
     public function about()
     {
-        $skills = Skill::active()->orderBy('sort_order')->get()->groupBy('category');
+        $skills = Skill::orderBy('sort_order')->get()->groupBy('category');
         return view('pages.about', compact('skills'));
     }
 
     public function services()
     {
-        $services = Service::active()->orderBy('sort_order')->get();
+        $services = Service::where('status', 'active')->orderBy('sort_order')->get();
         return view('pages.services', compact('services'));
     }
 
@@ -40,7 +41,7 @@ class HomeController extends Controller
 
     public function portfolio()
     {
-        $portfolios = Portfolio::published()->orderBy('sort_order')->get()->groupBy('category');
+        $portfolios = Portfolio::where('status', 'published')->orderBy('sort_order')->get()->groupBy('category');
         return view('pages.portfolio', compact('portfolios'));
     }
 
