@@ -807,6 +807,7 @@ a:hover {
     font-size: 0.75rem;
     color: var(--terminal-text-muted);
     display: inline;
+    margin-bottom: 0;
 }
 
 .footer-path {
@@ -815,6 +816,7 @@ a:hover {
     color: var(--terminal-accent);
     margin-left: auto;
     flex-shrink: 0;
+    margin-bottom: 0;
 }
 
 .footer-columns {
