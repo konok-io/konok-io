@@ -1412,11 +1412,10 @@ a:hover {
 .btn-card-light {
     background: transparent;
     color: #1e1e2e;
-    border: 1px solid #6b7280;
+    border: none;
 }
 
 .btn-card-light:hover {
     background: #e8e8f0;
-    border-color: #9ca3af;
     color: #1e1e2e;
 }
