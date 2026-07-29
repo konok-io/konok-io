@@ -158,8 +158,8 @@
     }
     
     .stat-card {
-        background: var(--admin-sidebar-bg);
-        border: 1px solid var(--admin-border);
+        background: #ffffff;
+        border: 1px solid var(--admin-content-border);
         border-radius: 8px;
         padding: var(--space-md);
         display: flex;
@@ -169,12 +169,12 @@
     }
     
     .stat-card:hover {
-        border-color: var(--admin-text-muted);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     
     .stat-card.stat-highlight {
         border-color: var(--terminal-accent);
-        background: rgba(37, 99, 235, 0.1);
+        background: rgba(37, 99, 235, 0.05);
     }
     
     .stat-icon {
@@ -190,13 +190,13 @@
         font-family: var(--font-mono);
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--admin-text);
+        color: var(--admin-content-text);
     }
     
     .stat-label {
         font-family: var(--font-mono);
         font-size: 0.7rem;
-        color: var(--admin-text-muted);
+        color: var(--admin-content-text-secondary);
     }
     
     /* Content Grid */
@@ -207,8 +207,8 @@
     }
     
     .content-card {
-        background: var(--admin-sidebar-bg);
-        border: 1px solid var(--admin-border);
+        background: #ffffff;
+        border: 1px solid var(--admin-content-border);
         border-radius: 8px;
         overflow: hidden;
     }
@@ -218,15 +218,15 @@
         justify-content: space-between;
         align-items: center;
         padding: var(--space-sm) var(--space-md);
-        border-bottom: 1px solid var(--admin-border);
-        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid var(--admin-content-border);
+        background: #f8f9fc;
     }
     
     .card-header h3 {
         font-family: var(--font-mono);
         font-size: 0.9rem;
         font-weight: 600;
-        color: var(--admin-text);
+        color: var(--admin-content-text);
         margin: 0;
     }
     
@@ -264,7 +264,7 @@
         justify-content: space-between;
         align-items: center;
         padding: var(--space-sm) var(--space-md);
-        border-bottom: 1px solid var(--admin-border);
+        border-bottom: 1px solid var(--admin-content-border);
         transition: background 0.2s ease;
     }
     
@@ -273,7 +273,7 @@
     }
     
     .contact-item:hover, .portfolio-item:hover {
-        background: var(--admin-hover);
+        background: #f8f9fc;
     }
     
     .contact-info, .portfolio-info {
@@ -285,13 +285,13 @@
     .contact-name, .portfolio-title {
         font-family: var(--font-mono);
         font-size: 0.85rem;
-        color: var(--admin-text);
+        color: var(--admin-content-text);
     }
     
     .contact-email, .portfolio-category {
         font-family: var(--font-mono);
         font-size: 0.7rem;
-        color: var(--admin-text-muted);
+        color: var(--admin-content-text-secondary);
     }
     
     .contact-meta {
@@ -309,24 +309,24 @@
     }
     
     .status-badge.new {
-        background: rgba(239, 68, 68, 0.2);
+        background: rgba(239, 68, 68, 0.1);
         color: #ef4444;
     }
     
     .status-badge.read, .status-badge.published {
-        background: rgba(34, 197, 94, 0.2);
+        background: rgba(34, 197, 94, 0.1);
         color: #22c55e;
     }
     
     .status-badge.draft {
-        background: rgba(245, 158, 11, 0.2);
+        background: rgba(245, 158, 11, 0.1);
         color: var(--terminal-accent);
     }
     
     .contact-date {
         font-family: var(--font-mono);
         font-size: 0.7rem;
-        color: var(--admin-text-muted);
+        color: var(--admin-content-text-secondary);
     }
 </style>
 @endpush

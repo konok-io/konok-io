@@ -412,7 +412,7 @@
     
     /* CSS Variables for Admin - macOS Dark Mode */
     :root {
-        --admin-bg: #0a0a0f;
+        /* Dark Sidebar & Topbar */
         --admin-sidebar-bg: #121218;
         --admin-border: #2a2a35;
         --admin-hover: rgba(255, 255, 255, 0.05);
@@ -420,8 +420,39 @@
         --admin-text: #e4e4e7;
         --admin-text-secondary: #a1a1aa;
         --admin-text-muted: #71717a;
+        
+        /* Light Content Area */
+        --admin-bg: #f8f9fc;
+        --admin-content-bg: #ffffff;
+        --admin-content-border: #e2e8f0;
+        --admin-content-text: #0f172a;
+        --admin-content-text-secondary: #64748b;
+        
         --sidebar-width: 240px;
         --sidebar-collapsed: 60px;
+    }
+    
+    /* Content Area - Light Mode */
+    .admin-content {
+        background: var(--admin-bg);
+    }
+    
+    .admin-main {
+        background: var(--admin-content-bg);
+        border-radius: 8px;
+        margin: var(--space-md);
+        padding: var(--space-lg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Topbar stays dark */
+    .admin-topbar {
+        background: var(--admin-sidebar-bg);
+    }
+    
+    /* Sidebar stays dark */
+    .admin-sidebar {
+        background: var(--admin-sidebar-bg);
     }
     
     /* Responsive */
@@ -444,6 +475,11 @@
         
         .admin-sidebar.collapsed + .admin-content {
             margin-left: 0;
+        }
+        
+        .admin-main {
+            margin: var(--space-sm);
+            padding: var(--space-md);
         }
     }
 </style>
