@@ -169,14 +169,12 @@
 <!-- Why Choose Us Section -->
 <section class="section" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
-        <div class="section-header-custom">
-            <div class="section-header-left">
-                <span class="section-eyebrow">// why_konok</span>
-                <h2 class="section-title">Why Choose KONOK.IO?</h2>
-                <p class="section-subtitle">
-                    We combine technical expertise with innovative solutions to deliver exceptional results.
-                </p>
-            </div>
+        <div class="section-header">
+            <span class="section-eyebrow">// why_konok</span>
+            <h2 class="section-title">Why Choose KONOK.IO?</h2>
+            <p class="section-subtitle">
+                We combine technical expertise with innovative solutions to deliver exceptional results.
+            </p>
         </div>
         
         <div class="grid grid-3">
