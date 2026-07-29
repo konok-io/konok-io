@@ -723,6 +723,24 @@ a:hover {
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
+/* Service Cards - Equal height with button at bottom */
+.section-light .grid .terminal-window,
+.section .grid .terminal-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-light .grid .terminal-window .terminal-content,
+.section .grid .terminal-window .terminal-content {
+    flex: 1;
+}
+
+.section-light .grid .card-footer,
+.section .grid .card-footer {
+    margin-top: auto;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
