@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.blank')
 
 @section('title', 'Admin Login - KONOK.IO')
 
