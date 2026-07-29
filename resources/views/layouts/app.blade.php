@@ -86,18 +86,6 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- Footer Header (Copyright) -->
-            <div class="footer-header">
-                <div class="terminal-dots">
-                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">[</span>
-                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">x</span>
-                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">]</span>
-                </div>
-                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
-                <span class="footer-creator">Created_by <span style="color: var(--terminal-accent);">KONOK</span></span>
-                <span class="terminal-path">~/copyright.blade.php</span>
-            </div>
-            
             <!-- Footer Columns -->
             <div class="footer-columns">
                 <div class="footer-column">
@@ -186,6 +174,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Footer Header (Copyright) -->
+            <div class="footer-header">
+                <div class="terminal-dots">
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">[</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">x</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">]</span>
+                </div>
+                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
+                <span class="footer-creator">Created_by <span style="color: var(--terminal-accent);">KONOK</span></span>
+                <span class="terminal-path">~/copyright.blade.php</span>
             </div>
         </div>
     </footer>
