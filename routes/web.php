@@ -29,6 +29,10 @@ Route::post('/contact', [HomeController::class, 'contactStore'])->name('contact.
 |--------------------------------------------------------------------------
 */
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+    Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+    
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('portfolios', App\Http\Controllers\Admin\PortfolioController::class);
     Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
@@ -39,11 +43,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('skills', App\Http\Controllers\Admin\SkillController::class);
 });
 
-/*
-|--------------------------------------------------------------------------
-| Auth Routes
-|--------------------------------------------------------------------------
-*/
-Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
-Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+
