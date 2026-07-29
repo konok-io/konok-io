@@ -1241,9 +1241,9 @@ a:hover {
     border-color: #585b70;
 }
 
-.footer-window-full .terminal-dots .terminal-dot.red { background: #f38ba8; }
-.footer-window-full .terminal-dots .terminal-dot.yellow { background: #f9e2af; }
-.footer-window-full .terminal-dots .terminal-dot.green { background: #a6e3a1; }
+.footer-window-full .terminal-dots .terminal-dot.red { background: #ff5f57; }
+.footer-window-full .terminal-dots .terminal-dot.yellow { background: #ffbd2e; }
+.footer-window-full .terminal-dots .terminal-dot.green { background: #28ca41; }
 
 .footer-window-full .terminal-path {
     background: #181825;
