@@ -1407,3 +1407,16 @@ a:hover {
     border-color: #585b70;
     color: #ffffff;
 }
+
+/* Card Button - Light Version */
+.btn-card-light {
+    background: transparent;
+    color: #1e1e2e;
+    border: 1px solid #45475a;
+}
+
+.btn-card-light:hover {
+    background: #e8e8f0;
+    border-color: #585b70;
+    color: #1e1e2e;
+}
