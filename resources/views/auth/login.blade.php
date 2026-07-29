@@ -14,27 +14,9 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">login.sh</span>
+                <span class="terminal-path">auth/login.blade.php</span>
             </div>
             <div class="terminal-content">
-                <!-- Header -->
-                <div class="login-header">
-                    <p class="terminal-line">
-                        <span style="color: var(--terminal-syntax-purple);">$</span> 
-                        <span style="color: var(--terminal-accent);">connecting</span> 
-                        <span style="color: var(--terminal-text-muted);">to admin_panel</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span style="color: var(--terminal-syntax-green);">✓</span> 
-                        <span style="color: var(--terminal-text-secondary);">Connection established</span>
-                    </p>
-                    <br>
-                    <p class="terminal-line">
-                        <span style="color: var(--terminal-syntax-purple);">$</span> 
-                        <span style="color: var(--terminal-accent);">./authenticate</span>
-                    </p>
-                </div>
-
                 <!-- Login Form -->
                 <form method="POST" action="{{ route('admin.login') }}" class="login-form">
                     @csrf
@@ -89,35 +71,29 @@
                         @enderror
                     </div>
 
-                    <!-- Remember Me -->
-                    <div class="form-group remember-me">
+                    <!-- Remember Me & Submit -->
+                    <div class="form-row">
                         <label class="checkbox-wrapper">
                             <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                             <span class="checkbox-custom"></span>
-                            <span style="color: var(--terminal-text-secondary); font-family: var(--font-mono);">remember_session</span>
+                            <span style="color: var(--terminal-text-secondary); font-family: var(--font-mono); font-size: 0.8rem;">remember</span>
                         </label>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="form-group">
+                        
                         <button type="submit" class="btn btn-login">
                             <span style="color: var(--terminal-syntax-purple);">$</span> 
-                            <span style="color: var(--terminal-accent);">login</span>
-                            <span class="cursor-blink"></span>
+                            <span style="color: var(--terminal-syntax-green);">login</span>
                         </button>
                     </div>
                 </form>
 
                 <!-- Footer -->
                 <div class="login-footer">
-                    <p class="terminal-line">
-                        <span style="color: var(--terminal-text-muted);">// Need help?</span>
-                        <a href="{{ url('/') }}" class="terminal-link">
-                            <span style="color: var(--terminal-syntax-purple);">&lt;</span> 
-                            <span style="color: var(--terminal-accent);">back_to_home</span>
-                            <span style="color: var(--terminal-syntax-purple);">/&gt;</span>
-                        </a>
-                    </p>
+                    <a href="{{ url('/') }}" class="terminal-link">
+                        <span style="color: var(--terminal-text-muted);">// </span>
+                        <span style="color: var(--terminal-syntax-purple);">&lt;</span> 
+                        <span style="color: var(--terminal-accent);">back_to_home</span>
+                        <span style="color: var(--terminal-syntax-purple);">/&gt;</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -139,39 +115,26 @@
 
     .login-container {
         width: 100%;
-        max-width: 520px;
+        max-width: 480px;
     }
 
     .login-terminal {
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
 
-    .login-header {
-        margin-bottom: var(--space-lg);
-        padding-bottom: var(--space-md);
-        border-bottom: 1px solid var(--terminal-border);
-    }
-
-    .terminal-line {
-        font-family: var(--font-mono);
-        font-size: 0.9rem;
-        margin-bottom: var(--space-xs);
-        line-height: 1.6;
-    }
-
     .login-form {
-        margin-top: var(--space-md);
+        padding: var(--space-md) 0;
     }
 
     .form-group {
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-md);
     }
 
     .terminal-label {
         display: block;
         font-family: var(--font-mono);
-        font-size: 0.9rem;
-        margin-bottom: var(--space-sm);
+        font-size: 0.85rem;
+        margin-bottom: var(--space-xs);
         color: var(--terminal-text);
     }
 
@@ -180,14 +143,14 @@
         align-items: center;
         background: var(--terminal-bg);
         border: 1px solid var(--terminal-border);
-        border-radius: 6px;
-        padding: 0 var(--space-md);
+        border-radius: 4px;
+        padding: 0 var(--space-sm);
         transition: all 0.3s ease;
     }
 
     .input-wrapper:focus-within {
         border-color: var(--terminal-accent);
-        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1);
     }
 
     .input-prefix {
@@ -199,9 +162,9 @@
         flex: 1;
         background: transparent;
         border: none;
-        padding: var(--space-md) 0;
+        padding: var(--space-sm) 0;
         font-family: var(--font-mono);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: var(--terminal-text);
         outline: none;
     }
@@ -216,13 +179,18 @@
 
     .terminal-error {
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: var(--terminal-syntax-red);
-        margin-top: var(--space-xs);
+        margin-top: 4px;
     }
 
-    .remember-me {
-        margin-bottom: var(--space-xl);
+    .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: var(--space-md);
+        padding-top: var(--space-md);
+        border-top: 1px solid var(--terminal-border);
     }
 
     .checkbox-wrapper {
@@ -230,7 +198,6 @@
         align-items: center;
         gap: var(--space-sm);
         cursor: pointer;
-        font-size: 0.85rem;
     }
 
     .checkbox-wrapper input[type="checkbox"] {
@@ -238,8 +205,8 @@
     }
 
     .checkbox-custom {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         border: 2px solid var(--terminal-border);
         border-radius: 4px;
         display: flex;
@@ -256,40 +223,34 @@
     .checkbox-wrapper input[type="checkbox"]:checked + .checkbox-custom::after {
         content: '✓';
         color: var(--terminal-bg);
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         font-weight: bold;
     }
 
     .btn-login {
-        width: 100%;
-        padding: var(--space-md) var(--space-lg);
-        background: linear-gradient(135deg, var(--terminal-accent) 0%, #d97706 100%);
-        color: var(--terminal-bg);
-        border: none;
-        border-radius: 6px;
+        padding: var(--space-sm) var(--space-lg);
+        background: var(--terminal-bg-secondary);
+        color: var(--terminal-syntax-green);
+        border: 1px solid var(--terminal-syntax-green);
+        border-radius: 4px;
         font-family: var(--font-mono);
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: var(--space-sm);
+        gap: var(--space-xs);
     }
 
     .btn-login:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px -10px rgba(245, 158, 11, 0.5);
-    }
-
-    .btn-login:active {
-        transform: translateY(0);
+        background: var(--terminal-syntax-green);
+        color: var(--terminal-bg);
     }
 
     .login-footer {
-        margin-top: var(--space-xl);
-        padding-top: var(--space-lg);
+        margin-top: var(--space-md);
+        padding-top: var(--space-md);
         border-top: 1px solid var(--terminal-border);
     }
 
@@ -297,22 +258,12 @@
         color: var(--terminal-accent);
         text-decoration: none;
         font-family: var(--font-mono);
+        font-size: 0.8rem;
         transition: all 0.2s ease;
-        margin-left: var(--space-sm);
     }
 
     .terminal-link:hover {
         color: var(--terminal-syntax-green);
-    }
-
-    /* Cursor blink animation */
-    @keyframes blink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
-    }
-
-    .cursor-blink {
-        animation: blink 1s infinite;
     }
 </style>
 @endpush
