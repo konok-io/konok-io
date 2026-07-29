@@ -163,7 +163,7 @@ a:hover {
 .terminal-titlebar {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    justify-content: space-between;
     padding: var(--space-sm) var(--space-md);
     background: var(--terminal-bg-tertiary);
     border-bottom: 1px solid var(--terminal-border);
