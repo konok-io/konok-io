@@ -773,30 +773,33 @@ a:hover {
    FOOTER
    ============================================ */
 .footer {
+    width: 100%;
     background: var(--terminal-bg-tertiary);
     border-top: 1px solid var(--terminal-border);
     padding: var(--space-2xl) 0;
 }
 
-.footer-header {
+.footer-bottom {
+    width: 100%;
     background: var(--terminal-bg-secondary);
-    border: 1px solid var(--terminal-border);
-    border-radius: var(--radius);
-    padding: var(--space-md) var(--space-lg);
-    margin-bottom: var(--space-xl);
+    border-top: 1px solid var(--terminal-border);
+    padding: var(--space-md) 0;
+}
+
+.footer-content-wrapper {
     display: flex;
     align-items: center;
     gap: var(--space-md);
 }
 
-.footer-header .terminal-dots {
+.footer-content-wrapper .terminal-dots {
     display: flex;
     gap: 6px;
     align-items: center;
     flex-shrink: 0;
 }
 
-.footer-header .terminal-dots .terminal-dot {
+.footer-content-wrapper .terminal-dots .terminal-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -819,7 +822,7 @@ a:hover {
     margin-left: auto;
 }
 
-.footer-header .terminal-path {
+.footer-content-wrapper .terminal-path {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--terminal-accent);
@@ -835,6 +838,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .footer-column {
@@ -950,12 +954,12 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .footer-header {
+    .footer-content-wrapper {
         flex-wrap: wrap;
         gap: var(--space-sm);
     }
     
-    .footer-header .terminal-dots {
+    .footer-content-wrapper .terminal-dots {
         width: 100%;
         justify-content: flex-start;
     }

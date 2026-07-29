@@ -185,7 +185,7 @@
         <!-- Footer Bottom (Copyright) - Full Width -->
         <div class="footer-bottom">
             <div class="container">
-                <div class="footer-header">
+                <div class="footer-content-wrapper">
                     <div class="terminal-dots">
                         <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">[</span>
                         <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">x</span>
