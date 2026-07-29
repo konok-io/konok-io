@@ -232,6 +232,18 @@ a:hover {
     gap: var(--space-sm);
 }
 
+/* Navbar Header Dots - Black */
+.navbar-brand .terminal-dots .terminal-dot {
+    width: 10px;
+    height: 10px;
+}
+
+.navbar-brand .terminal-dots .terminal-dot.red,
+.navbar-brand .terminal-dots .terminal-dot.yellow,
+.navbar-brand .terminal-dots .terminal-dot.green {
+    background: #1e293b;
+}
+
 .navbar-nav {
     display: flex;
     align-items: center;
@@ -1372,9 +1384,9 @@ a:hover {
     border-color: #45475a;
 }
 
-.hero-window .terminal-dots .terminal-dot.red { background: #1e293b; }
-.hero-window .terminal-dots .terminal-dot.yellow { background: #1e293b; }
-.hero-window .terminal-dots .terminal-dot.green { background: #1e293b; }
+.hero-window .terminal-dots .terminal-dot.red { background: #ff5f57; }
+.hero-window .terminal-dots .terminal-dot.yellow { background: #ffbd2e; }
+.hero-window .terminal-dots .terminal-dot.green { background: #28ca41; }
 
 .hero-window .terminal-path {
     background: #181825;
