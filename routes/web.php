@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,54 +13,37 @@ use Illuminate\Support\Facades\View;
 |
 */
 
-// Make layout available
-View::composer('layouts.app', function ($view) {
-    $view->with('currentRoute', Route::currentRouteName());
+// Public Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/services/{slug}', [HomeController::class, 'service'])->name('service');
+Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
+Route::get('/portfolio/{slug}', [HomeController::class, 'portfolioShow'])->name('portfolio.show');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [HomeController::class, 'contactStore'])->name('contact.store');
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('portfolios', App\Http\Controllers\Admin\PortfolioController::class);
+    Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
+    Route::get('contacts', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('contacts.index');
+    Route::get('contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('contacts.show');
+    Route::post('contacts/{contact}/read', [App\Http\Controllers\Admin\ContactController::class, 'markAsRead'])->name('contacts.read');
+    Route::delete('contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('contacts.destroy');
+    Route::resource('skills', App\Http\Controllers\Admin\SkillController::class);
 });
 
-// Home Page
-Route::get('/', function () {
-    return view('pages.welcome');
-})->name('home');
-
-// About Page
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
-
-// Services Page
-Route::get('/services', function () {
-    return view('pages.services');
-})->name('services');
-
-// Portfolio Page
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-})->name('portfolio');
-
-// Contact Page
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
-
-// Contact Form Submission (placeholder)
-Route::post('/contact', function (\Illuminate\Http\Request $request) {
-    // Validate the request
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'subject' => 'nullable|string|max:255',
-        'message' => 'required|string|max:5000',
-    ]);
-    
-    // Here you would typically:
-    // 1. Send an email
-    // 2. Store in database
-    // 3. Notify via Slack/Discord
-    
-    // For now, return success response
-    return response()->json([
-        'success' => true,
-        'message' => 'Your message has been sent successfully!'
-    ]);
-})->name('contact.store');
+/*
+|--------------------------------------------------------------------------
+| Auth Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
