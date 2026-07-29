@@ -59,7 +59,7 @@
 
 <!-- Services Preview -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="section-header">
             <span class="section-eyebrow">// services</span>
             <h2 class="section-title">What We Offer</h2>
@@ -167,7 +167,7 @@
 
 <!-- Why Choose Us Section -->
 <section class="section" style="padding-left: 0; padding-right: 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="section-header">
             <span class="section-eyebrow">// why_konok</span>
             <h2 class="section-title">Why Choose KONOK.IO?</h2>
@@ -290,7 +290,7 @@
 
 <!-- Featured Projects Section -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="section-header">
             <span class="section-eyebrow">// projects</span>
             <h2 class="section-title">Featured Projects</h2>
@@ -410,7 +410,7 @@
 
 <!-- Stats Section -->
 <section class="section" style="padding-left: 0; padding-right: 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
@@ -446,7 +446,7 @@
 
 <!-- CTA Section -->
 <section class="cta-section" style="padding: var(--space-3xl) 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
@@ -477,7 +477,7 @@
 
 <!-- Testimonials Section -->
 <section class="section section-light" style="padding-left: 0; padding-right: 0;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="section-header">
             <span class="section-eyebrow">// testimonials</span>
             <h2 class="section-title">What Our Clients Say</h2>
@@ -576,7 +576,7 @@
 
 <!-- Client Logos Section -->
 <section class="section" style="padding-left: 0; padding-right: 0; overflow: hidden;">
-    <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="text-center" style="margin-bottom: var(--space-xl);">
             <span class="section-eyebrow">// trusted_by</span>
             <h2 class="section-title" style="font-size: 1.5rem;">Trusted by Leading Companies</h2>
