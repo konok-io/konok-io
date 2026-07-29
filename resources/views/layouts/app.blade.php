@@ -103,11 +103,6 @@
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
                         <div class="terminal-titlebar">
-                            <div class="terminal-dots">
-                                <span class="terminal-dot red"></span>
-                                <span class="terminal-dot yellow"></span>
-                                <span class="terminal-dot green"></span>
-                            </div>
                             <span class="terminal-path">~/konok.io/about.js</span>
                         </div>
                         <div class="terminal-content">
