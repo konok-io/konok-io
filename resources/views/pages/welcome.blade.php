@@ -448,7 +448,7 @@
 
 <!-- CTA Section -->
 <section class="cta-section">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
+    <div class="container">
         <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
@@ -456,19 +456,19 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">contact.blade.php</span>
+                <span class="terminal-path">~/konok-io $ ./deploy.sh</span>
             </div>
-            <div class="terminal-content" style="padding: var(--space-2xl);">
-                <span class="section-eyebrow">// start_project</span>
+            <div class="terminal-content" style="padding: var(--space-3xl) var(--space-xl);">
+                <p style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--terminal-syntax-green); margin-bottom: var(--space-md);">// start_project</p>
                 <h2 class="cta-title">Ready to Transform Your Business?</h2>
                 <p class="cta-subtitle">
                     Let's collaborate and build something amazing together. Get started with a free consultation today.
                 </p>
-                <div class="cta-actions">
+                <div class="cta-actions" style="margin-top: var(--space-xl);">
                     <a href="{{ route('contact') }}" class="btn btn-card">
-                        <span>$</span> get_in_touch
+                        <span style="color: var(--terminal-syntax-green);">$</span> get_in_touch
                     </a>
-                    <a href="{{ route('projects') }}" class="btn btn-card" style="background: transparent; color: var(--terminal-accent); border: 1px solid var(--terminal-accent);">
+                    <a href="{{ route('projects') }}" class="btn btn-command">
                         &gt; view_projects
                     </a>
                 </div>
