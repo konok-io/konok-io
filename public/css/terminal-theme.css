@@ -1187,3 +1187,124 @@ a:hover {
     white-space: nowrap;
     border: 0;
 }
+
+/* ============================================
+   FOOTER DARK MODE
+   ============================================ */
+.footer {
+    background: #1e1e2e;
+    border-top: 1px solid #313244;
+}
+
+.footer-bottom {
+    background: #181825;
+    border-top: 1px solid #313244;
+}
+
+.footer-content-wrapper {
+    color: #cdd6f4;
+}
+
+.footer-content-wrapper .terminal-dots .terminal-dot.red { background: #f38ba8; }
+.footer-content-wrapper .terminal-dots .terminal-dot.yellow { background: #f9e2af; }
+.footer-content-wrapper .terminal-dots .terminal-dot.green { background: #a6e3a1; }
+
+.footer-copyright {
+    color: #a6adc8;
+}
+
+.footer-creator {
+    color: #a6adc8;
+}
+
+.footer-content-wrapper .terminal-path {
+    background: #313244;
+    color: #89b4fa;
+    border-color: #45475a;
+}
+
+.footer-columns {
+    color: #cdd6f4;
+}
+
+.footer-column {
+    color: #cdd6f4;
+}
+
+.footer-window-full {
+    background: #313244;
+    border-color: #45475a;
+}
+
+.footer-window-full .terminal-titlebar {
+    background: #45475a;
+    border-color: #585b70;
+}
+
+.footer-window-full .terminal-dots .terminal-dot.red { background: #f38ba8; }
+.footer-window-full .terminal-dots .terminal-dot.yellow { background: #f9e2af; }
+.footer-window-full .terminal-dots .terminal-dot.green { background: #a6e3a1; }
+
+.footer-window-full .terminal-path {
+    background: #181825;
+    color: #89b4fa;
+    border-color: #45475a;
+}
+
+.footer-window-full .terminal-content {
+    color: #cdd6f4;
+}
+
+.footer-links {
+    color: #cdd6f4;
+}
+
+.footer-link {
+    color: #a6adc8;
+}
+
+.footer-link:hover {
+    color: #89b4fa;
+}
+
+.newsletter-input {
+    background: #181825;
+    border-color: #45475a;
+    color: #cdd6f4;
+}
+
+.newsletter-input::placeholder {
+    color: #6c7086;
+}
+
+.newsletter-input:focus {
+    border-color: #89b4fa;
+}
+
+.newsletter-btn {
+    background: #89b4fa;
+    color: #1e1e2e;
+}
+
+.newsletter-btn:hover {
+    background: #b4befe;
+}
+
+.social-icons {
+    color: #cdd6f4;
+}
+
+.social-link {
+    background: #313244;
+    border-color: #45475a;
+    color: #a6adc8;
+}
+
+.social-link:hover {
+    background: #89b4fa;
+    color: #1e1e2e;
+}
+
+.footer pre code {
+    color: #cdd6f4;
+}
