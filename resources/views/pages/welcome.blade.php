@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('services') }}" class="btn btn-card btn-sm">
                         &gt; learn_more
                     </a>
@@ -334,7 +334,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
@@ -367,7 +367,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
@@ -400,7 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer" style="background: #1e1e2e; padding: var(--space-sm) var(--space-md); border-top: 1px solid #45475a; text-align: center;">
+                <div class="card-footer" style="background: #e8e8f0; padding: var(--space-sm) var(--space-md); border-top: 1px solid #c0c0d0; text-align: center;">
                     <a href="{{ route('projects') }}" class="btn btn-card btn-sm">
                         &gt; view_details
                     </a>
@@ -487,6 +487,11 @@
                 <p class="section-subtitle">
                     Don't just take our word for it - hear from our satisfied clients.
                 </p>
+            </div>
+            <div class="section-header-right">
+                <a href="#" class="btn btn-card">
+                    &gt; view_all
+                </a>
             </div>
         </div>
         
