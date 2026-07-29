@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Services | Muhammad Rashed Hossain')
+@section('title', 'Services | KONOK.IO - Key Of Next Online Knowledge')
 
 @section('content')
 <!-- Page Header -->

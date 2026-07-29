@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'KONOK.IO - Professional Web Development & IT Solutions')
+@section('title', 'KONOK.IO - Key Of Next Online Knowledge')
 
 @section('content')
 
@@ -45,7 +45,7 @@
   <span style="color: var(--terminal-syntax-amber);">name</span>: <span style="color: var(--terminal-syntax-green);">"KONOK.IO"</span>,
   <span style="color: var(--terminal-syntax-amber);">services</span>: [<span style="color: var(--terminal-syntax-green);">"Web Dev"</span>, <span style="color: var(--terminal-syntax-green);">"IT Support"</span>],
   <span style="color: var(--terminal-syntax-amber);">focus</span>: <span style="color: var(--terminal-syntax-green);">"Business Solutions"</span>,
-  <span style="color: var(--terminal-syntax-amber);">mission</span>: <span style="color: var(--terminal-syntax-green);">"Digital Excellence"</span>
+  <span style="color: var(--terminal-syntax-amber);">mission</span>: <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>
 };
 
 <span style="color: var(--terminal-text-muted);">// Ready to transform?</span>

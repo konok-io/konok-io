@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KONOK.IO - Professional Web Development and IT Solutions. Building powerful digital experiences.">
-    <title>@yield('title', 'KONOK.IO | Professional Web Development & IT Solutions')</title>
+    <meta name="description" content="KONOK.IO - Key Of Next Online Knowledge. Building powerful digital experiences.">
+    <title>@yield('title', 'KONOK.IO | Key Of Next Online Knowledge')</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
