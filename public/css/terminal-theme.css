@@ -773,13 +773,13 @@ a:hover {
    FOOTER
    ============================================ */
 .footer {
-    background: var(--terminal-bg-primary);
+    background: var(--terminal-bg-tertiary);
     border-top: 1px solid var(--terminal-border);
     padding: var(--space-2xl) 0;
 }
 
 .footer-header {
-    background: var(--terminal-bg-primary);
+    background: var(--terminal-bg-secondary);
     border: 1px solid var(--terminal-border);
     border-radius: var(--radius);
     padding: var(--space-md) var(--space-lg);
