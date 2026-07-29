@@ -431,7 +431,7 @@
         /* Sidebar & Topbar - Light Gray */
         --admin-sidebar-bg: #e8e8f0;
         --admin-border: #d1d5db;
-        --admin-hover: #dcdce4;
+        --admin-hover: #f3f4f6;
         --admin-active-bg: rgba(37, 99, 235, 0.12);
         --admin-accent: #2563eb;
         --admin-text: #0f172a;
