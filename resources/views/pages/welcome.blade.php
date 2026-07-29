@@ -15,11 +15,7 @@
                 </h1>
                 <p class="hero-subtitle">
                     <span style="color: var(--terminal-syntax-purple);">&lt;</span>
-                    Professional Web Development
-                    <span style="color: var(--terminal-text-muted);"> | </span>
-                    IT Solutions
-                    <span style="color: var(--terminal-text-muted);"> | </span>
-                    Digital Excellence
+                    Key Of Next Online Knowledge
                     <span style="color: var(--terminal-syntax-purple);">/&gt;</span>
                 </p>
                 <p style="color: var(--terminal-text-secondary); margin-bottom: 24px; font-size: 1.125rem;">
