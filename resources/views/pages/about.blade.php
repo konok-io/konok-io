@@ -20,7 +20,7 @@
                 <h1 class="hero-title" style="font-size: 2rem;">The Story Behind KONOK</h1>
                 <p class="hero-subtitle" style="font-size: 1rem;">
                     <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">mission</span> = 
-                    <span style="color: var(--terminal-syntax-green);">"Key Of Next-generation Online Knowledge"</span>;
+                    <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>;
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     </p>
                     
                     <p style="margin-bottom: var(--space-md);">
-                        Today, as the founder of <strong>KONOK (Key Of Next-generation Online Knowledge)</strong>, 
+                        Today, as the founder of <strong>KONOK (Key Of Next Online Knowledge)</strong>, 
                         I leverage advanced AI tools to accelerate code development and optimize 
                         system workflows, delivering high-quality solutions to clients worldwide.
                     </p>
@@ -206,7 +206,7 @@
                                 <div style="position: absolute; left: calc(-1 * var(--space-lg) - 5px); top: 5px; width: 10px; height: 10px; background: var(--terminal-accent); border-radius: 50%;"></div>
                                 <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); margin-bottom: var(--space-xs);">2023 - Present</div>
                                 <h4 style="font-size: 1rem; margin-bottom: var(--space-xs);">Founder & Developer</h4>
-                                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: var(--space-sm);">KONOK - Key Of Next-generation Online Knowledge</p>
+                                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: var(--space-sm);">KONOK - Key Of Next Online Knowledge</p>
                                 <p style="font-size: 0.875rem; color: var(--terminal-text-secondary); margin-bottom: 0;">
                                     Building innovative web solutions and providing IT consulting services to clients worldwide.
                                 </p>

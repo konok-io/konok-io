@@ -108,8 +108,7 @@
                         <div class="terminal-content">
                             <pre style="font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
   <span style="color: var(--terminal-syntax-amber);">name</span>: <span style="color: var(--terminal-syntax-green);">"KONOK.IO"</span>,
-  <span style="color: var(--terminal-syntax-amber);">desc</span>: <span style="color: var(--terminal-syntax-green);">"Key Of Next"</span>,
-  <span style="color: var(--terminal-syntax-amber);">      </span>: <span style="color: var(--terminal-syntax-green);">"Online Knowledge"</span>
+  <span style="color: var(--terminal-syntax-amber);">desc</span>: <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>
 };</code></pre>
                         </div>
                     </div>
