@@ -42,7 +42,7 @@
                             <span class="terminal-dot yellow"></span>
                             <span class="terminal-dot green"></span>
                         </div>
-                        <span class="terminal-path">~/konok.io/company.js</span>
+                        <span class="terminal-path">~/konok.io/company.blade.php</span>
                     </div>
                     <div class="terminal-content">
                         <pre style="font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.8; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
@@ -192,7 +192,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/stats.json</span>
+                <span class="terminal-path">~/stats.blade.php</span>
             </div>
             <div class="terminal-content">
                 <div class="grid grid-4">
@@ -228,7 +228,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">~/start.sh</span>
+                <span class="terminal-path" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">~/start.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow" style="color: white;">// start_project</span>

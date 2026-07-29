@@ -95,7 +95,7 @@
                 </div>
                 <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
                 <span class="footer-creator">Created_by <span style="color: var(--terminal-accent);">KONOK</span></span>
-                <span class="terminal-path">~/copyright.js</span>
+                <span class="terminal-path">~/copyright.blade.php</span>
             </div>
             
             <!-- Footer Columns -->
@@ -103,7 +103,7 @@
                 <div class="footer-column">
                     <div class="terminal-window footer-window-full">
                         <div class="terminal-titlebar">
-                            <span class="terminal-path">~/konok.io/about.js</span>
+                            <span class="terminal-path">~/konok.io/about.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <pre style="font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">konok</span> = {
@@ -123,7 +123,7 @@
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/routes.js</span>
+                            <span class="terminal-path">~/routes.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <ul class="footer-links">
@@ -145,7 +145,7 @@
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/services.json</span>
+                            <span class="terminal-path">~/services.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <ul class="footer-links">
@@ -166,7 +166,7 @@
                                 <span class="terminal-dot yellow"></span>
                                 <span class="terminal-dot green"></span>
                             </div>
-                            <span class="terminal-path">~/subscribe.sh</span>
+                            <span class="terminal-path">~/subscribe.blade.php</span>
                         </div>
                         <div class="terminal-content">
                             <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-text-secondary); margin-bottom: 12px;">

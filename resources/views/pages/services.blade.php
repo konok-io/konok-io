@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/services.json</span>
+                <span class="terminal-path">~/services.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow">// services</span>
@@ -369,7 +369,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/hire-me.sh</span>
+                <span class="terminal-path">~/hire-me.blade.php</span>
             </div>
             <div class="terminal-content text-center">
                 <span class="section-eyebrow">// get_started</span>

@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/portfolio/index.html</span>
+                <span class="terminal-path">~/portfolio/index.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow">// portfolio</span>
@@ -274,7 +274,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/technologies.json</span>
+                <span class="terminal-path">~/technologies.blade.php</span>
             </div>
             <div class="terminal-content">
                 <div class="grid grid-4">
@@ -330,7 +330,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/hire-developer.sh</span>
+                <span class="terminal-path">~/hire-developer.blade.php</span>
             </div>
             <div class="terminal-content text-center">
                 <span class="section-eyebrow">// collaborate</span>

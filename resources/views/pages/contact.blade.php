@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/contact.js</span>
+                <span class="terminal-path">~/contact.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow">// contact_me</span>

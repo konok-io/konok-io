@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/about.js</span>
+                <span class="terminal-path">~/about.blade.php</span>
             </div>
             <div class="terminal-content">
                 <span class="section-eyebrow">// about_me</span>
@@ -251,7 +251,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/next-step.sh</span>
+                <span class="terminal-path">~/next-step.blade.php</span>
             </div>
             <div class="terminal-content text-center">
                 <span class="section-eyebrow">// next_steps</span>
