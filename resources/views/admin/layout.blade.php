@@ -59,10 +59,6 @@
         </nav>
         
         <div class="sidebar-footer">
-            <a href="{{ url('/') }}" target="_blank" class="sidebar-link">
-                <span class="nav-icon">&lt;</span>
-                <span>view_site /&gt;</span>
-            </a>
             <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
                 <button type="submit" class="sidebar-link">
