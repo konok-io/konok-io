@@ -907,7 +907,7 @@ a:hover {
 }
 
 .newsletter-btn {
-    padding: 8px 12px;
+    padding: 0;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     background: var(--terminal-accent);
