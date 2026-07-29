@@ -169,15 +169,6 @@ a:hover {
     border-bottom: 1px solid var(--terminal-border);
 }
 
-.terminal-titlebar-dark {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-sm) var(--space-md);
-    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .terminal-dots {
     display: flex;
     gap: 6px;
