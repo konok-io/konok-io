@@ -241,6 +241,7 @@
         width: 16px;
         text-align: center;
         flex-shrink: 0;
+        margin-right: 8px;
         color: #1e293b;
     }
     
