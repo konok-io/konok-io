@@ -193,7 +193,7 @@
         padding: var(--space-sm) var(--space-md);
         font-family: var(--font-mono);
         font-size: 0.65rem;
-        color: var(--admin-text-muted);
+        color: #1e293b;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -241,7 +241,7 @@
         width: 16px;
         text-align: center;
         flex-shrink: 0;
-        color: var(--admin-text-muted);
+        color: #1e293b;
     }
     
     .badge {
@@ -300,7 +300,7 @@
         background: var(--admin-hover);
         border: 1px solid var(--admin-border);
         border-radius: 4px;
-        color: var(--admin-text-muted);
+        color: #1e293b;
         font-family: var(--font-mono);
         font-size: 0.9rem;
         cursor: pointer;
@@ -381,7 +381,7 @@
     }
     
     .breadcrumb-sep {
-        color: var(--admin-text-muted);
+        color: #1e293b;
     }
     
     .breadcrumb-current {
@@ -417,7 +417,7 @@
     }
     
     .topbar-btn .terminal-syntax-purple {
-        color: var(--admin-text-muted);
+        color: #1e293b;
     }
     
     /* Admin Main */
