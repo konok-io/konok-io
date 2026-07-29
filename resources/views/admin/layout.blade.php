@@ -231,11 +231,11 @@
     
     .nav-link.active {
         background: var(--admin-active-bg);
-        color: #3b82f6;
+        color: #2563eb;
     }
     
     .nav-link.active .nav-icon {
-        color: #3b82f6;
+        color: #2563eb;
     }
     
     .nav-icon {
@@ -432,22 +432,22 @@
     
     /* CSS Variables */
     :root {
-        /* Light Sidebar & Topbar */
-        --admin-sidebar-bg: #f8f9fc;
-        --admin-border: #e2e8f0;
-        --admin-hover: #eef1f6;
-        --admin-active-bg: rgba(59, 130, 246, 0.12);
-        --admin-accent: #f59e0b;
-        --admin-text: #1e293b;
-        --admin-text-secondary: #64748b;
+        /* Sidebar & Topbar - Light Gray */
+        --admin-sidebar-bg: #f1f5f9;
+        --admin-border: #cbd5e1;
+        --admin-hover: #e2e8f0;
+        --admin-active-bg: rgba(37, 99, 235, 0.12);
+        --admin-accent: #2563eb;
+        --admin-text: #0f172a;
+        --admin-text-secondary: #475569;
         --admin-text-muted: #94a3b8;
         
-        /* Light Content Area */
-        --admin-bg: #f1f5f9;
+        /* Content Area - White */
+        --admin-bg: #e2e8f0;
         --admin-content-bg: #ffffff;
-        --admin-content-border: #e2e8f0;
-        --admin-content-text: #1e293b;
-        --admin-content-text-secondary: #64748b;
+        --admin-content-border: #cbd5e1;
+        --admin-content-text: #0f172a;
+        --admin-content-text-secondary: #475569;
         --admin-content-text-muted: #94a3b8;
         
         --sidebar-width: 220px;

@@ -49,8 +49,8 @@
         <div class="stat-card">
             <div class="stat-card-header">
                 <div class="terminal-dots-mini">
-                    <span class="dot green"></span>
-                    <span class="dot green"></span>
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
                     <span class="dot green"></span>
                 </div>
                 <span class="stat-file">stats/published.blade.php</span>
@@ -69,9 +69,9 @@
         <div class="stat-card">
             <div class="stat-card-header">
                 <div class="terminal-dots-mini">
+                    <span class="dot red"></span>
                     <span class="dot yellow"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
                 </div>
                 <span class="stat-file">stats/services.blade.php</span>
             </div>
@@ -89,9 +89,9 @@
         <div class="stat-card">
             <div class="stat-card-header">
                 <div class="terminal-dots-mini">
-                    <span class="dot blue"></span>
-                    <span class="dot blue"></span>
-                    <span class="dot blue"></span>
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
                 </div>
                 <span class="stat-file">stats/contacts.blade.php</span>
             </div>
@@ -110,8 +110,8 @@
             <div class="stat-card-header">
                 <div class="terminal-dots-mini">
                     <span class="dot red"></span>
-                    <span class="dot red"></span>
-                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
                 </div>
                 <span class="stat-file">stats/unread.blade.php</span>
             </div>
@@ -244,7 +244,7 @@
     }
     
     .terminal-dot.red { background: #ff5f57; }
-    .terminal-dot.yellow { background: var(--admin-accent); }
+    .terminal-dot.yellow { background: #ffbd2e; }
     .terminal-dot.green { background: #28c840; }
     .terminal-dot.blue { background: #3b82f6; }
     
@@ -306,7 +306,7 @@
     }
     
     .terminal-dots-mini .dot.red { background: #ff5f57; }
-    .terminal-dots-mini .dot.yellow { background: var(--admin-accent); }
+    .terminal-dots-mini .dot.yellow { background: #ffbd2e; }
     .terminal-dots-mini .dot.green { background: #28c840; }
     .terminal-dots-mini .dot.blue { background: #3b82f6; }
     
@@ -343,6 +343,8 @@
         background: rgba(245, 158, 11, 0.1);
         border-color: rgba(245, 158, 11, 0.3);
     }
+    
+    .stat-icon-wrapper.warning .stat-icon { color: #f59e0b; }
     
     .stat-icon-wrapper.danger {
         background: rgba(239, 68, 68, 0.1);
