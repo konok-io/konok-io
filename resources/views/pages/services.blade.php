@@ -278,7 +278,7 @@
                         </svg>
                     </div>
                     <h4 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: var(--space-sm);">// consultation</h4>
-                    <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                    <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                         Discuss your requirements, goals, and timeline to understand your needs.
                     </p>
                 </div>
@@ -304,7 +304,7 @@
                         </svg>
                     </div>
                     <h4 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: var(--space-sm);">// planning</h4>
-                    <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                    <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                         Create detailed project specifications, wireframes, and development roadmap.
                     </p>
                 </div>
@@ -327,7 +327,7 @@
                         </svg>
                     </div>
                     <h4 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: var(--space-sm);">// development</h4>
-                    <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                    <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                         Build your solution with clean code, regular updates, and collaborative feedback.
                     </p>
                 </div>
@@ -350,7 +350,7 @@
                         </svg>
                     </div>
                     <h4 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: var(--space-sm);">// delivery</h4>
-                    <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                    <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                         Launch your project with full documentation, training, and ongoing support.
                     </p>
                 </div>

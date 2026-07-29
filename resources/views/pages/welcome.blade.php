@@ -18,7 +18,7 @@
                     Key Of Next Online Knowledge
                     <span style="color: var(--terminal-syntax-purple);">/&gt;</span>
                 </p>
-                <p style="font-family: var(--font-mono); color: var(--terminal-text-secondary); margin-bottom: 24px; font-size: 1rem; line-height: 1.8;">
+                <p style="color: var(--terminal-text-secondary); margin-bottom: 24px; font-size: 1.125rem; line-height: 1.8;">
                     Transforming your ideas into powerful digital experiences. We help businesses grow with custom web applications, IT infrastructure, and comprehensive digital solutions.
                 </p>
                 <div class="hero-actions">

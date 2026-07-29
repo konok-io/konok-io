@@ -46,7 +46,7 @@
                         <span style="color: var(--terminal-syntax-purple);">function</span> <span style="color: var(--terminal-accent);">aboutMe</span>() {
                     </h2>
                     
-                    <p style="font-family: var(--font-mono); margin-bottom: var(--space-md); font-size: 0.9rem; line-height: 1.8; color: var(--terminal-text-secondary);">
+                    <p style="margin-bottom: var(--space-md); font-size: 1rem; line-height: 1.8; color: var(--terminal-text-secondary);">
                         Hello! I'm <strong>Muhammad Rashed Hossain</strong>, an experienced 
                         <span class="badge badge-primary">IT Support Specialist</span>, 
                         <span class="badge">Computer Operator</span>, and 
@@ -54,14 +54,14 @@
                         currently based in <strong>Saudi Arabia</strong>.
                     </p>
                     
-                    <p style="font-family: var(--font-mono); margin-bottom: var(--space-md); font-size: 0.9rem; line-height: 1.8; color: var(--terminal-text-secondary);">
+                    <p style="margin-bottom: var(--space-md); font-size: 1rem; line-height: 1.8; color: var(--terminal-text-secondary);">
                         With a passion for technology and problem-solving, I've built a career 
                         bridging the gap between IT infrastructure and modern web development. 
                         My journey began in IT support, where I mastered the art of troubleshooting 
                         and maintaining complex systems.
                     </p>
                     
-                    <p style="font-family: var(--font-mono); margin-bottom: var(--space-md); font-size: 0.9rem; line-height: 1.8; color: var(--terminal-text-secondary);">
+                    <p style="margin-bottom: var(--space-md); font-size: 1rem; line-height: 1.8; color: var(--terminal-text-secondary);">
                         Today, as the founder of <strong>KONOK (Key Of Next Online Knowledge)</strong>, 
                         I leverage advanced AI tools to accelerate code development and optimize 
                         system workflows, delivering high-quality solutions to clients worldwide.
@@ -205,9 +205,9 @@
                             <div style="position: relative; margin-bottom: var(--space-xl);">
                                 <div style="position: absolute; left: calc(-1 * var(--space-lg) - 5px); top: 5px; width: 10px; height: 10px; background: var(--terminal-accent); border-radius: 50%;"></div>
                                 <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); margin-bottom: var(--space-xs);">2023 - Present</div>
-                                <h4 style="font-family: var(--font-mono); font-size: 1rem; margin-bottom: var(--space-xs); color: var(--terminal-accent);">Founder & Developer</h4>
+                                <h4 style="font-size: 1rem; margin-bottom: var(--space-xs);">Founder & Developer</h4>
                                 <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: var(--space-sm);">KONOK - Key Of Next Online Knowledge</p>
-                                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                                <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                                     Building innovative web solutions and providing IT consulting services to clients worldwide.
                                 </p>
                             </div>
@@ -216,9 +216,9 @@
                             <div style="position: relative; margin-bottom: var(--space-xl);">
                                 <div style="position: absolute; left: calc(-1 * var(--space-lg) - 5px); top: 5px; width: 10px; height: 10px; background: var(--terminal-syntax-purple); border-radius: 50%;"></div>
                                 <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-syntax-purple); margin-bottom: var(--space-xs);">2020 - 2023</div>
-                                <h4 style="font-family: var(--font-mono); font-size: 1rem; margin-bottom: var(--space-xs); color: var(--terminal-accent);">Senior IT Support Specialist</h4>
+                                <h4 style="font-size: 1rem; margin-bottom: var(--space-xs);">Senior IT Support Specialist</h4>
                                 <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: var(--space-sm);">Various Organizations</p>
-                                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                                <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                                     Managed IT infrastructure, provided technical support, and implemented security solutions.
                                 </p>
                             </div>
@@ -227,9 +227,9 @@
                             <div style="position: relative;">
                                 <div style="position: absolute; left: calc(-1 * var(--space-lg) - 5px); top: 5px; width: 10px; height: 10px; background: var(--terminal-syntax-green); border-radius: 50%;"></div>
                                 <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-syntax-green); margin-bottom: var(--space-xs);">2018 - 2020</div>
-                                <h4 style="font-family: var(--font-mono); font-size: 1rem; margin-bottom: var(--space-xs); color: var(--terminal-accent);">Computer Operator & IT Assistant</h4>
+                                <h4 style="font-size: 1rem; margin-bottom: var(--space-xs);">Computer Operator & IT Assistant</h4>
                                 <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: var(--space-sm);">Entry Level Positions</p>
-                                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
+                                <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); margin-bottom: 0; line-height: 1.6;">
                                     Gained foundational experience in IT operations and system administration.
                                 </p>
                             </div>
