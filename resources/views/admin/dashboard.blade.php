@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">dashboard.sh</span>
+                <span class="terminal-path">dashboard.blade.php</span>
             </div>
             <div class="terminal-content">
                 <pre style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; margin: 0; padding: var(--space-md);"><code><span style="color: var(--admin-accent);">$</span> <span style="color: var(--admin-content-text);">./dashboard.sh</span>
@@ -33,7 +33,7 @@
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
                 </div>
-                <span class="stat-file">portfolios.json</span>
+                <span class="stat-file">stats/portfolios.blade.php</span>
             </div>
             <div class="stat-card-body">
                 <div class="stat-icon-wrapper">
@@ -53,7 +53,7 @@
                     <span class="dot green"></span>
                     <span class="dot green"></span>
                 </div>
-                <span class="stat-file">published.json</span>
+                <span class="stat-file">stats/published.blade.php</span>
             </div>
             <div class="stat-card-body">
                 <div class="stat-icon-wrapper success">
@@ -73,7 +73,7 @@
                     <span class="dot yellow"></span>
                     <span class="dot yellow"></span>
                 </div>
-                <span class="stat-file">services.json</span>
+                <span class="stat-file">stats/services.blade.php</span>
             </div>
             <div class="stat-card-body">
                 <div class="stat-icon-wrapper warning">
@@ -93,7 +93,7 @@
                     <span class="dot blue"></span>
                     <span class="dot blue"></span>
                 </div>
-                <span class="stat-file">contacts.json</span>
+                <span class="stat-file">stats/contacts.blade.php</span>
             </div>
             <div class="stat-card-body">
                 <div class="stat-icon-wrapper">
@@ -113,7 +113,7 @@
                     <span class="dot red"></span>
                     <span class="dot red"></span>
                 </div>
-                <span class="stat-file">unread.json</span>
+                <span class="stat-file">stats/unread.blade.php</span>
             </div>
             <div class="stat-card-body">
                 <div class="stat-icon-wrapper danger">
@@ -138,7 +138,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">contacts.sh</span>
+                    <span class="terminal-path">partials/recent-contacts.blade.php</span>
                     <a href="{{ route('admin.contacts.index') }}" class="terminal-action">&gt; view_all</a>
                 </div>
                 <div class="terminal-content" style="max-height: 180px; overflow-y: auto;">
@@ -174,7 +174,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">portfolios.sh</span>
+                    <span class="terminal-path">partials/recent-portfolios.blade.php</span>
                     <a href="{{ route('admin.portfolios.index') }}" class="terminal-action">&gt; view_all</a>
                 </div>
                 <div class="terminal-content" style="max-height: 180px; overflow-y: auto;">
