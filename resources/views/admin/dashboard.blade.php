@@ -131,7 +131,7 @@
     <div class="content-grid">
         <!-- Recent Contacts -->
         <div class="content-card">
-            <div class="terminal-window" style="margin: 0; border: none; box-shadow: none;">
+            <div class="terminal-window" style="margin: 0;">
                 <div class="terminal-titlebar">
                     <div class="terminal-dots">
                         <span class="terminal-dot red"></span>
@@ -167,7 +167,7 @@
         
         <!-- Recent Portfolios -->
         <div class="content-card">
-            <div class="terminal-window" style="margin: 0; border: none; box-shadow: none;">
+            <div class="terminal-window" style="margin: 0;">
                 <div class="terminal-titlebar">
                     <div class="terminal-dots">
                         <span class="terminal-dot red"></span>
@@ -397,6 +397,9 @@
     
     .content-card {
         background: transparent;
+        border: 1px solid var(--admin-content-border);
+        border-radius: 8px;
+        overflow: hidden;
     }
     
     .content-card .terminal-content::-webkit-scrollbar {
