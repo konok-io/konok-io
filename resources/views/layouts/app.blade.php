@@ -89,9 +89,9 @@
             <!-- Footer Header (Copyright) -->
             <div class="footer-header">
                 <div class="terminal-dots">
-                    <span class="terminal-dot red"></span>
-                    <span class="terminal-dot yellow"></span>
-                    <span class="terminal-dot green"></span>
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">[</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">x</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">]</span>
                 </div>
                 <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
                 <span class="footer-creator">Created_by <span style="color: var(--terminal-accent);">KONOK</span></span>
