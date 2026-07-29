@@ -172,7 +172,7 @@
         <div class="section-header">
             <span class="section-eyebrow">// why_konok</span>
             <h2 class="section-title">Why Choose KONOK.IO?</h2>
-            <p class="section-subtitle">
+            <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">
                 We combine technical expertise with innovative solutions to deliver exceptional results.
             </p>
         </div>
