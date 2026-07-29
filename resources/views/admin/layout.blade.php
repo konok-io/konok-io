@@ -140,7 +140,7 @@
         border-bottom: 1px solid var(--admin-border);
         display: flex;
         align-items: center;
-        min-height: 48px;
+        min-height: 56px;
     }
     
     .sidebar-brand {
@@ -365,7 +365,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 48px;
+        min-height: 56px;
         position: sticky;
         top: 0;
         z-index: 50;
