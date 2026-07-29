@@ -900,6 +900,33 @@ a:hover {
     margin-left: auto;
 }
 
+/* Footer - No border, no padding on PC */
+.footer {
+    padding: var(--space-2xl) 0;
+}
+
+.footer-column .terminal-window {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.footer-column .terminal-window .terminal-titlebar {
+    border-bottom: none;
+    background: transparent;
+}
+
+.footer-columns {
+    padding: 0;
+}
+
+@media (min-width: 769px) {
+    .footer {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 /* ============================================
    TESTIMONIALS
    ============================================ */
