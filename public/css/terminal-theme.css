@@ -1312,3 +1312,32 @@ a:hover {
 .footer pre code {
     color: #cdd6f4;
 }
+
+/* Hero Window Dark Mode */
+.hero-window {
+    background: #1e1e2e;
+    border-color: #45475a;
+}
+
+.hero-window .terminal-titlebar {
+    background: #313244;
+    border-color: #45475a;
+}
+
+.hero-window .terminal-dots .terminal-dot.red { background: #ff5f57; }
+.hero-window .terminal-dots .terminal-dot.yellow { background: #ffbd2e; }
+.hero-window .terminal-dots .terminal-dot.green { background: #28ca41; }
+
+.hero-window .terminal-path {
+    background: #181825;
+    color: #89b4fa;
+    border-color: #45475a;
+}
+
+.hero-window .terminal-content {
+    color: #cdd6f4;
+}
+
+.hero-window .terminal-content code {
+    color: #cdd6f4;
+}
