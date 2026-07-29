@@ -155,22 +155,7 @@
             
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <div class="terminal-window">
-                    <div class="terminal-titlebar" style="padding: 8px 12px;">
-                        <div class="terminal-dots">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                        </div>
-                        <span class="terminal-path">~/copyright.js</span>
-                    </div>
-                </div>
-                <div class="footer-bottom-content">
-                    <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
-                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-text-muted);">
-                        Built with <span style="color: var(--terminal-syntax-red);">❤</span> in Bangladesh 🇧🇩
-                    </p>
-                </div>
+                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. Built with <span style="color: var(--terminal-syntax-red);">❤</span> in Bangladesh */</p>
             </div>
         </div>
     </footer>
