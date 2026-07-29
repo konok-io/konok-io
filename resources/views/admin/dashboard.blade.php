@@ -1,16 +1,35 @@
 @extends('admin.layout')
 
-@section('page-title', 'Dashboard')
+@section('page-title', 'dashboard')
 
 @section('admin-content')
 <div class="dashboard">
+    <!-- Terminal Header -->
+    <div class="dashboard-header">
+        <div class="terminal-window">
+            <div class="terminal-titlebar">
+                <div class="terminal-dots">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-path">dashboard.blade.php</span>
+            </div>
+            <div class="terminal-content">
+                <pre style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">$</span> <span style="color: var(--admin-text);">./dashboard.sh</span>
+<span style="color: var(--terminal-syntax-green);">✓</span> <span style="color: var(--admin-text-secondary);">Loading dashboard data...</span>
+<span style="color: var(--terminal-syntax-green);">✓</span> <span style="color: var(--admin-text-secondary);">System ready</span></code></pre>
+            </div>
+        </div>
+    </div>
+
     <!-- Stats Grid -->
     <div class="stats-grid">
         <div class="stat-card">
             <div class="stat-icon">💼</div>
             <div class="stat-info">
                 <span class="stat-value">{{ $stats['total_portfolios'] }}</span>
-                <span class="stat-label">Total Portfolios</span>
+                <span class="stat-label">// total_portfolios</span>
             </div>
         </div>
         
@@ -18,7 +37,7 @@
             <div class="stat-icon">✅</div>
             <div class="stat-info">
                 <span class="stat-value">{{ $stats['published_portfolios'] }}</span>
-                <span class="stat-label">Published</span>
+                <span class="stat-label">// published</span>
             </div>
         </div>
         
@@ -26,7 +45,7 @@
             <div class="stat-icon">🛠️</div>
             <div class="stat-info">
                 <span class="stat-value">{{ $stats['total_services'] }}</span>
-                <span class="stat-label">Services</span>
+                <span class="stat-label">// services</span>
             </div>
         </div>
         
@@ -34,7 +53,7 @@
             <div class="stat-icon">📧</div>
             <div class="stat-info">
                 <span class="stat-value">{{ $stats['total_contacts'] }}</span>
-                <span class="stat-label">Total Contacts</span>
+                <span class="stat-label">// total_contacts</span>
             </div>
         </div>
         
@@ -42,7 +61,7 @@
             <div class="stat-icon">🔔</div>
             <div class="stat-info">
                 <span class="stat-value">{{ $stats['unread_contacts'] }}</span>
-                <span class="stat-label">Unread Messages</span>
+                <span class="stat-label">// unread_messages</span>
             </div>
         </div>
     </div>
@@ -52,12 +71,14 @@
         <!-- Recent Contacts -->
         <div class="content-card">
             <div class="card-header">
-                <h3>Recent Contacts</h3>
-                <a href="{{ route('admin.contacts.index') }}" class="card-link">View All →</a>
+                <h3><span style="color: var(--terminal-syntax-purple);">$</span> recent_contacts</h3>
+                <a href="{{ route('admin.contacts.index') }}" class="card-link">&gt; view_all</a>
             </div>
             <div class="card-body">
                 @if($recentContacts->isEmpty())
-                    <p class="empty-state">No contacts yet</p>
+                    <div class="empty-terminal">
+                        <span style="color: var(--admin-text-muted);">// No contacts yet</span>
+                    </div>
                 @else
                     <ul class="contact-list">
                         @foreach($recentContacts as $contact)
@@ -68,9 +89,9 @@
                                 </div>
                                 <div class="contact-meta">
                                     @if($contact->status === 'new')
-                                        <span class="status-badge new">New</span>
+                                        <span class="status-badge new">NEW</span>
                                     @else
-                                        <span class="status-badge read">Read</span>
+                                        <span class="status-badge read">READ</span>
                                     @endif
                                     <span class="contact-date">{{ $contact->created_at->diffForHumans() }}</span>
                                 </div>
@@ -84,25 +105,27 @@
         <!-- Recent Portfolios -->
         <div class="content-card">
             <div class="card-header">
-                <h3>Recent Portfolios</h3>
-                <a href="{{ route('admin.portfolios.index') }}" class="card-link">View All →</a>
+                <h3><span style="color: var(--terminal-syntax-purple);">$</span> recent_portfolios</h3>
+                <a href="{{ route('admin.portfolios.index') }}" class="card-link">&gt; view_all</a>
             </div>
             <div class="card-body">
                 @if($recentPortfolios->isEmpty())
-                    <p class="empty-state">No portfolios yet</p>
+                    <div class="empty-terminal">
+                        <span style="color: var(--admin-text-muted);">// No portfolios yet</span>
+                    </div>
                 @else
                     <ul class="portfolio-list">
                         @foreach($recentPortfolios as $portfolio)
                             <li class="portfolio-item">
                                 <div class="portfolio-info">
                                     <span class="portfolio-title">{{ $portfolio->title }}</span>
-                                    <span class="portfolio-category">{{ $portfolio->category ?? 'Uncategorized' }}</span>
+                                    <span class="portfolio-category">{{ $portfolio->category ?? 'uncategorized' }}</span>
                                 </div>
                                 <div class="portfolio-meta">
                                     @if($portfolio->status === 'published')
-                                        <span class="status-badge published">Published</span>
+                                        <span class="status-badge published">PUBLISHED</span>
                                     @else
-                                        <span class="status-badge draft">Draft</span>
+                                        <span class="status-badge draft">DRAFT</span>
                                     @endif
                                 </div>
                             </li>
@@ -121,31 +144,41 @@
         max-width: 1400px;
     }
     
+    /* Dashboard Header */
+    .dashboard-header {
+        margin-bottom: var(--space-lg);
+    }
+    
     /* Stats Grid */
     .stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: var(--space-lg);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--space-md);
         margin-bottom: var(--space-xl);
     }
     
     .stat-card {
-        background: var(--terminal-bg-secondary);
-        border: 1px solid var(--terminal-border);
+        background: var(--admin-sidebar-bg);
+        border: 1px solid var(--admin-border);
         border-radius: 8px;
-        padding: var(--space-lg);
+        padding: var(--space-md);
         display: flex;
         align-items: center;
         gap: var(--space-md);
+        transition: all 0.2s ease;
+    }
+    
+    .stat-card:hover {
+        border-color: var(--admin-text-muted);
     }
     
     .stat-card.stat-highlight {
         border-color: var(--terminal-accent);
-        background: rgba(245, 158, 11, 0.05);
+        background: rgba(37, 99, 235, 0.1);
     }
     
     .stat-icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .stat-info {
@@ -155,26 +188,27 @@
     
     .stat-value {
         font-family: var(--font-mono);
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        color: var(--terminal-text);
+        color: var(--admin-text);
     }
     
     .stat-label {
-        font-size: 0.85rem;
-        color: var(--terminal-text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--admin-text-muted);
     }
     
     /* Content Grid */
     .content-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: var(--space-lg);
     }
     
     .content-card {
-        background: var(--terminal-bg-secondary);
-        border: 1px solid var(--terminal-border);
+        background: var(--admin-sidebar-bg);
+        border: 1px solid var(--admin-border);
         border-radius: 8px;
         overflow: hidden;
     }
@@ -183,24 +217,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: var(--space-md) var(--space-lg);
-        border-bottom: 1px solid var(--terminal-border);
+        padding: var(--space-sm) var(--space-md);
+        border-bottom: 1px solid var(--admin-border);
         background: rgba(0, 0, 0, 0.2);
     }
     
     .card-header h3 {
         font-family: var(--font-mono);
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 600;
-        color: var(--terminal-text);
+        color: var(--admin-text);
         margin: 0;
     }
     
     .card-link {
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: var(--terminal-accent);
         text-decoration: none;
+        transition: color 0.2s ease;
     }
     
     .card-link:hover {
@@ -208,13 +243,12 @@
     }
     
     .card-body {
-        padding: var(--space-md);
+        padding: var(--space-sm);
     }
     
-    .empty-state {
+    .empty-terminal {
         text-align: center;
         padding: var(--space-xl);
-        color: var(--terminal-text-muted);
         font-family: var(--font-mono);
     }
     
@@ -230,7 +264,7 @@
         justify-content: space-between;
         align-items: center;
         padding: var(--space-sm) var(--space-md);
-        border-bottom: 1px solid var(--terminal-border);
+        border-bottom: 1px solid var(--admin-border);
         transition: background 0.2s ease;
     }
     
@@ -239,7 +273,7 @@
     }
     
     .contact-item:hover, .portfolio-item:hover {
-        background: rgba(245, 158, 11, 0.05);
+        background: var(--admin-hover);
     }
     
     .contact-info, .portfolio-info {
@@ -250,13 +284,14 @@
     
     .contact-name, .portfolio-title {
         font-family: var(--font-mono);
-        font-size: 0.9rem;
-        color: var(--terminal-text);
+        font-size: 0.85rem;
+        color: var(--admin-text);
     }
     
     .contact-email, .portfolio-category {
-        font-size: 0.75rem;
-        color: var(--terminal-text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--admin-text-muted);
     }
     
     .contact-meta {
@@ -267,9 +302,10 @@
     
     .status-badge {
         font-family: var(--font-mono);
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        border-radius: 4px;
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: 600;
     }
     
     .status-badge.new {
@@ -288,8 +324,9 @@
     }
     
     .contact-date {
-        font-size: 0.75rem;
-        color: var(--terminal-text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--admin-text-muted);
     }
 </style>
 @endpush
