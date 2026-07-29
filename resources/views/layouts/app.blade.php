@@ -93,7 +93,8 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */ // Created_by <span style="color: var(--terminal-accent);">KONOK</span></p>
+                <p class="footer-copyright">/* © {{ date('Y') }} KONOK.IO. All rights reserved. */</p>
+                <span class="footer-creator">Created_by <span style="color: var(--terminal-accent);">KONOK</span></span>
                 <span class="terminal-path">~/copyright.js</span>
             </div>
             

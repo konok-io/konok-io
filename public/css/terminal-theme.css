@@ -810,11 +810,18 @@ a:hover {
     margin-bottom: 0;
 }
 
+.footer-creator {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--terminal-text-muted);
+    display: inline;
+    margin-bottom: 0;
+}
+
 .footer-header .terminal-path {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--terminal-accent);
-    margin-left: auto;
     flex-shrink: 0;
     margin-bottom: 0;
     background: var(--terminal-bg-secondary);
