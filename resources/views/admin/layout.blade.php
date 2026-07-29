@@ -433,22 +433,22 @@
     /* CSS Variables */
     :root {
         /* Light Sidebar & Topbar */
-        --admin-sidebar-bg: #ffffff;
-        --admin-border: #e5e7eb;
-        --admin-hover: #f3f4f6;
-        --admin-active-bg: rgba(59, 130, 246, 0.15);
+        --admin-sidebar-bg: #f8f9fc;
+        --admin-border: #e2e8f0;
+        --admin-hover: #eef1f6;
+        --admin-active-bg: rgba(59, 130, 246, 0.12);
         --admin-accent: #f59e0b;
-        --admin-text: #1f2937;
-        --admin-text-secondary: #6b7280;
-        --admin-text-muted: #9ca3af;
+        --admin-text: #1e293b;
+        --admin-text-secondary: #64748b;
+        --admin-text-muted: #94a3b8;
         
         /* Light Content Area */
-        --admin-bg: #f9fafb;
+        --admin-bg: #f1f5f9;
         --admin-content-bg: #ffffff;
-        --admin-content-border: #e5e7eb;
-        --admin-content-text: #1f2937;
-        --admin-content-text-secondary: #6b7280;
-        --admin-content-text-muted: #9ca3af;
+        --admin-content-border: #e2e8f0;
+        --admin-content-text: #1e293b;
+        --admin-content-text-secondary: #64748b;
+        --admin-content-text-muted: #94a3b8;
         
         --sidebar-width: 220px;
         --sidebar-collapsed: 56px;
