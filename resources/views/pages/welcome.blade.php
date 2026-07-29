@@ -413,7 +413,7 @@
 </section>
 
 <!-- Stats Section -->
-<section class="section" style="padding-left: 0; padding-right: 0;">
+<section class="section section-light" style="padding-left: 0; padding-right: 0;">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="terminal-window">
             <div class="terminal-titlebar">
