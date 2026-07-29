@@ -447,7 +447,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section" style="padding: var(--space-3xl) 0;">
+<section class="cta-section">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
         <div class="terminal-window">
             <div class="terminal-titlebar">
@@ -456,19 +456,19 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.3);">contact.blade.php</span>
+                <span class="terminal-path">contact.blade.php</span>
             </div>
-            <div class="terminal-content">
-                <span class="section-eyebrow" style="color: white;">// start_project</span>
+            <div class="terminal-content" style="padding: var(--space-2xl);">
+                <span class="section-eyebrow">// start_project</span>
                 <h2 class="cta-title">Ready to Transform Your Business?</h2>
                 <p class="cta-subtitle">
                     Let's collaborate and build something amazing together. Get started with a free consultation today.
                 </p>
                 <div class="cta-actions">
-                    <a href="{{ route('contact') }}" class="btn btn-primary">
-                        <span style="color: var(--terminal-accent);">$</span> get_in_touch
+                    <a href="{{ route('contact') }}" class="btn btn-card">
+                        <span>$</span> get_in_touch
                     </a>
-                    <a href="{{ route('projects') }}" class="btn btn-command">
+                    <a href="{{ route('projects') }}" class="btn btn-card" style="background: transparent; color: var(--terminal-accent); border: 1px solid var(--terminal-accent);">
                         &gt; view_projects
                     </a>
                 </div>

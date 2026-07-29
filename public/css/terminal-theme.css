@@ -1073,23 +1073,32 @@ a:hover {
    CTA SECTION
    ============================================ */
 .cta-section {
-    background: var(--terminal-bg-primary);
+    background: var(--terminal-bg-tertiary);
     text-align: center;
     padding: var(--space-3xl) 0;
 }
 
+.cta-section .terminal-window {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--terminal-border);
+}
+
 .cta-title {
     font-size: 2rem;
+    font-weight: 700;
     margin-bottom: var(--space-md);
+    color: var(--terminal-text-primary);
 }
 
 .cta-subtitle {
     font-size: 1.125rem;
     color: var(--terminal-text-secondary);
     margin-bottom: var(--space-xl);
-    max-width: 500px;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
 }
 
 .cta-actions {
