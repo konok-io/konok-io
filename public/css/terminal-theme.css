@@ -775,29 +775,44 @@ a:hover {
 .footer {
     background: var(--terminal-bg-primary);
     border-top: 1px solid var(--terminal-border);
-    padding: var(--space-2xl) 0;
+    padding: var(--space-2xl) 0 var(--space-lg);
 }
 
-.footer-content {
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-links-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    flex-direction: column;
 }
 
 .footer-links {
-    display: flex;
-    gap: var(--space-lg);
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
     padding: 0;
     margin: 0;
 }
 
 .footer-link {
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--terminal-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .footer-link:hover {
@@ -810,8 +825,57 @@ a:hover {
     color: var(--terminal-text-muted);
 }
 
-.footer-copyright::before {
+.footer-title {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--terminal-text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.footer-title::before {
     content: '// ';
+    color: var(--terminal-text-muted);
+}
+
+.footer-bottom {
+    padding-top: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.footer-bottom-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.footer-bottom .terminal-window {
+    max-width: 180px;
+}
+
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
 }
 
 /* ============================================
