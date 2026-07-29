@@ -13,55 +13,116 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">dashboard.blade.php</span>
+                <span class="terminal-path">dashboard.sh</span>
             </div>
             <div class="terminal-content">
-                <pre style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6; margin: 0;"><code><span style="color: var(--terminal-syntax-purple);">$</span> <span style="color: var(--admin-text);">./dashboard.sh</span>
-<span style="color: var(--terminal-syntax-green);">✓</span> <span style="color: var(--admin-text-secondary);">Loading dashboard data...</span>
-<span style="color: var(--terminal-syntax-green);">✓</span> <span style="color: var(--admin-text-secondary);">System ready</span></code></pre>
+                <pre style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.6; margin: 0; padding: var(--space-md);"><code><span style="color: var(--admin-accent);">$</span> <span style="color: var(--admin-content-text);">./dashboard.sh</span>
+<span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Loading system metrics...</span>
+<span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Connected to database</span>
+<span style="color: #22c55e;">✓</span> <span style="color: var(--admin-content-text-secondary);">Ready</span> <span style="color: var(--admin-content-text-muted);">_</span></code></pre>
             </div>
         </div>
     </div>
 
-    <!-- Stats Grid -->
+    <!-- Stats Grid - Terminal Style -->
     <div class="stats-grid">
         <div class="stat-card">
-            <div class="stat-icon">💼</div>
-            <div class="stat-info">
-                <span class="stat-value">{{ $stats['total_portfolios'] }}</span>
-                <span class="stat-label">// total_portfolios</span>
+            <div class="stat-card-header">
+                <div class="terminal-dots-mini">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="stat-file">portfolios.json</span>
+            </div>
+            <div class="stat-card-body">
+                <div class="stat-icon-wrapper">
+                    <span class="stat-icon">{...}</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value">{{ $stats['total_portfolios'] }}</span>
+                    <span class="stat-label">// total_projects</span>
+                </div>
             </div>
         </div>
         
         <div class="stat-card">
-            <div class="stat-icon">✅</div>
-            <div class="stat-info">
-                <span class="stat-value">{{ $stats['published_portfolios'] }}</span>
-                <span class="stat-label">// published</span>
+            <div class="stat-card-header">
+                <div class="terminal-dots-mini">
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="stat-file">published.json</span>
+            </div>
+            <div class="stat-card-body">
+                <div class="stat-icon-wrapper success">
+                    <span class="stat-icon">✓</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value">{{ $stats['published_portfolios'] }}</span>
+                    <span class="stat-label">// published</span>
+                </div>
             </div>
         </div>
         
         <div class="stat-card">
-            <div class="stat-icon">🛠️</div>
-            <div class="stat-info">
-                <span class="stat-value">{{ $stats['total_services'] }}</span>
-                <span class="stat-label">// services</span>
+            <div class="stat-card-header">
+                <div class="terminal-dots-mini">
+                    <span class="dot yellow"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot yellow"></span>
+                </div>
+                <span class="stat-file">services.json</span>
+            </div>
+            <div class="stat-card-body">
+                <div class="stat-icon-wrapper warning">
+                    <span class="stat-icon">⚙</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value">{{ $stats['total_services'] }}</span>
+                    <span class="stat-label">// services</span>
+                </div>
             </div>
         </div>
         
         <div class="stat-card">
-            <div class="stat-icon">📧</div>
-            <div class="stat-info">
-                <span class="stat-value">{{ $stats['total_contacts'] }}</span>
-                <span class="stat-label">// total_contacts</span>
+            <div class="stat-card-header">
+                <div class="terminal-dots-mini">
+                    <span class="dot blue"></span>
+                    <span class="dot blue"></span>
+                    <span class="dot blue"></span>
+                </div>
+                <span class="stat-file">contacts.json</span>
+            </div>
+            <div class="stat-card-body">
+                <div class="stat-icon-wrapper">
+                    <span class="stat-icon">@</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value">{{ $stats['total_contacts'] }}</span>
+                    <span class="stat-label">// total_contacts</span>
+                </div>
             </div>
         </div>
         
-        <div class="stat-card stat-highlight">
-            <div class="stat-icon">🔔</div>
-            <div class="stat-info">
-                <span class="stat-value">{{ $stats['unread_contacts'] }}</span>
-                <span class="stat-label">// unread_messages</span>
+        <div class="stat-card stat-alert">
+            <div class="stat-card-header">
+                <div class="terminal-dots-mini">
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                    <span class="dot red"></span>
+                </div>
+                <span class="stat-file">unread.json</span>
+            </div>
+            <div class="stat-card-body">
+                <div class="stat-icon-wrapper danger">
+                    <span class="stat-icon">!</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value">{{ $stats['unread_contacts'] }}</span>
+                    <span class="stat-label">// unread_messages</span>
+                </div>
             </div>
         </div>
     </div>
@@ -70,68 +131,90 @@
     <div class="content-grid">
         <!-- Recent Contacts -->
         <div class="content-card">
-            <div class="card-header">
-                <h3><span style="color: var(--terminal-syntax-purple);">$</span> recent_contacts</h3>
-                <a href="{{ route('admin.contacts.index') }}" class="card-link">&gt; view_all</a>
-            </div>
-            <div class="card-body">
-                @if($recentContacts->isEmpty())
-                    <div class="empty-terminal">
-                        <span style="color: var(--admin-text-muted);">// No contacts yet</span>
+            <div class="terminal-window" style="margin: 0; border: none; box-shadow: none;">
+                <div class="terminal-titlebar">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
                     </div>
-                @else
-                    <ul class="contact-list">
-                        @foreach($recentContacts as $contact)
-                            <li class="contact-item">
-                                <div class="contact-info">
-                                    <span class="contact-name">{{ $contact->name }}</span>
-                                    <span class="contact-email">{{ $contact->email }}</span>
-                                </div>
-                                <div class="contact-meta">
-                                    @if($contact->status === 'new')
-                                        <span class="status-badge new">NEW</span>
-                                    @else
-                                        <span class="status-badge read">READ</span>
-                                    @endif
-                                    <span class="contact-date">{{ $contact->created_at->diffForHumans() }}</span>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
+                    <span class="terminal-path">contacts.sh</span>
+                    <a href="{{ route('admin.contacts.index') }}" class="terminal-action">&gt; view_all</a>
+                </div>
+                <div class="terminal-content">
+                    @if($recentContacts->isEmpty())
+                        <div class="terminal-empty">
+                            <span style="color: var(--admin-content-text-muted);"># No contacts found</span>
+                        </div>
+                    @else
+                        <ul class="data-list">
+                            @foreach($recentContacts as $contact)
+                                <li class="data-item">
+                                    <div class="data-info">
+                                        <span class="data-key">name:</span>
+                                        <span class="data-value">{{ $contact->name }}</span>
+                                    </div>
+                                    <div class="data-info">
+                                        <span class="data-key">email:</span>
+                                        <span class="data-value">{{ $contact->email }}</span>
+                                    </div>
+                                    <div class="data-meta">
+                                        @if($contact->status === 'new')
+                                            <span class="data-status new"><span style="color: #ef4444;">[NEW]</span></span>
+                                        @else
+                                            <span class="data-status read"><span style="color: #22c55e;">[READ]</span></span>
+                                        @endif
+                                        <span class="data-time">{{ $contact->created_at->diffForHumans() }}</span>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
             </div>
         </div>
         
         <!-- Recent Portfolios -->
         <div class="content-card">
-            <div class="card-header">
-                <h3><span style="color: var(--terminal-syntax-purple);">$</span> recent_portfolios</h3>
-                <a href="{{ route('admin.portfolios.index') }}" class="card-link">&gt; view_all</a>
-            </div>
-            <div class="card-body">
-                @if($recentPortfolios->isEmpty())
-                    <div class="empty-terminal">
-                        <span style="color: var(--admin-text-muted);">// No portfolios yet</span>
+            <div class="terminal-window" style="margin: 0; border: none; box-shadow: none;">
+                <div class="terminal-titlebar">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
                     </div>
-                @else
-                    <ul class="portfolio-list">
-                        @foreach($recentPortfolios as $portfolio)
-                            <li class="portfolio-item">
-                                <div class="portfolio-info">
-                                    <span class="portfolio-title">{{ $portfolio->title }}</span>
-                                    <span class="portfolio-category">{{ $portfolio->category ?? 'uncategorized' }}</span>
-                                </div>
-                                <div class="portfolio-meta">
-                                    @if($portfolio->status === 'published')
-                                        <span class="status-badge published">PUBLISHED</span>
-                                    @else
-                                        <span class="status-badge draft">DRAFT</span>
-                                    @endif
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
+                    <span class="terminal-path">portfolios.sh</span>
+                    <a href="{{ route('admin.portfolios.index') }}" class="terminal-action">&gt; view_all</a>
+                </div>
+                <div class="terminal-content">
+                    @if($recentPortfolios->isEmpty())
+                        <div class="terminal-empty">
+                            <span style="color: var(--admin-content-text-muted);"># No portfolios found</span>
+                        </div>
+                    @else
+                        <ul class="data-list">
+                            @foreach($recentPortfolios as $portfolio)
+                                <li class="data-item">
+                                    <div class="data-info">
+                                        <span class="data-key">title:</span>
+                                        <span class="data-value">{{ $portfolio->title }}</span>
+                                    </div>
+                                    <div class="data-info">
+                                        <span class="data-key">cat:</span>
+                                        <span class="data-value">{{ $portfolio->category ?? 'null' }}</span>
+                                    </div>
+                                    <div class="data-meta">
+                                        @if($portfolio->status === 'published')
+                                            <span class="data-status published"><span style="color: #22c55e;">[PUBLISHED]</span></span>
+                                        @else
+                                            <span class="data-status draft"><span style="color: var(--admin-accent);">[DRAFT]</span></span>
+                                        @endif
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
@@ -144,42 +227,154 @@
         max-width: 1400px;
     }
     
-    /* Dashboard Header */
+    /* Dashboard Header - Main Terminal */
     .dashboard-header {
         margin-bottom: var(--space-lg);
     }
     
-    /* Stats Grid */
+    .terminal-window {
+        background: #fefefe;
+        border: 1px solid var(--admin-content-border);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .terminal-titlebar {
+        background: linear-gradient(to bottom, #f6f6f6, #e8e8e8);
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .terminal-dots {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .terminal-dots .terminal-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    
+    .terminal-dot.red { background: #ff5f57; }
+    .terminal-dot.yellow { background: var(--admin-accent); }
+    .terminal-dot.green { background: #28c840; }
+    .terminal-dot.blue { background: #3b82f6; }
+    
+    .terminal-path {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: #666;
+        margin-left: auto;
+    }
+    
+    .terminal-content {
+        padding: 0;
+    }
+    
+    .terminal-content pre {
+        margin: 0;
+        padding: var(--space-md);
+    }
+    
+    /* Stats Grid - Card Style */
     .stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: var(--space-md);
         margin-bottom: var(--space-xl);
     }
     
     .stat-card {
-        background: #ffffff;
+        background: #fefefe;
         border: 1px solid var(--admin-content-border);
         border-radius: 8px;
-        padding: var(--space-md);
-        display: flex;
-        align-items: center;
-        gap: var(--space-md);
+        overflow: hidden;
         transition: all 0.2s ease;
     }
     
     .stat-card:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
     }
     
-    .stat-card.stat-highlight {
-        border-color: var(--terminal-accent);
-        background: rgba(37, 99, 235, 0.05);
+    .stat-card-header {
+        background: linear-gradient(to bottom, #fafafa, #f0f0f0);
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .terminal-dots-mini {
+        display: flex;
+        gap: 4px;
+    }
+    
+    .terminal-dots-mini .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    
+    .terminal-dots-mini .dot.red { background: #ff5f57; }
+    .terminal-dots-mini .dot.yellow { background: var(--admin-accent); }
+    .terminal-dots-mini .dot.green { background: #28c840; }
+    .terminal-dots-mini .dot.blue { background: #3b82f6; }
+    
+    .stat-file {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: #888;
+    }
+    
+    .stat-card-body {
+        padding: var(--space-md);
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+    }
+    
+    .stat-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e5e5e5;
+    }
+    
+    .stat-icon-wrapper.success {
+        background: rgba(34, 197, 94, 0.1);
+        border-color: rgba(34, 197, 94, 0.3);
+    }
+    
+    .stat-icon-wrapper.warning {
+        background: rgba(245, 158, 11, 0.1);
+        border-color: rgba(245, 158, 11, 0.3);
+    }
+    
+    .stat-icon-wrapper.danger {
+        background: rgba(239, 68, 68, 0.1);
+        border-color: rgba(239, 68, 68, 0.3);
     }
     
     .stat-icon {
-        font-size: 1.5rem;
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
     }
+    
+    .stat-icon-wrapper.success .stat-icon { color: #22c55e; }
+    .stat-icon-wrapper.warning .stat-icon { color: var(--admin-accent); }
+    .stat-icon-wrapper.danger .stat-icon { color: #ef4444; }
     
     .stat-info {
         display: flex;
@@ -188,145 +383,127 @@
     
     .stat-value {
         font-family: var(--font-mono);
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         font-weight: 700;
         color: var(--admin-content-text);
+        line-height: 1;
     }
     
     .stat-label {
         font-family: var(--font-mono);
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--admin-content-text-secondary);
+        margin-top: 4px;
     }
     
-    /* Content Grid */
+    .stat-card.stat-alert {
+        border-color: rgba(239, 68, 68, 0.3);
+    }
+    
+    .stat-card.stat-alert .stat-card-header {
+        background: linear-gradient(to bottom, #fff5f5, #ffe5e5);
+    }
+    
+    /* Content Grid - Terminal Style Lists */
     .content-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         gap: var(--space-lg);
     }
     
     .content-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-content-border);
-        border-radius: 8px;
-        overflow: hidden;
+        background: transparent;
     }
     
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--space-sm) var(--space-md);
-        border-bottom: 1px solid var(--admin-content-border);
-        background: #f8f9fc;
-    }
-    
-    .card-header h3 {
+    .terminal-action {
         font-family: var(--font-mono);
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--admin-content-text);
-        margin: 0;
-    }
-    
-    .card-link {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        color: var(--terminal-accent);
+        font-size: 0.7rem;
+        color: #3b82f6;
         text-decoration: none;
-        transition: color 0.2s ease;
+        margin-left: auto;
+        transition: color 0.2s;
     }
     
-    .card-link:hover {
-        color: var(--terminal-syntax-green);
+    .terminal-action:hover {
+        color: var(--admin-accent);
     }
     
-    .card-body {
-        padding: var(--space-sm);
+    .terminal-content {
+        padding: 0;
     }
     
-    .empty-terminal {
-        text-align: center;
+    .terminal-empty {
         padding: var(--space-xl);
+        text-align: center;
         font-family: var(--font-mono);
+        font-size: 0.8rem;
     }
     
-    /* Contact List */
-    .contact-list, .portfolio-list {
+    /* Data List - JSON Style */
+    .data-list {
         list-style: none;
         padding: 0;
         margin: 0;
     }
     
-    .contact-item, .portfolio-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .data-item {
         padding: var(--space-sm) var(--space-md);
-        border-bottom: 1px solid var(--admin-content-border);
-        transition: background 0.2s ease;
+        border-bottom: 1px dashed #e5e5e5;
+        transition: background 0.2s;
     }
     
-    .contact-item:last-child, .portfolio-item:last-child {
+    .data-item:last-child {
         border-bottom: none;
     }
     
-    .contact-item:hover, .portfolio-item:hover {
-        background: #f8f9fc;
+    .data-item:hover {
+        background: #fafafa;
     }
     
-    .contact-info, .portfolio-info {
+    .data-info {
         display: flex;
-        flex-direction: column;
-        gap: 2px;
+        gap: 6px;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        margin-bottom: 2px;
     }
     
-    .contact-name, .portfolio-title {
-        font-family: var(--font-mono);
-        font-size: 0.85rem;
+    .data-key {
+        color: #888;
+    }
+    
+    .data-value {
         color: var(--admin-content-text);
     }
     
-    .contact-email, .portfolio-category {
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        color: var(--admin-content-text-secondary);
-    }
-    
-    .contact-meta {
+    .data-meta {
         display: flex;
         align-items: center;
         gap: var(--space-sm);
+        margin-top: 4px;
     }
     
-    .status-badge {
+    .data-status {
         font-family: var(--font-mono);
-        font-size: 0.6rem;
-        padding: 2px 6px;
-        border-radius: 3px;
+        font-size: 0.65rem;
         font-weight: 600;
     }
     
-    .status-badge.new {
-        background: rgba(239, 68, 68, 0.1);
-        color: #ef4444;
-    }
-    
-    .status-badge.read, .status-badge.published {
-        background: rgba(34, 197, 94, 0.1);
-        color: #22c55e;
-    }
-    
-    .status-badge.draft {
-        background: rgba(245, 158, 11, 0.1);
-        color: var(--terminal-accent);
-    }
-    
-    .contact-date {
+    .data-time {
         font-family: var(--font-mono);
-        font-size: 0.7rem;
-        color: var(--admin-content-text-secondary);
+        font-size: 0.65rem;
+        color: #888;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 @endpush
