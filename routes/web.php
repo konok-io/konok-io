@@ -18,8 +18,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/services/{slug}', [HomeController::class, 'service'])->name('service');
-Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
-Route::get('/portfolio/{slug}', [HomeController::class, 'portfolioShow'])->name('portfolio.show');
+Route::get('/projects', [HomeController::class, 'portfolio'])->name('projects');
+Route::get('/projects/{slug}', [HomeController::class, 'portfolioShow'])->name('projects.show');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact', [HomeController::class, 'contactStore'])->name('contact.store');
 

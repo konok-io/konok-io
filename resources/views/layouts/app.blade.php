@@ -55,8 +55,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/portfolio" class="nav-link {{ request()->is('portfolio') ? 'active' : '' }}">
-                        <span class="nav-index">4.</span> portfolio()
+                    <a href="/projects" class="nav-link {{ request()->is('projects') ? 'active' : '' }}">
+                        <span class="nav-index">4.</span> projects()
                     </a>
                 </li>
                 <li class="nav-item">
@@ -117,7 +117,7 @@
                                 <li><a href="/" class="footer-link">&gt; home()</a></li>
                                 <li><a href="/about" class="footer-link">&gt; about()</a></li>
                                 <li><a href="/services" class="footer-link">&gt; services()</a></li>
-                                <li><a href="/portfolio" class="footer-link">&gt; portfolio()</a></li>
+                                <li><a href="/projects" class="footer-link">&gt; projects()</a></li>
                                 <li><a href="/contact" class="footer-link">&gt; contact()</a></li>
                             </ul>
                         </div>

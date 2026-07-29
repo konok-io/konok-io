@@ -236,8 +236,8 @@
                     <a href="{{ route('contact') }}" class="btn btn-primary">
                         <span style="color: var(--terminal-accent);">$</span> get_in_touch
                     </a>
-                    <a href="{{ route('portfolio') }}" class="btn btn-command">
-                        &gt; view_portfolio
+                    <a href="{{ route('projects') }}" class="btn btn-command">
+                        &gt; view_projects
                     </a>
                 </div>
             </div>

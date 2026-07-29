@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio | KONOK.IO - Key Of Next Online Knowledge')
+@section('title', 'Projects | KONOK.IO - Key Of Next Online Knowledge')
 
 @section('content')
 <!-- Page Header -->
@@ -13,10 +13,10 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/portfolio/index.blade.php</span>
+                <span class="terminal-path">~/projects/index.blade.php</span>
             </div>
             <div class="terminal-content">
-                <span class="section-eyebrow">// portfolio</span>
+                <span class="section-eyebrow">// projects</span>
                 <h1 class="hero-title" style="font-size: 2rem;">
                     <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">projects</span> = [
                 </h1>
