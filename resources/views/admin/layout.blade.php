@@ -429,9 +429,9 @@
     /* CSS Variables */
     :root {
         /* Sidebar & Topbar - Light Gray */
-        --admin-sidebar-bg: #f1f5f9;
-        --admin-border: #cbd5e1;
-        --admin-hover: #e2e8f0;
+        --admin-sidebar-bg: #e8e8f0;
+        --admin-border: #d1d5db;
+        --admin-hover: #dcdce4;
         --admin-active-bg: rgba(37, 99, 235, 0.12);
         --admin-accent: #2563eb;
         --admin-text: #0f172a;
@@ -439,9 +439,9 @@
         --admin-text-muted: #94a3b8;
         
         /* Content Area - White */
-        --admin-bg: #e2e8f0;
+        --admin-bg: #e8e8f0;
         --admin-content-bg: #ffffff;
-        --admin-content-border: #cbd5e1;
+        --admin-content-border: #d1d5db;
         --admin-content-text: #0f172a;
         --admin-content-text-secondary: #475569;
         --admin-content-text-muted: #94a3b8;
