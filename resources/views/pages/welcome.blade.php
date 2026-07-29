@@ -585,12 +585,13 @@
 
 <!-- Client Logos Section -->
 <section class="section" style="padding-left: 0; padding-right: 0; overflow: hidden;">
-    <div class="text-center" style="margin-bottom: var(--space-xl); padding: 0 var(--space-lg);">
-        <span class="section-eyebrow">// trusted_by</span>
-        <h2 class="section-title" style="font-size: 1.5rem;">Trusted by Leading Companies</h2>
-    </div>
-    
-    <div class="terminal-window" style="max-width: 100%; border-radius: 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 var(--space-lg);">
+        <div class="text-center" style="margin-bottom: var(--space-xl);">
+            <span class="section-eyebrow">// trusted_by</span>
+            <h2 class="section-title" style="font-size: 1.5rem;">Trusted by Leading Companies</h2>
+        </div>
+        
+        <div class="terminal-window" style="border-radius: 8px;">
         <div class="terminal-titlebar">
             <div class="terminal-dots">
                 <span class="terminal-dot red"></span>
@@ -664,7 +665,9 @@
             </div>
         </div>
     </div>
-    
+        </div>
+    </div>
+
     <style>
         @keyframes slide {
             0% { transform: translateX(0); }
