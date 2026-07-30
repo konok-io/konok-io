@@ -13,7 +13,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/about.blade.php</span>
+                <span class="terminal-path">~/about/index.blade.php</span>
             </div>
             <div class="terminal-content" style="text-align: center;">
                 <span class="section-eyebrow">// about_us</span>
@@ -38,7 +38,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">company-overview.json</span>
+                <span class="terminal-path">~/about/company.blade.php</span>
             </div>
             <div class="card-body" style="padding: 40px;">
                 <h2 style="font-family: var(--font-mono); font-size: 1.5rem; margin-bottom: 24px; text-align: center;">
@@ -70,7 +70,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">mission.json</span>
+                    <span class="terminal-path">~/about/mission.blade.php</span>
                 </div>
                 <div class="card-body" style="padding: 32px;">
                     <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 16px; color: var(--terminal-accent);">
@@ -90,7 +90,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="terminal-path">vision.json</span>
+                    <span class="terminal-path">~/about/vision.blade.php</span>
                 </div>
                 <div class="card-body" style="padding: 32px;">
                     <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 16px; color: var(--terminal-accent);">
@@ -112,7 +112,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">why-choose-us.json</span>
+                <span class="terminal-path">~/about/features.blade.php</span>
             </div>
             <div class="card-body" style="padding: 40px;">
                 <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 32px; text-align: center;">
@@ -227,7 +227,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">statistics.json</span>
+                <span class="terminal-path">~/about/stats.blade.php</span>
             </div>
             <div class="card-body" style="padding: 40px;">
                 <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 32px; text-align: center;">
@@ -277,7 +277,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">certifications.json</span>
+                <span class="terminal-path">~/about/certs.blade.php</span>
             </div>
             <div class="card-body" style="padding: 40px;">
                 <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 24px; text-align: center;">
@@ -360,7 +360,7 @@
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/contact.blade.php</span>
+                <span class="terminal-path">~/contact/index.blade.php</span>
             </div>
             <div class="terminal-content text-center">
                 <span class="section-eyebrow">// lets_connect</span>
