@@ -124,15 +124,17 @@
     }
 
     .topbar-tab {
-        padding: 0 20px;
+        padding: 0 16px;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
-        font-size: 12px;
+        font-size: 13px;
         color: #6b6b6b;
-        border-bottom: 2px solid transparent;
         transition: all 0.2s;
         text-decoration: none;
+        border-radius: 6px;
+        margin: 0 4px;
     }
 
     .topbar-tab a {
@@ -148,7 +150,6 @@
     .topbar-tab.active {
         color: #2563eb;
         background: #eff6ff;
-        border-bottom-color: #2563eb;
     }
 
     .topbar-tab .prefix {
