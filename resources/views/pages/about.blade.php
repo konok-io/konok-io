@@ -355,7 +355,7 @@
 <!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
-        <div class="terminal-window" style="max-width: 600px; margin: 0 auto;">
+        <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
                     <span class="terminal-dot red"></span>
