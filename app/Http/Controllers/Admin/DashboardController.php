@@ -22,7 +22,8 @@ class DashboardController extends Controller
 
         $recentContacts = Contact::orderBy('created_at', 'desc')->limit(5)->get();
         $recentPortfolios = Portfolio::orderBy('created_at', 'desc')->limit(5)->get();
+        $unreadCount = Contact::unread()->count();
 
-        return view('admin.dashboard', compact('stats', 'recentContacts', 'recentPortfolios'));
+        return view('admin.dashboard-minimal', compact('stats', 'recentContacts', 'recentPortfolios', 'unreadCount'));
     }
 }

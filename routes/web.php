@@ -43,22 +43,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('skills', App\Http\Controllers\Admin\SkillController::class);
 });
 
-/*
-|--------------------------------------------------------------------------
-| Admin Designs Preview Routes
-|--------------------------------------------------------------------------
-*/
-Route::get('/admin-designs', function () {
-    return response()->file(public_path('admin-designs/index.html'));
-})->name('admin-designs');
-
-Route::get('/admin-designs/{file}', function ($file) {
-    $path = public_path('admin-designs/' . $file);
-    if (file_exists($path)) {
-        return response()->file($path);
-    }
-    abort(404);
-})->where('file', '.*\.html');
-
 
 
