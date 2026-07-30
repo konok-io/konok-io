@@ -88,9 +88,12 @@
             
             <div class="topbar-actions">
                 <a href="{{ url('/') }}" target="_blank" class="topbar-btn" title="View Website">
-                    <span class="terminal-syntax-purple">&lt;</span>
-                    <span>exit_to_app</span>
-                    <span class="terminal-syntax-purple">/&gt;</span>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 4px;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <span>View Site</span>
                 </a>
             </div>
         </header>
@@ -354,7 +357,7 @@
     .admin-topbar {
         background: var(--terminal-bg-primary);
         border-bottom: 1px solid var(--terminal-border);
-        padding: var(--space-md) var(--space-lg);
+        padding: var(--space-sm) var(--space-lg);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -362,6 +365,13 @@
         position: sticky;
         top: 0;
         z-index: 50;
+    }
+    
+    .admin-topbar .topbar-breadcrumb .breadcrumb-current {
+        background: var(--terminal-bg-tertiary);
+        color: var(--terminal-accent);
+        padding: var(--space-xs) var(--space-md);
+        border-radius: var(--radius-md);
     }
     
     .topbar-breadcrumb {
@@ -398,18 +408,18 @@
         display: flex;
         align-items: center;
         gap: var(--space-xs);
-        padding: var(--space-xs) var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
         font-family: var(--font-mono);
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         color: var(--terminal-text-secondary);
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: var(--radius-md);
         transition: all 0.2s ease;
     }
     
     .topbar-btn:hover {
-        background: var(--terminal-bg-secondary);
-        color: var(--terminal-accent);
+        background: var(--terminal-bg-tertiary);
+        color: var(--terminal-text-primary);
     }
     
     .topbar-btn:hover .terminal-syntax-purple {
@@ -417,7 +427,7 @@
     }
     
     .topbar-btn .terminal-syntax-purple {
-        color: var(--terminal-text-muted);
+        color: var(--terminal-accent);
     }
     
     /* Admin Main */
