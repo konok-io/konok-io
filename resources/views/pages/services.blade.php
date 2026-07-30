@@ -17,10 +17,10 @@
             </div>
             <div class="terminal-content" style="text-align: center;">
                 <span class="section-eyebrow">// services</span>
-                <h1 class="hero-title" style="font-size: 2rem;">
+                <h1 class="hero-title" style="font-size: 2rem; text-align: center;">
                     <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">services</span> = [
                 </h1>
-                <p class="hero-subtitle" style="font-size: 1rem;">
+                <p class="hero-subtitle" style="font-size: 1rem; text-align: center;">
                     <span style="color: var(--terminal-syntax-green);">"Comprehensive solutions for your digital needs"</span>
                 </p>
             </div>
