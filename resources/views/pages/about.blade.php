@@ -30,33 +30,35 @@
 <!-- About Content -->
 <section class="section">
     <div class="container">
-        <!-- About Info -->
-        <div class="card" style="margin-bottom: 48px;">
-            <div class="card-header">
-                <div class="terminal-dots">
-                    <span class="terminal-dot red"></span>
-                    <span class="terminal-dot yellow"></span>
-                    <span class="terminal-dot green"></span>
+        <!-- About Info - Full Width -->
+        <div style="margin-bottom: 48px;">
+            <div class="terminal-window" style="max-width: 100%;">
+                <div class="terminal-titlebar">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                    </div>
+                    <span class="terminal-path">~/about/company.blade.php</span>
                 </div>
-                <span class="terminal-path">~/about/company.blade.php</span>
-            </div>
-            <div class="card-body" style="padding: 40px;">
-                <h2 style="font-family: var(--font-mono); font-size: 1.5rem; margin-bottom: 24px; text-align: center;">
-                    <span style="color: var(--terminal-syntax-purple);">About</span> <span style="color: var(--terminal-accent);">KONOK.IO</span>
-                </h2>
-                
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
-                        <strong>KONOK (Key Of Next Online Knowledge)</strong> is a professional IT services and web development company 
-                        dedicated to delivering cutting-edge digital solutions to businesses worldwide.
-                    </p>
-                    <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
-                        Founded by <strong>Muhammad Rashed Hossain</strong>, we combine deep technical expertise with innovative 
-                        AI-assisted development to create robust, scalable, and secure web applications.
-                    </p>
-                    <p style="font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
-                        Our mission is to empower businesses with technology that drives growth, efficiency, and digital transformation.
-                    </p>
+                <div class="terminal-content" style="padding: 48px;">
+                    <h2 style="font-family: var(--font-mono); font-size: 1.5rem; margin-bottom: 24px; text-align: center;">
+                        <span style="color: var(--terminal-syntax-purple);">About</span> <span style="color: var(--terminal-accent);">KONOK.IO</span>
+                    </h2>
+                    
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
+                            <strong>KONOK (Key Of Next Online Knowledge)</strong> is a professional IT services and web development company 
+                            dedicated to delivering cutting-edge digital solutions to businesses worldwide.
+                        </p>
+                        <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
+                            Founded by <strong>Muhammad Rashed Hossain</strong>, we combine deep technical expertise with innovative 
+                            AI-assisted development to create robust, scalable, and secure web applications.
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.9; color: var(--terminal-text-secondary); text-align: center;">
+                            Our mission is to empower businesses with technology that drives growth, efficiency, and digital transformation.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
