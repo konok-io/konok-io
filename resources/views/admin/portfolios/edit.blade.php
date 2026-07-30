@@ -69,18 +69,18 @@
             <span class="footer-dot minimize"></span>
             <span class="footer-dot maximize"></span>
         </div>
-        <span class="footer-title">konok-admin — 80×24</span>
+        <span class="footer-title">konok-admin ~ 80×24</span>
     </div>
     <div class="footer-body">
         <div class="footer-prompt">
             <span class="prompt-symbol">$</span>
-            <span class="prompt-text">konok@admin</span>
+            <span class="prompt-text">konok@admin:~$</span>
             <span class="prompt-status">System Online</span>
         </div>
         <div class="footer-info">
             <span>v1.0.4</span>
             <span class="separator">|</span>
-            <span class="footer-brand">{{ date('Y') }} KONOK.IO</span>
+            <span class="footer-brand">© {{ date('Y') }} KONOK.IO</span>
         </div>
     </div>
 </div>

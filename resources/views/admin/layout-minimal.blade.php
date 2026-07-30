@@ -494,24 +494,25 @@
     /* Footer */
     .footer {
         margin-top: 40px;
-        background: #0a0a0a;
-        border-radius: 12px;
+        background: #171717;
+        border: 1px solid #333;
+        border-radius: 8px;
         overflow: hidden;
         font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
     }
 
     .footer-window {
-        background: #1a1a1a;
-        padding: 12px 16px;
+        background: #1f1f1f;
+        padding: 10px 14px;
         display: flex;
         align-items: center;
-        gap: 12px;
-        border-bottom: 1px solid #2a2a2a;
+        gap: 10px;
+        border-bottom: 1px solid #333;
     }
 
     .footer-dots {
         display: flex;
-        gap: 6px;
+        gap: 5px;
     }
 
     .footer-dot {
@@ -521,7 +522,7 @@
     }
 
     .footer-dot.close {
-        background: #ff5f56;
+        background: #ff5f57;
     }
 
     .footer-dot.minimize {
@@ -529,18 +530,18 @@
     }
 
     .footer-dot.maximize {
-        background: #27ca40;
+        background: #28c840;
     }
 
     .footer-title {
-        font-size: 11px;
-        color: #666;
+        font-size: 10px;
+        color: #888;
         flex: 1;
         text-align: center;
     }
 
     .footer-body {
-        padding: 16px 20px;
+        padding: 14px 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -553,17 +554,18 @@
     }
 
     .footer-prompt .prompt-symbol {
-        color: #27ca40;
-        font-size: 12px;
+        color: #28c840;
+        font-size: 13px;
+        font-weight: 700;
     }
 
     .footer-prompt .prompt-text {
-        color: #888;
-        font-size: 11px;
+        color: #e0e0e0;
+        font-size: 12px;
     }
 
     .footer-prompt .prompt-status {
-        color: #27ca40;
+        color: #28c840;
         font-size: 11px;
         display: flex;
         align-items: center;
@@ -583,28 +585,21 @@
     .footer-info {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 14px;
     }
 
     .footer-info span {
-        font-size: 10px;
-        color: #555;
+        font-size: 11px;
+        color: #888;
     }
 
     .footer-info .separator {
-        color: #333;
+        color: #555;
     }
 
     .footer-brand {
-        color: #666;
-        font-size: 10px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .footer-brand::before {
-        content: '©';
+        color: #aaa;
+        font-size: 11px;
     }
 
     /* Buttons */
