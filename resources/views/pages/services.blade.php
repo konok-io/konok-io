@@ -61,6 +61,20 @@
                         From simple websites to complex enterprise solutions.
                     </p>
                     
+                    <div class="mt-3">
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
+                            <span style="color: var(--terminal-syntax-amber);">// features</span>
+                        </span>
+                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
+                            <li style="margin-bottom: var(--space-xs);">Custom Laravel Applications</li>
+                            <li style="margin-bottom: var(--space-xs);">E-commerce Solutions</li>
+                            <li style="margin-bottom: var(--space-xs);">CMS Development</li>
+                            <li style="margin-bottom: var(--space-xs);">RESTful API Integration</li>
+                            <li style="margin-bottom: var(--space-xs);">Responsive Frontend Design</li>
+                            <li>Database Design & Optimization</li>
+                        </ul>
+                    </div>
+                    
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Laravel</span>
                         <span class="tag">PHP</span>
@@ -99,6 +113,20 @@
                         Comprehensive IT support and system administration services to keep 
                         your business running smoothly and securely.
                     </p>
+                    
+                    <div class="mt-3">
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
+                            <span style="color: var(--terminal-syntax-amber);">// capabilities</span>
+                        </span>
+                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
+                            <li style="margin-bottom: var(--space-xs);">Network Setup & Configuration</li>
+                            <li style="margin-bottom: var(--space-xs);">Hardware Troubleshooting</li>
+                            <li style="margin-bottom: var(--space-xs);">Server Administration</li>
+                            <li style="margin-bottom: var(--space-xs);">Security Audits</li>
+                            <li style="margin-bottom: var(--space-xs);">24/7 Technical Support</li>
+                            <li>Remote Desktop Support</li>
+                        </ul>
+                    </div>
                     
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Windows</span>
@@ -139,6 +167,20 @@
                         Professional design services to establish and enhance your brand's
                         visual identity across all digital platforms.
                     </p>
+                    
+                    <div class="mt-3">
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
+                            <span style="color: var(--terminal-syntax-amber);">// specialties</span>
+                        </span>
+                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
+                            <li style="margin-bottom: var(--space-xs);">Logo Design</li>
+                            <li style="margin-bottom: var(--space-xs);">Brand Identity</li>
+                            <li style="margin-bottom: var(--space-xs);">Graphic Design</li>
+                            <li style="margin-bottom: var(--space-xs);">UI/UX Consultation</li>
+                            <li style="margin-bottom: var(--space-xs);">Social Media Graphics</li>
+                            <li>Print Materials</li>
+                        </ul>
+                    </div>
                     
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Photoshop</span>
