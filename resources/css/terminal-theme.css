@@ -178,11 +178,23 @@ a:hover {
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    /* Default dot color - 232F40 */
+    background: #232F40;
 }
 
-.terminal-dot.red { background: var(--dot-red); }
-.terminal-dot.yellow { background: var(--dot-yellow); }
-.terminal-dot.green { background: var(--dot-green); }
+/* Hero section terminal - Keep original macOS colors */
+.hero-window .terminal-dot.red,
+.hero-visual .terminal-dot.red { background: #ff5f57; }
+.hero-window .terminal-dot.yellow,
+.hero-visual .terminal-dot.yellow { background: #ffbd2e; }
+.hero-window .terminal-dot.green,
+.hero-visual .terminal-dot.green { background: #28ca41; }
+
+/* Footer terminal - White dots for dark mode cards */
+.footer-window-full .terminal-dot,
+.footer .terminal-dot {
+    background: #ffffff;
+}
 
 .terminal-path {
     font-family: var(--font-mono);
@@ -231,6 +243,13 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
+}
+
+/* Navbar Header Dots - 232F40 */
+.navbar-brand .terminal-dots .terminal-dot {
+    width: 12px;
+    height: 12px;
+    background: #232F40;
 }
 
 .navbar-nav {
@@ -914,6 +933,11 @@ a:hover {
 .footer-column .terminal-window .terminal-titlebar {
     border-bottom: none;
     background: transparent;
+}
+
+/* Footer terminal dots - White for light mode */
+.footer-column .terminal-window .terminal-dots .terminal-dot {
+    background: #ffffff;
 }
 
 .footer-columns {
