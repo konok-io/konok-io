@@ -73,7 +73,7 @@
                     @endif
                 </div>
                 <div class="card-footer">
-                    <a href="{{ route('portfolio.show', $portfolio->slug) }}" class="btn btn-card btn-sm">
+                    <a href="{{ route('projects.show', $portfolio->slug) }}" class="btn btn-card btn-sm">
                         > view_project
                     </a>
                 </div>
