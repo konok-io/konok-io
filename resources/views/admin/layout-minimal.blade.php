@@ -20,7 +20,7 @@
             </div>
             <div class="topbar-tab {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
                 <span class="prefix">02.</span>
-                <a href="{{ route('admin.portfolios.index') }}">Portfolios</a>
+                <a href="{{ route('admin.portfolios.index') }}">Projects</a>
             </div>
             <div class="topbar-tab {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
                 <span class="prefix">03.</span>
