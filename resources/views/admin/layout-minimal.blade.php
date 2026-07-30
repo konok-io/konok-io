@@ -113,6 +113,7 @@
         align-items: stretch;
         height: 100%;
         flex: 1;
+        justify-content: center;
     }
 
     .topbar-tab {
@@ -459,8 +460,9 @@
     /* Footer */
     .footer {
         margin-top: 32px;
-        padding: 16px 0;
-        border-top: 1px solid #e5e5e5;
+        padding: 16px 20px;
+        background: #f5f5f5;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -479,6 +481,16 @@
         height: 6px;
         border-radius: 50%;
         background: #22c55e;
+    }
+
+    .footer-center {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-center .separator {
+        color: #d1d5db;
     }
 
     /* Buttons */

@@ -155,7 +155,11 @@
         <span class="dot"></span>
         <span>System Online</span>
     </div>
-    <span>Version 1.0.4</span>
+    <div class="footer-center">
+        <span>Last deploy: {{ now()->subHours(2)->diffForHumans() }}</span>
+        <span class="separator">|</span>
+        <span>Version 1.0.4</span>
+    </div>
     <span>© {{ date('Y') }} KONOK.IO</span>
 </div>
 @endsection
