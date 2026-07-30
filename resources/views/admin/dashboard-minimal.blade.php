@@ -72,61 +72,6 @@
     </div>
 </div>
 
-<!-- Duck Mode Cards -->
-<div class="stats-row">
-    <div class="duck-card">
-        <div class="duck-card-window">
-            <div class="duck-card-dots">
-                <span class="duck-card-dot"></span>
-                <span class="duck-card-dot"></span>
-                <span class="duck-card-dot"></span>
-            </div>
-            <span class="duck-card-title">system-info.json</span>
-        </div>
-        <div class="duck-card-body">
-            <div class="duck-card-prompt">
-                <span class="duck-card-symbol">❯</span>
-                <span class="duck-card-path">konok@admin:~$</span>
-                <span class="duck-card-cursor"></span>
-            </div>
-            <div class="duck-card-status">
-                <span class="duck-card-indicator"></span>
-                <span class="duck-card-status-text">System Online</span>
-            </div>
-            <div class="duck-card-info">
-                <span>❯ v1.0.4</span>
-                <span>❯ © {{ date('Y') }} KONOK.IO</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="duck-card">
-        <div class="duck-card-window">
-            <div class="duck-card-dots">
-                <span class="duck-card-dot"></span>
-                <span class="duck-card-dot"></span>
-                <span class="duck-card-dot"></span>
-            </div>
-            <span class="duck-card-title">quick-stats.json</span>
-        </div>
-        <div class="duck-card-body">
-            <div class="duck-card-prompt">
-                <span class="duck-card-symbol">❯</span>
-                <span class="duck-card-path">konok@admin:~$</span>
-                <span class="duck-card-cursor"></span>
-            </div>
-            <div class="duck-card-status">
-                <span class="duck-card-indicator"></span>
-                <span class="duck-card-status-text">All Systems Operational</span>
-            </div>
-            <div class="duck-card-info">
-                <span>❯ {{ $stats['total_portfolios'] }} Projects</span>
-                <span>❯ {{ $stats['total_services'] }} Services</span>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Two Column -->
 <div class="two-col">
     <!-- Recent Contacts -->
