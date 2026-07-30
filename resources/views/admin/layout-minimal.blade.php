@@ -286,14 +286,13 @@
     }
 
     .stat-card {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border: 1px solid rgba(255,255,255,0.1);
         border-radius: 8px;
         overflow: hidden;
     }
 
     .stat-card-header {
-        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         padding: 12px 16px;
         display: flex;
         align-items: center;
@@ -329,20 +328,20 @@
     .stat-card-value {
         font-size: 36px;
         font-weight: 700;
-        color: #171717;
+        color: #ffffff;
         line-height: 1;
         margin-bottom: 4px;
     }
 
     .stat-card-label {
         font-size: 11px;
-        color: #6b6b6b;
+        color: #94a3b8;
     }
 
-    /* Window Card */
+    /* Window Card - Dark Theme */
     .window-card {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border: 1px solid rgba(255,255,255,0.1);
         border-radius: 8px;
         overflow: hidden;
         margin-bottom: 20px;
@@ -350,15 +349,14 @@
 
     .window-header {
         padding: 12px 16px;
-        border-bottom: 1px solid #e5e5e5;
         display: flex;
         align-items: center;
         gap: 12px;
     }
 
     .window-header.dark-header {
-        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-        border-bottom: none;
+        background: transparent;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .window-dots {
@@ -393,7 +391,7 @@
 
     .window-action {
         font-size: 10px;
-        color: #6b6b6b;
+        color: #94a3b8;
         margin-left: auto;
         cursor: pointer;
         text-transform: uppercase;
@@ -402,14 +400,135 @@
     }
 
     .window-action:hover {
-        color: #171717;
+        color: #4ade80;
+    }
+
+    /* Duck Mode Card */
+    .duck-card {
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border-radius: 12px;
+        overflow: hidden;
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .duck-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(39,202,64,0.5), transparent);
+    }
+
+    .duck-card-window {
+        background: rgba(0,0,0,0.3);
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .duck-card-dots {
+        display: flex;
+        gap: 6px;
+    }
+
+    .duck-card-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .duck-card-title {
+        font-size: 11px;
+        color: #94a3b8;
+    }
+
+    .duck-card-body {
+        padding: 16px;
+    }
+
+    .duck-card-prompt {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .duck-card-symbol {
+        color: #4ade80;
+        font-weight: bold;
+    }
+
+    .duck-card-path {
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .duck-card-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: #4ade80;
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+
+    .duck-card-status {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .duck-card-indicator {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4ade80;
+    }
+
+    .duck-card-status-text {
+        font-size: 10px;
+        color: #4ade80;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .duck-card-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 11px;
+        color: #94a3b8;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .duck-card-info span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .window-body {
         padding: 16px;
     }
 
-    /* Data Table */
+    /* Data Table - Dark Theme */
     .data-table {
         width: 100%;
         border-collapse: collapse;
@@ -420,16 +539,17 @@
         padding: 8px 12px;
         font-size: 10px;
         font-weight: 500;
-        color: #a3a3a3;
+        color: #94a3b8;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .data-table td {
         padding: 10px 12px;
         font-size: 12px;
-        border-bottom: 1px solid #e5e5e5;
+        color: #e2e8f0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .data-table tr:last-child td {
@@ -437,16 +557,16 @@
     }
 
     .data-table tr:hover td {
-        background: #f5f5f5;
+        background: rgba(255,255,255,0.05);
     }
 
     .data-table .name {
         font-weight: 500;
-        color: #171717;
+        color: #ffffff;
     }
 
     .data-table .email {
-        color: #6b6b6b;
+        color: #94a3b8;
         font-size: 11px;
     }
 
@@ -461,18 +581,18 @@
     }
 
     .data-table .badge.new {
-        background: #171717;
-        color: white;
+        background: rgba(74, 222, 128, 0.2);
+        color: #4ade80;
     }
 
     .data-table .badge.pending {
-        background: #f5f5f5;
-        color: #6b6b6b;
+        background: rgba(251, 191, 36, 0.2);
+        color: #fbbf24;
     }
 
     .data-table .badge.done {
-        background: #e8f5e9;
-        color: #2e7d32;
+        background: rgba(74, 222, 128, 0.2);
+        color: #4ade80;
     }
 
     /* Two Column Grid */
@@ -489,11 +609,12 @@
 
     .simple-list li {
         padding: 10px 0;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         display: flex;
         align-items: center;
         gap: 12px;
         font-size: 12px;
+        color: #e2e8f0;
     }
 
     .simple-list li:last-child {
@@ -504,20 +625,20 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: #171717;
+        background: #4ade80;
     }
 
     .simple-list .indicator.dim {
-        background: #a3a3a3;
+        background: #64748b;
     }
 
     .simple-list .title {
         flex: 1;
-        color: #171717;
+        color: #ffffff;
     }
 
     .simple-list .meta {
-        color: #a3a3a3;
+        color: #94a3b8;
         font-size: 11px;
     }
 
