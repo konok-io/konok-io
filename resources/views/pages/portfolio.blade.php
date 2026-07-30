@@ -31,9 +31,18 @@
 <!-- Portfolio Grid -->
 <section class="section section-light">
     <div class="container">
-        @if($portfolios->isNotEmpty())
+        @php
+            // Flatten grouped collections for display
+            $flatPortfolios = $portfolios instanceof \Illuminate\Support\Collection 
+                ? ($portfolios->first() instanceof \Illuminate\Support\Collection 
+                    ? $portfolios->flatten() 
+                    : $portfolios)
+                : collect();
+        @endphp
+        
+        @if($flatPortfolios->isNotEmpty())
         <div class="grid grid-3">
-            @foreach($portfolios as $index => $portfolio)
+            @foreach($flatPortfolios as $portfolio)
             <div class="card">
                 <div class="card-header">
                     <div class="terminal-dots">
