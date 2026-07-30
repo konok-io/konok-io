@@ -548,10 +548,11 @@
 
     .footer-title {
         font-size: 11px;
-        color: #64748b;
+        color: #ffffff;
         flex: 1;
         text-align: center;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
+        font-weight: 600;
     }
 
     .footer-body {
@@ -564,26 +565,26 @@
     .footer-prompt {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
     }
 
     .footer-prompt .prompt-symbol {
         color: #4ade80;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         text-shadow: 0 0 10px rgba(74,222,128,0.5);
     }
 
     .footer-prompt .prompt-text {
-        color: #e2e8f0;
-        font-size: 12px;
+        color: #ffffff;
+        font-size: 13px;
         font-weight: 500;
     }
 
     .footer-prompt .prompt-cursor {
         display: inline-block;
         width: 8px;
-        height: 14px;
+        height: 16px;
         background: #4ade80;
         animation: cursor-blink 1s infinite;
         margin-left: 2px;
@@ -616,10 +617,10 @@
     }
 
     .footer-status .status-text {
-        color: #4ade80;
+        color: #ffffff;
         font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
     .footer-info {
@@ -630,16 +631,17 @@
 
     .footer-info span {
         font-size: 11px;
-        color: #94a3b8;
+        color: #ffffff;
+        font-weight: 500;
     }
 
     .footer-info .separator {
-        color: #475569;
+        color: rgba(255,255,255,0.3);
         font-size: 10px;
     }
 
     .footer-brand {
-        color: #cbd5e1;
+        color: #ffffff;
         font-size: 11px;
         font-weight: 500;
         letter-spacing: 0.5px;
@@ -647,6 +649,7 @@
 
     .footer-brand span {
         color: #4ade80;
+        font-weight: 700;
     }
 
     /* Buttons */
