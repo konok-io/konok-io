@@ -39,25 +39,29 @@ class SettingsController extends Controller
             $rules['logo_image'] = 'image|mimes:png,jpg,jpeg,svg|max:2048';
         }
 
-        $request->validate($rules);
+        $validated = $request->validate($rules);
 
         // Handle logo image upload
         if ($request->hasFile('logo_image')) {
             try {
                 // Delete old logo if exists
-                $oldLogo = Setting::where('key', 'logo_image')->first();
+                $oldLogo = Setting::find('logo_image');
                 if ($oldLogo && $oldLogo->value) {
                     Storage::disk('public')->delete($oldLogo->value);
                 }
 
                 // Store new logo
                 $logoPath = $request->file('logo_image')->store('logos', 'public');
+                
                 Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
             } catch (\Exception $e) {
                 \Log::error('Logo upload failed: ' . $e->getMessage());
+                return redirect()->back()
+                    ->withInput()
+                    ->withErrors(['logo_image' => 'Logo upload failed: ' . $e->getMessage()]);
             }
         }
 
