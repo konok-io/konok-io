@@ -39,6 +39,10 @@
                     @endif
                 </a>
             </div>
+            <div class="topbar-tab {{ request()->routeIs('admin.settings*') ? 'active' : '' }}">
+                <span class="prefix">06.</span>
+                <a href="{{ route('admin.settings') }}">Settings</a>
+            </div>
         </div>
 
         <div class="topbar-actions">
