@@ -46,13 +46,16 @@ class PortfolioController extends Controller
         return redirect()->route('admin.projects.index')->with('success', 'Portfolio created successfully!');
     }
 
-    public function edit(Portfolio $portfolio)
+    public function edit($id)
     {
+        $portfolio = Portfolio::findOrFail($id);
         return view('admin.portfolios.edit', compact('portfolio'));
     }
 
-    public function update(Request $request, Portfolio $portfolio)
+    public function update(Request $request, $id)
     {
+        $portfolio = Portfolio::findOrFail($id);
+        
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:500',
@@ -77,8 +80,9 @@ class PortfolioController extends Controller
         return redirect()->route('admin.projects.index')->with('success', 'Portfolio updated successfully!');
     }
 
-    public function destroy(Portfolio $portfolio)
+    public function destroy($id)
     {
+        $portfolio = Portfolio::findOrFail($id);
         $portfolio->delete();
         return redirect()->route('admin.projects.index')->with('success', 'Portfolio deleted successfully!');
     }
