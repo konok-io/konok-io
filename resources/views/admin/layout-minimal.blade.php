@@ -493,38 +493,118 @@
 
     /* Footer */
     .footer {
-        margin-top: 32px;
+        margin-top: 40px;
+        background: #0a0a0a;
+        border-radius: 12px;
+        overflow: hidden;
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+    }
+
+    .footer-window {
+        background: #1a1a1a;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid #2a2a2a;
+    }
+
+    .footer-dots {
+        display: flex;
+        gap: 6px;
+    }
+
+    .footer-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-dot.close {
+        background: #ff5f56;
+    }
+
+    .footer-dot.minimize {
+        background: #ffbd2e;
+    }
+
+    .footer-dot.maximize {
+        background: #27ca40;
+    }
+
+    .footer-title {
+        font-size: 11px;
+        color: #666;
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer-body {
         padding: 16px 20px;
-        background: #f5f5f5;
-        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 11px;
-        color: #a3a3a3;
     }
 
-    .footer-status {
+    .footer-prompt {
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    .footer-status .dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #22c55e;
+    .footer-prompt .prompt-symbol {
+        color: #27ca40;
+        font-size: 12px;
     }
 
-    .footer-center {
+    .footer-prompt .prompt-text {
+        color: #888;
+        font-size: 11px;
+    }
+
+    .footer-prompt .prompt-status {
+        color: #27ca40;
+        font-size: 11px;
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 6px;
     }
 
-    .footer-center .separator {
-        color: #d1d5db;
+    .footer-prompt .prompt-status::before {
+        content: '●';
+        animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+    }
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-info span {
+        font-size: 10px;
+        color: #555;
+    }
+
+    .footer-info .separator {
+        color: #333;
+    }
+
+    .footer-brand {
+        color: #666;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .footer-brand::before {
+        content: '©';
     }
 
     /* Buttons */
@@ -539,22 +619,24 @@
     }
 
     .btn-primary {
-        background: #171717;
-        color: white;
+        background: #27ca40;
+        color: #0a0a0a;
+        font-weight: 600;
     }
 
     .btn-primary:hover {
-        background: #404040;
+        background: #3dd854;
     }
 
     .btn-secondary {
-        background: #f5f5f5;
-        color: #171717;
-        border: 1px solid #e5e5e5;
+        background: #2a2a2a;
+        color: #888;
+        border: 1px solid #333;
     }
 
     .btn-secondary:hover {
-        background: #e5e5e5;
+        background: #333;
+        color: #fff;
     }
 
     .btn-sm {
