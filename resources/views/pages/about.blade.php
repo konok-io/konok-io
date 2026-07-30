@@ -124,9 +124,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ fast_delivery()</h4>
@@ -140,9 +140,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ quality_check()</h4>
@@ -156,9 +156,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ support_24x7()</h4>
@@ -172,9 +172,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ cost_effective()</h4>
@@ -188,9 +188,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-red);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ secure_mode()</h4>
@@ -204,9 +204,9 @@
                         <div class="card-body" style="padding: 32px;">
                             <div style="margin-bottom: 16px;">
                                 <div class="terminal-dots" style="justify-content: center; gap: 6px;">
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-cyan);"></span>
-                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                                 </div>
                             </div>
                             <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ global_reach()</h4>
@@ -236,7 +236,7 @@
                 <div class="grid grid-4" style="gap: 24px;">
                     <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
                         <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
-                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                         </div>
                         <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">50+</div>
                         <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ projects_completed</div>
@@ -244,7 +244,7 @@
                     
                     <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
                         <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
-                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                         </div>
                         <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">30+</div>
                         <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ happy_clients</div>
@@ -252,7 +252,7 @@
                     
                     <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
                         <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
-                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                         </div>
                         <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">5+</div>
                         <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ years_experience</div>
@@ -260,7 +260,7 @@
                     
                     <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
                         <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
-                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-cyan);"></span>
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: #232F40;"></span>
                         </div>
                         <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">24/7</div>
                         <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ support_ready</div>
@@ -289,8 +289,8 @@
                         <div class="card-body" style="padding: 20px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-green);"></span>
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ BSc_ComputerScience()</h4>
@@ -304,8 +304,8 @@
                         <div class="card-body" style="padding: 20px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-purple);"></span>
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-cyan);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ CompTIA_A_Plus()</h4>
@@ -319,8 +319,8 @@
                         <div class="card-body" style="padding: 20px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-accent);"></span>
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ Laravel_Dev()</h4>
@@ -334,8 +334,8 @@
                         <div class="card-body" style="padding: 20px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-amber);"></span>
-                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-red);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: #232F40;"></span>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ AI_Assisted()</h4>
