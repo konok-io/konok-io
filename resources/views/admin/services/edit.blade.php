@@ -4,9 +4,12 @@
 
 @section('admin-content')
 <!-- Section Header -->
-<div class="section-header">
-    <div class="section-label">// Edit Service</div>
-    <h1 class="section-title">Edit Service</h1>
+<div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <div class="section-label">// Edit Service</div>
+        <h1 class="section-title">Edit Service</h1>
+    </div>
+    <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">&lt; Back</a>
 </div>
 
 <div class="window-card">
@@ -50,7 +53,6 @@
                 </select>
             </div>
             <div class="form-actions">
-                <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">&lt; Back</a>
                 <button type="submit" class="btn btn-primary">Update Service</button>
             </div>
         </form>
