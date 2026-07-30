@@ -267,14 +267,14 @@
             <h2 class="section-title">Technologies I Work With</h2>
         </div>
         
-        <div class="terminal-window" style="max-width: 800px; margin: 0 auto;">
+        <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
                     <span class="terminal-dot red"></span>
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/technologies.blade.php</span>
+                <span class="terminal-path">~/technologies/index.blade.php</span>
             </div>
             <div class="terminal-content">
                 <div class="grid grid-4">
