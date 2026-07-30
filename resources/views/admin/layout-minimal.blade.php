@@ -356,6 +356,11 @@
         gap: 12px;
     }
 
+    .window-header.dark-header {
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border-bottom: none;
+    }
+
     .window-dots {
         display: flex;
         gap: 5px;
@@ -366,6 +371,19 @@
         height: 10px;
         border-radius: 50%;
         background: #232323;
+    }
+
+    .window-header.dark-header .window-dot {
+        background: #ffffff;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .window-header.dark-header .window-title {
+        color: #ffffff;
+    }
+
+    .window-header.dark-header .window-action {
+        color: #4ade80;
     }
 
     .window-title {

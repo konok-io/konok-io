@@ -76,8 +76,10 @@
 <div class="two-col">
     <!-- Recent Contacts -->
     <div class="window-card">
-        <div class="window-header">
+        <div class="window-header dark-header">
             <div class="window-dots">
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
                 <span class="window-dot"></span>
             </div>
             <span class="window-title">recent-contacts.json</span>
@@ -119,8 +121,10 @@
 
     <!-- Recent Activity -->
     <div class="window-card">
-        <div class="window-header">
+        <div class="window-header dark-header">
             <div class="window-dots">
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
                 <span class="window-dot"></span>
             </div>
             <span class="window-title">activity.log</span>
