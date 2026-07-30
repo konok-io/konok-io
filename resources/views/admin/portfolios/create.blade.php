@@ -57,7 +57,7 @@
                 </select>
             </div>
             <div class="form-actions">
-                <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">&lt; Back</a>
                 <button type="submit" class="btn btn-primary">Save Project</button>
             </div>
         </form>

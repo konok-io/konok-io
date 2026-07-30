@@ -50,7 +50,7 @@
                 </select>
             </div>
             <div class="form-actions">
-                <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">&lt; Back</a>
                 <button type="submit" class="btn btn-primary">Update Service</button>
             </div>
         </form>
