@@ -654,23 +654,30 @@
 
     /* Buttons */
     .btn {
-        display: inline-block;
-        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: 600;
         border-radius: 6px;
         text-decoration: none;
         transition: all 0.2s;
+        border: none;
+        cursor: pointer;
     }
 
     .btn-primary {
-        background: #27ca40;
+        background: linear-gradient(135deg, #27ca40, #4ade80);
         color: #0a0a0a;
-        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
     }
 
     .btn-primary:hover {
-        background: #3dd854;
+        background: linear-gradient(135deg, #4ade80, #22c55e);
+        box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
+        transform: translateY(-1px);
     }
 
     .btn-secondary {

@@ -21,7 +21,8 @@ class SettingsController extends Controller
 
     public function update(Request $request)
     {
-        $request->validate([
+        // Validation rules - logo_image only validated if file is uploaded
+        $rules = [
             'site_logo' => 'required|string|max:100',
             'header_title' => 'required|string|max:255',
             'header_subtitle' => 'required|string|max:255',
@@ -32,40 +33,46 @@ class SettingsController extends Controller
             'menu_item_3' => 'required|string|max:100',
             'menu_item_4' => 'required|string|max:100',
             'menu_item_5' => 'required|string|max:100',
-            'logo_image' => 'nullable|image|mimes:png,jpg,jpeg,svg|max:2048',
-        ]);
+        ];
 
-        try {
-            // Handle logo image upload
-            if ($request->hasFile('logo_image')) {
+        if ($request->hasFile('logo_image')) {
+            $rules['logo_image'] = 'image|mimes:png,jpg,jpeg,svg|max:2048';
+        }
+
+        $request->validate($rules);
+
+        // Handle logo image upload
+        if ($request->hasFile('logo_image')) {
+            try {
                 // Delete old logo if exists
                 $oldLogo = Setting::where('key', 'logo_image')->first();
                 if ($oldLogo && $oldLogo->value) {
                     Storage::disk('public')->delete($oldLogo->value);
                 }
-                
+
                 // Store new logo
                 $logoPath = $request->file('logo_image')->store('logos', 'public');
                 Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
+            } catch (\Exception $e) {
+                \Log::error('Logo upload failed: ' . $e->getMessage());
             }
+        }
 
-            $fields = [
-                'site_logo', 'header_title', 'header_subtitle',
-                'footer_copyright', 'footer_description',
-                'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
-            ];
+        // Save other settings
+        $fields = [
+            'site_logo', 'header_title', 'header_subtitle',
+            'footer_copyright', 'footer_description',
+            'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
+        ];
 
-            foreach ($fields as $field) {
-                Setting::updateOrCreate(
-                    ['key' => $field],
-                    ['value' => $request->$field]
-                );
-            }
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Please run migrations first: php artisan migrate');
+        foreach ($fields as $field) {
+            Setting::updateOrCreate(
+                ['key' => $field],
+                ['value' => $request->$field]
+            );
         }
 
         return redirect()->back()->with('success', 'Settings updated successfully!');
