@@ -10,7 +10,11 @@ class SettingsController extends Controller
 {
     public function index()
     {
-        $settings = Setting::pluck('value', 'key');
+        try {
+            $settings = Setting::pluck('value', 'key')->toArray();
+        } catch (\Exception $e) {
+            $settings = [];
+        }
         return view('admin.settings.index', compact('settings'));
     }
 
@@ -28,17 +32,21 @@ class SettingsController extends Controller
             'menu_item_5' => 'required|string|max:100',
         ]);
 
-        $fields = [
-            'header_title', 'header_subtitle',
-            'footer_copyright', 'footer_description',
-            'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
-        ];
+        try {
+            $fields = [
+                'header_title', 'header_subtitle',
+                'footer_copyright', 'footer_description',
+                'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
+            ];
 
-        foreach ($fields as $field) {
-            Setting::updateOrCreate(
-                ['key' => $field],
-                ['value' => $request->$field]
-            );
+            foreach ($fields as $field) {
+                Setting::updateOrCreate(
+                    ['key' => $field],
+                    ['value' => $request->$field]
+                );
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Please run migrations first: php artisan migrate');
         }
 
         return redirect()->back()->with('success', 'Settings updated successfully!');
