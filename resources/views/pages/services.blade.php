@@ -15,7 +15,7 @@
                 </div>
                 <span class="terminal-path">~/services.blade.php</span>
             </div>
-            <div class="terminal-content">
+            <div class="terminal-content" style="text-align: center;">
                 <span class="section-eyebrow">// services</span>
                 <h1 class="hero-title" style="font-size: 2rem;">
                     <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">services</span> = [
