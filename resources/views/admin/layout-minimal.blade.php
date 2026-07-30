@@ -4,15 +4,17 @@
 <div class="minimal-wrapper">
     <!-- Top Bar -->
     <div class="minimal-topbar">
-        <div class="topbar-brand">
+        <!-- Window Header -->
+        <div class="topbar-window">
             <div class="topbar-dots">
-                <span class="topbar-dot"></span>
-                <span class="topbar-dot"></span>
-                <span class="topbar-dot"></span>
+                <span class="topbar-dot close"></span>
+                <span class="topbar-dot minimize"></span>
+                <span class="topbar-dot maximize"></span>
             </div>
-            <span class="topbar-name">KONOK</span>
+            <span class="topbar-title">KONOK.IO ADMIN</span>
         </div>
 
+        <!-- Navigation Tabs -->
         <div class="topbar-tabs">
             <div class="topbar-tab {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                 <span class="prefix">01.</span>
@@ -42,7 +44,7 @@
         </div>
 
         <div class="topbar-actions">
-            <a href="{{ url('/') }}" target="_blank" class="topbar-search" title="View Website">
+            <a href="{{ url('/') }}" target="_blank" class="topbar-btn" title="View Website">
                 <span>⌘K</span>
                 <span>View Site</span>
             </a>
@@ -52,7 +54,7 @@
             </div>
             <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
-                <button type="submit" class="topbar-logout">
+                <button type="submit" class="topbar-btn topbar-logout">
                     <span>→</span>
                     <span>logout</span>
                 </button>
@@ -72,15 +74,15 @@
     /* Minimal Console Layout */
     .minimal-wrapper {
         font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-        background: #fafafa;
-        color: #171717;
+        background: #f8fafc;
+        color: #1e293b;
         min-height: 100vh;
     }
 
-    /* Top Bar - Match site navbar height */
+    /* Top Bar - Dark Theme */
     .minimal-topbar {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e5e5;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         padding: 0 24px;
         display: flex;
         align-items: center;
@@ -88,31 +90,49 @@
         position: sticky;
         top: 0;
         z-index: 100;
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
     }
 
-    .topbar-brand {
+    .topbar-window {
+        background: rgba(0,0,0,0.3);
+        padding: 8px 16px;
+        border-radius: 8px;
+        margin-right: 24px;
         display: flex;
         align-items: center;
         gap: 12px;
-        margin-right: 32px;
+        border: 1px solid rgba(255,255,255,0.05);
     }
 
     .topbar-dots {
         display: flex;
-        gap: 5px;
+        gap: 6px;
     }
 
     .topbar-dot {
-        width: 10px;
-        height: 10px;
+        width: 11px;
+        height: 11px;
         border-radius: 50%;
-        background: #232323;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
-    .topbar-name {
-        font-size: 13px;
+    .topbar-dot.close {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+    }
+
+    .topbar-dot.minimize {
+        background: linear-gradient(135deg, #ffd93d, #f0c419);
+    }
+
+    .topbar-dot.maximize {
+        background: linear-gradient(135deg, #6bcb77, #4ade80);
+    }
+
+    .topbar-title {
+        font-size: 11px;
+        color: #ffffff;
+        letter-spacing: 2px;
         font-weight: 600;
-        letter-spacing: -0.5px;
     }
 
     .topbar-tabs {
@@ -124,17 +144,17 @@
     }
 
     .topbar-tab {
-        padding: 0 16px;
+        padding: 0 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
         font-size: 13px;
-        color: #6b6b6b;
+        color: #94a3b8;
         transition: all 0.2s;
         text-decoration: none;
-        border-radius: 6px;
         margin: 0 4px;
+        border-radius: 6px;
     }
 
     .topbar-tab a {
@@ -143,23 +163,23 @@
     }
 
     .topbar-tab:hover {
-        color: #171717;
-        background: #f5f5f5;
+        color: #ffffff;
+        background: rgba(255,255,255,0.1);
     }
 
     .topbar-tab.active {
-        color: #2563eb;
-        background: #eff6ff;
+        color: #4ade80;
+        background: rgba(74, 222, 128, 0.1);
     }
 
     .topbar-tab .prefix {
-        color: #a3a3a3;
+        color: #64748b;
     }
 
     .tab-badge {
-        background: #171717;
-        color: white;
-        padding: 2px 6px;
+        background: #4ade80;
+        color: #0a0a0a;
+        padding: 2px 8px;
         border-radius: 10px;
         font-size: 10px;
         font-weight: 600;
@@ -173,47 +193,51 @@
         margin-left: auto;
     }
 
-    .topbar-search {
+    .topbar-btn {
         display: flex;
         align-items: center;
         gap: 8px;
-        background: #f5f5f5;
-        border: 1px solid #e5e5e5;
-        padding: 6px 12px;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 8px 14px;
         font-size: 11px;
-        color: #a3a3a3;
-        border-radius: 4px;
+        color: #94a3b8;
+        border-radius: 6px;
         text-decoration: none;
         transition: all 0.2s;
+        cursor: pointer;
+        font-family: 'JetBrains Mono', monospace;
     }
 
-    .topbar-search:hover {
-        background: #e5e5e5;
-        color: #171717;
+    .topbar-btn:hover {
+        background: rgba(255,255,255,0.15);
+        color: #ffffff;
+        border-color: rgba(255,255,255,0.2);
     }
 
     .topbar-user {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
     }
 
     .topbar-avatar {
-        width: 28px;
-        height: 28px;
-        border-radius: 4px;
-        background: #171717;
-        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #4ade80, #22c55e);
+        color: #0a0a0a;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 10px;
-        font-weight: 600;
+        font-size: 11px;
+        font-weight: 700;
     }
 
     .topbar-username {
-        font-size: 11px;
-        color: #6b6b6b;
+        font-size: 12px;
+        color: #e2e8f0;
+        font-weight: 500;
     }
 
     .logout-form {
@@ -221,24 +245,15 @@
     }
 
     .topbar-logout {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        background: #f5f5f5;
-        border: 1px solid #e5e5e5;
-        padding: 6px 12px;
-        font-size: 11px;
-        color: #6b6b6b;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-        transition: all 0.2s;
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #fca5a5;
     }
 
     .topbar-logout:hover {
-        background: #fee2e2;
+        background: rgba(239, 68, 68, 0.2);
         border-color: #ef4444;
-        color: #ef4444;
+        color: #ffffff;
     }
 
     /* Main Content */
