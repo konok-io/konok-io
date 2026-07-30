@@ -17,7 +17,7 @@
         <span class="window-title">edit-project.json</span>
     </div>
     <div class="window-body">
-        <form action="{{ route('admin.projects.update', $portfolio->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.projects.update', ['project' => $portfolio->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group">

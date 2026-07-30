@@ -47,8 +47,8 @@
                         </td>
                         <td>
                             <div class="table-actions">
-                                <a href="{{ route('admin.projects.edit', $portfolio->id) }}" class="btn btn-secondary btn-sm">Edit</a>
-                                <form action="{{ route('admin.projects.destroy', $portfolio->id) }}" method="POST" onsubmit="return confirm('Delete this project?')">
+                                <a href="{{ route('admin.projects.edit', ['project' => $portfolio->id]) }}" class="btn btn-secondary btn-sm">Edit</a>
+                                <form action="{{ route('admin.projects.destroy', ['project' => $portfolio->id]) }}" method="POST" onsubmit="return confirm('Delete this project?')">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-secondary btn-sm" style="color: #ef4444;">Delete</button>
