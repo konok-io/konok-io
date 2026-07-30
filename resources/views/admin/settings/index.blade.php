@@ -23,7 +23,7 @@
     <button class="settings-tab" data-tab="pages">Pages</button>
 </div>
 
-<form action="{{ route('admin.settings.update') }}" method="POST">
+<form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
     <!-- Header Settings -->
@@ -37,11 +37,23 @@
             </div>
             <div class="window-body">
                 <div class="form-group">
-                    <label class="form-label">// site_logo</label>
-                    <input type="text" name="site_logo" class="form-input" 
-                           value="{{ $settings['site_logo'] ?? 'KONOK' }}" 
+                    <label class="form-label">// logo_image (PNG, JPG, SVG)</label>
+                    <input type="file" name="logo_image" class="form-input" accept="image/*">
+                    @if(isset($settings['logo_image']) && $settings['logo_image'])
+                        <div style="margin-top: 12px; padding: 12px; background: #f5f5f5; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
+                            <img src="{{ Storage::url($settings['logo_image']) }}" alt="Current Logo" style="max-height: 50px; max-width: 150px; object-fit: contain;">
+                            <small style="color: #6b6b6b; font-size: 11px;">Current logo uploaded</small>
+                        </div>
+                    @else
+                        <small style="color: #a3a3a3; font-size: 11px; margin-top: 4px; display: block;">Upload your logo image (PNG, JPG, SVG - Max 2MB)</small>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label class="form-label">// site_logo (Fallback Text)</label>
+                    <input type="text" name="site_logo" class="form-input"
+                           value="{{ $settings['site_logo'] ?? 'KONOK' }}"
                            placeholder="Enter site logo text">
-                    <small style="color: #a3a3a3; font-size: 11px; margin-top: 4px; display: block;">This will appear in the header as your logo</small>
+                    <small style="color: #a3a3a3; font-size: 11px; margin-top: 4px; display: block;">This will appear if no logo is uploaded</small>
                 </div>
                 <div class="form-group">
                     <label class="form-label">// header_title</label>

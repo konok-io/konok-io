@@ -23,18 +23,22 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
-            <!-- Logo with macOS dots and path badge -->
+            <!-- Logo with image or fallback text -->
             <a href="/" class="navbar-brand">
-                <div class="terminal-window" style="box-shadow: none; border: none;">
-                    <div class="terminal-titlebar" style="padding: 6px 8px; background: transparent; border: none;">
-                        <div class="terminal-dots">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
+                @if(!empty($siteSettings['logo_image_url']))
+                    <img src="{{ $siteSettings['logo_image_url'] }}" alt="{{ $siteSettings['site_logo'] ?? 'KONOK' }}" class="navbar-logo-img">
+                @else
+                    <div class="terminal-window" style="box-shadow: none; border: none;">
+                        <div class="terminal-titlebar" style="padding: 6px 8px; background: transparent; border: none;">
+                            <div class="terminal-dots">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <span class="terminal-path">&lt;KONOK.IO/&gt;</span>
+                    <span class="terminal-path">&lt;{{ $siteSettings['site_logo'] ?? 'KONOK' }}/&gt;</span>
+                @endif
             </a>
             
             <!-- Navigation Links -->

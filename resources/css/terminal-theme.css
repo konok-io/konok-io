@@ -245,6 +245,13 @@ a:hover {
     gap: var(--space-sm);
 }
 
+.navbar-logo-img {
+    height: 36px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
 /* Navbar Header Dots - 232F40 */
 .navbar-brand .terminal-dots .terminal-dot {
     width: 12px;
