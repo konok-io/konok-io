@@ -113,6 +113,27 @@
                             I'll get back to you within 24 hours.
                         </p>
                     </div>
+                    
+                    <!-- Quick Info -->
+                    <div style="margin-top: 24px; padding-top: 20px; border-top: 1px dashed var(--terminal-border);">
+                        <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); margin-bottom: 16px;">
+                            <span style="color: var(--terminal-syntax-purple);">//</span> What happens next?
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">01</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary);">I'll review your message</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">02</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary);">Get back to you within 24h</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">03</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary);">Discuss your project details</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
