@@ -350,15 +350,15 @@
         margin-left: var(--sidebar-collapsed);
     }
     
-    /* Topbar - Same height as sidebar header */
+    /* Topbar - Same height as site navbar */
     .admin-topbar {
-        background: var(--admin-sidebar-bg);
-        border-bottom: 1px solid var(--admin-border);
-        padding: 0 var(--space-lg);
+        background: var(--terminal-bg-primary);
+        border-bottom: 1px solid var(--terminal-border);
+        padding: var(--space-md) var(--space-lg);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 56px;
+        min-height: auto;
         position: sticky;
         top: 0;
         z-index: 50;
@@ -373,19 +373,19 @@
     }
     
     .breadcrumb-path {
-        color: var(--admin-accent);
+        color: var(--terminal-syntax-green);
     }
     
     .breadcrumb-text {
-        color: var(--admin-text-secondary);
+        color: var(--terminal-text-secondary);
     }
     
     .breadcrumb-sep {
-        color: var(--admin-text-muted);
+        color: var(--terminal-text-muted);
     }
     
     .breadcrumb-current {
-        color: var(--admin-text);
+        color: var(--terminal-text);
     }
     
     .topbar-actions {
@@ -401,23 +401,23 @@
         padding: var(--space-xs) var(--space-sm);
         font-family: var(--font-mono);
         font-size: 0.75rem;
-        color: var(--admin-text-secondary);
+        color: var(--terminal-text-secondary);
         text-decoration: none;
         border-radius: 4px;
         transition: all 0.2s ease;
     }
     
     .topbar-btn:hover {
-        background: var(--admin-hover);
-        color: var(--admin-text);
+        background: var(--terminal-bg-secondary);
+        color: var(--terminal-accent);
     }
     
     .topbar-btn:hover .terminal-syntax-purple {
-        color: var(--admin-accent);
+        color: var(--terminal-accent);
     }
     
     .topbar-btn .terminal-syntax-purple {
-        color: var(--admin-text-muted);
+        color: var(--terminal-text-muted);
     }
     
     /* Admin Main */
