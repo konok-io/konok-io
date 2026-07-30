@@ -77,14 +77,14 @@
         min-height: 100vh;
     }
 
-    /* Top Bar */
+    /* Top Bar - Match site navbar height */
     .minimal-topbar {
         background: #ffffff;
         border-bottom: 1px solid #e5e5e5;
         padding: 0 24px;
         display: flex;
         align-items: center;
-        height: 52px;
+        height: 64px;
         position: sticky;
         top: 0;
         z-index: 100;
@@ -146,8 +146,9 @@
     }
 
     .topbar-tab.active {
-        color: #171717;
-        border-bottom-color: #171717;
+        color: #2563eb;
+        background: #eff6ff;
+        border-bottom-color: #2563eb;
     }
 
     .topbar-tab .prefix {
