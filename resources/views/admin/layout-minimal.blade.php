@@ -494,54 +494,68 @@
     /* Footer */
     .footer {
         margin-top: 40px;
-        background: #171717;
-        border: 1px solid #333;
-        border-radius: 8px;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        border-radius: 12px;
         overflow: hidden;
         font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+        position: relative;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(39,202,64,0.5), transparent);
     }
 
     .footer-window {
-        background: #1f1f1f;
-        padding: 10px 14px;
+        background: rgba(0,0,0,0.3);
+        padding: 12px 16px;
         display: flex;
         align-items: center;
-        gap: 10px;
-        border-bottom: 1px solid #333;
+        gap: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .footer-dots {
         display: flex;
-        gap: 5px;
+        gap: 6px;
     }
 
     .footer-dot {
-        width: 10px;
-        height: 10px;
+        width: 11px;
+        height: 11px;
         border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .footer-dot.close {
-        background: #ff5f57;
+        background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
     }
 
     .footer-dot.minimize {
-        background: #ffbd2e;
+        background: linear-gradient(135deg, #ffd93d, #f0c419);
     }
 
     .footer-dot.maximize {
-        background: #28c840;
+        background: linear-gradient(135deg, #6bcb77, #4ade80);
     }
 
     .footer-title {
-        font-size: 10px;
-        color: #888;
+        font-size: 11px;
+        color: #64748b;
         flex: 1;
         text-align: center;
+        letter-spacing: 1px;
     }
 
     .footer-body {
-        padding: 14px 18px;
+        padding: 16px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -554,52 +568,85 @@
     }
 
     .footer-prompt .prompt-symbol {
-        color: #28c840;
-        font-size: 13px;
+        color: #4ade80;
+        font-size: 14px;
         font-weight: 700;
+        text-shadow: 0 0 10px rgba(74,222,128,0.5);
     }
 
     .footer-prompt .prompt-text {
-        color: #e0e0e0;
+        color: #e2e8f0;
         font-size: 12px;
+        font-weight: 500;
     }
 
-    .footer-prompt .prompt-status {
-        color: #28c840;
-        font-size: 11px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
+    .footer-prompt .prompt-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        background: #4ade80;
+        animation: cursor-blink 1s infinite;
+        margin-left: 2px;
     }
 
-    .footer-prompt .prompt-status::before {
-        content: '●';
-        animation: blink 1.5s infinite;
-    }
-
-    @keyframes blink {
+    @keyframes cursor-blink {
         0%, 50% { opacity: 1; }
         51%, 100% { opacity: 0; }
+    }
+
+    .footer-status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 20px;
+    }
+
+    .footer-status .status-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #4ade80;
+        box-shadow: 0 0 8px rgba(74,222,128,0.6);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 8px rgba(74,222,128,0.6); }
+        50% { box-shadow: 0 0 16px rgba(74,222,128,0.9); }
+    }
+
+    .footer-status .status-text {
+        color: #4ade80;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
     }
 
     .footer-info {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
     }
 
     .footer-info span {
         font-size: 11px;
-        color: #888;
+        color: #94a3b8;
     }
 
     .footer-info .separator {
-        color: #555;
+        color: #475569;
+        font-size: 10px;
     }
 
     .footer-brand {
-        color: #aaa;
+        color: #cbd5e1;
         font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-brand span {
+        color: #4ade80;
     }
 
     /* Buttons */
