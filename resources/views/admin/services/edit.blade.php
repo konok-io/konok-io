@@ -17,7 +17,7 @@
         <span class="window-title">edit-service.json</span>
     </div>
     <div class="window-body">
-        <form action="{{ route('admin.services.update', $service->id) }}" method="POST">
+        <form action="{{ route('admin.services.update', ['service' => $service->id]) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">

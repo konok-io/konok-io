@@ -40,13 +40,16 @@ class ServiceController extends Controller
         return redirect()->route('admin.services.index')->with('success', 'Service created successfully!');
     }
 
-    public function edit(Service $service)
+    public function edit($id)
     {
+        $service = Service::findOrFail($id);
         return view('admin.services.edit', compact('service'));
     }
 
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
+        $service = Service::findOrFail($id);
+        
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'icon' => 'nullable|string|max:100',
@@ -65,8 +68,9 @@ class ServiceController extends Controller
         return redirect()->route('admin.services.index')->with('success', 'Service updated successfully!');
     }
 
-    public function destroy(Service $service)
+    public function destroy($id)
     {
+        $service = Service::findOrFail($id);
         $service->delete();
         return redirect()->route('admin.services.index')->with('success', 'Service deleted successfully!');
     }

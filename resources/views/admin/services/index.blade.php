@@ -39,8 +39,8 @@
                         <td>{{ $service->slug }}</td>
                         <td>
                             <div class="table-actions">
-                                <a href="{{ route('admin.services.edit', $service->id) }}" class="btn btn-secondary btn-sm">Edit</a>
-                                <form action="{{ route('admin.services.destroy', $service->id) }}" method="POST" onsubmit="return confirm('Delete this service?')">
+                                <a href="{{ route('admin.services.edit', ['service' => $service->id]) }}" class="btn btn-secondary btn-sm">Edit</a>
+                                <form action="{{ route('admin.services.destroy', ['service' => $service->id]) }}" method="POST" onsubmit="return confirm('Delete this service?')">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-secondary btn-sm" style="color: #ef4444;">Delete</button>
