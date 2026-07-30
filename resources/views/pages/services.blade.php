@@ -31,7 +31,7 @@
 <!-- Main Services -->
 <section class="section section-light">
     <div class="container">
-        <div class="grid grid-2">
+        <div class="grid grid-3">
             <!-- Web Development -->
             <div class="card">
                 <div class="card-header">
@@ -40,7 +40,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="badge">01</span>
+                    <span class="terminal-path">~/services/web-dev.blade.php</span>
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-center gap-3 mb-3">
@@ -61,25 +61,10 @@
                         From simple websites to complex enterprise solutions.
                     </p>
                     
-                    <div class="mt-3">
-                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
-                            <span style="color: var(--terminal-syntax-amber);">// features</span>
-                        </span>
-                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
-                            <li style="margin-bottom: var(--space-xs);">Custom Laravel Applications</li>
-                            <li style="margin-bottom: var(--space-xs);">E-commerce Solutions</li>
-                            <li style="margin-bottom: var(--space-xs);">CMS Development</li>
-                            <li style="margin-bottom: var(--space-xs);">RESTful API Integration</li>
-                            <li style="margin-bottom: var(--space-xs);">Responsive Frontend Design</li>
-                            <li>Database Design & Optimization</li>
-                        </ul>
-                    </div>
-                    
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Laravel</span>
                         <span class="tag">PHP</span>
                         <span class="tag">MySQL</span>
-                        <span class="tag">HTML/CSS</span>
                         <span class="tag">JavaScript</span>
                     </div>
                 </div>
@@ -93,7 +78,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="badge">02</span>
+                    <span class="terminal-path">~/services/it-support.blade.php</span>
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-center gap-3 mb-3">
@@ -115,77 +100,11 @@
                         your business running smoothly and securely.
                     </p>
                     
-                    <div class="mt-3">
-                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
-                            <span style="color: var(--terminal-syntax-amber);">// capabilities</span>
-                        </span>
-                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
-                            <li style="margin-bottom: var(--space-xs);">Network Setup & Configuration</li>
-                            <li style="margin-bottom: var(--space-xs);">Hardware Troubleshooting</li>
-                            <li style="margin-bottom: var(--space-xs);">Server Administration</li>
-                            <li style="margin-bottom: var(--space-xs);">Security Audits</li>
-                            <li style="margin-bottom: var(--space-xs);">24/7 Technical Support</li>
-                            <li>Remote Desktop Support</li>
-                        </ul>
-                    </div>
-                    
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Windows</span>
                         <span class="tag">Linux</span>
                         <span class="tag">Networking</span>
                         <span class="tag">Security</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Database Management -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="terminal-dots">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <span class="badge">03</span>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex align-center gap-3 mb-3">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="feature-title" style="margin-bottom: 0;">Database Management</h3>
-                            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-text-muted);">// data solutions</span>
-                        </div>
-                    </div>
-                    
-                    <p class="feature-description">
-                        Professional database design, development, and optimization services 
-                        to ensure your data is organized, secure, and performant.
-                    </p>
-                    
-                    <div class="mt-3">
-                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
-                            <span style="color: var(--terminal-syntax-amber);">// offerings</span>
-                        </span>
-                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
-                            <li style="margin-bottom: var(--space-xs);">Database Design & Architecture</li>
-                            <li style="margin-bottom: var(--space-xs);">Performance Optimization</li>
-                            <li style="margin-bottom: var(--space-xs);">Data Migration</li>
-                            <li style="margin-bottom: var(--space-xs);">Backup Solutions</li>
-                            <li style="margin-bottom: var(--space-xs);">Data Analytics</li>
-                            <li>Backup & Recovery Plans</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">MongoDB</span>
                     </div>
                 </div>
             </div>
@@ -198,7 +117,7 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
                     </div>
-                    <span class="badge">04</span>
+                    <span class="terminal-path">~/services/design.blade.php</span>
                 </div>
                 <div class="card-body">
                     <div class="d-flex align-center gap-3 mb-3">
@@ -217,23 +136,9 @@
                     </div>
                     
                     <p class="feature-description">
-                        Professional design services to establish and enhance your brand's 
+                        Professional design services to establish and enhance your brand's
                         visual identity across all digital platforms.
                     </p>
-                    
-                    <div class="mt-3">
-                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-muted); display: block; margin-bottom: var(--space-sm);">
-                            <span style="color: var(--terminal-syntax-amber);">// specialties</span>
-                        </span>
-                        <ul style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--terminal-text-secondary); padding-left: var(--space-lg); margin: 0;">
-                            <li style="margin-bottom: var(--space-xs);">Logo Design</li>
-                            <li style="margin-bottom: var(--space-xs);">Brand Identity</li>
-                            <li style="margin-bottom: var(--space-xs);">Graphic Design</li>
-                            <li style="margin-bottom: var(--space-xs);">UI/UX Consultation</li>
-                            <li style="margin-bottom: var(--space-xs);">Social Media Graphics</li>
-                            <li>Print Materials</li>
-                        </ul>
-                    </div>
                     
                     <div class="d-flex gap-1 mt-3" style="flex-wrap: wrap;">
                         <span class="tag">Photoshop</span>
