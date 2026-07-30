@@ -12,12 +12,12 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolios = Portfolio::orderBy('sort_order')->get();
-        return view('admin.portfolios.index', compact('portfolios'));
+        return view('admin.projects.index', compact('portfolios'));
     }
 
     public function create()
     {
-        return view('admin.portfolios.create');
+        return view('admin.projects.create');
     }
 
     public function store(Request $request)
@@ -43,12 +43,12 @@ class PortfolioController extends Controller
 
         Portfolio::create($validated);
 
-        return redirect()->route('admin.portfolios.index')->with('success', 'Portfolio created successfully!');
+        return redirect()->route('admin.projects.index')->with('success', 'Portfolio created successfully!');
     }
 
     public function edit(Portfolio $portfolio)
     {
-        return view('admin.portfolios.edit', compact('portfolio'));
+        return view('admin.projects.edit', compact('portfolio'));
     }
 
     public function update(Request $request, Portfolio $portfolio)
@@ -74,12 +74,12 @@ class PortfolioController extends Controller
 
         $portfolio->update($validated);
 
-        return redirect()->route('admin.portfolios.index')->with('success', 'Portfolio updated successfully!');
+        return redirect()->route('admin.projects.index')->with('success', 'Portfolio updated successfully!');
     }
 
     public function destroy(Portfolio $portfolio)
     {
         $portfolio->delete();
-        return redirect()->route('admin.portfolios.index')->with('success', 'Portfolio deleted successfully!');
+        return redirect()->route('admin.projects.index')->with('success', 'Portfolio deleted successfully!');
     }
 }
