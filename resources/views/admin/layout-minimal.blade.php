@@ -560,6 +560,20 @@
     .btn-sm {
         padding: 6px 12px;
         font-size: 11px;
+        cursor: pointer;
+    }
+    
+    /* Table Actions */
+    .table-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    
+    .table-actions .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Forms */

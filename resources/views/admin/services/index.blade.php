@@ -38,7 +38,7 @@
                         <td class="name">{{ $service->title }}</td>
                         <td>{{ $service->slug }}</td>
                         <td>
-                            <div style="display: flex; gap: 8px;">
+                            <div class="table-actions">
                                 <a href="{{ route('admin.services.edit', $service->id) }}" class="btn btn-secondary btn-sm">Edit</a>
                                 <form action="{{ route('admin.services.destroy', $service->id) }}" method="POST" onsubmit="return confirm('Delete this service?')">
                                     @csrf
