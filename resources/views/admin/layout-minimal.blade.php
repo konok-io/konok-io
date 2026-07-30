@@ -293,8 +293,8 @@
     }
 
     .stat-card-header {
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         padding: 12px 16px;
-        border-bottom: 1px solid #e5e5e5;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -302,22 +302,24 @@
 
     .stat-card-dots {
         display: flex;
-        gap: 4px;
+        gap: 6px;
     }
 
     .stat-card-dot {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
-        background: #232323;
+        background: #ffffff;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
     .stat-card-title {
         font-size: 10px;
-        color: #a3a3a3;
+        color: #ffffff;
         margin-left: auto;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        font-weight: 600;
     }
 
     .stat-card-body {

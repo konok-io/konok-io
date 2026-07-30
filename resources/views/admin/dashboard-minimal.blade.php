@@ -15,6 +15,8 @@
         <div class="stat-card-header">
             <div class="stat-card-dots">
                 <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
             </div>
             <span class="stat-card-title">Projects</span>
         </div>
@@ -27,6 +29,8 @@
     <div class="stat-card">
         <div class="stat-card-header">
             <div class="stat-card-dots">
+                <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
                 <span class="stat-card-dot"></span>
             </div>
             <span class="stat-card-title">Published</span>
@@ -41,6 +45,8 @@
         <div class="stat-card-header">
             <div class="stat-card-dots">
                 <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
             </div>
             <span class="stat-card-title">Services</span>
         </div>
@@ -53,6 +59,8 @@
     <div class="stat-card">
         <div class="stat-card-header">
             <div class="stat-card-dots">
+                <span class="stat-card-dot"></span>
+                <span class="stat-card-dot"></span>
                 <span class="stat-card-dot"></span>
             </div>
             <span class="stat-card-title">Contacts</span>
