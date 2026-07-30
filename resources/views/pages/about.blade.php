@@ -3,24 +3,26 @@
 @section('title', 'About | KONOK.IO - Key Of Next Online Knowledge')
 
 @section('content')
-<!-- Page Header - Full Width -->
+<!-- Page Header -->
 <section class="hero" style="padding: 80px 0;">
-    <div class="terminal-window" style="max-width: 100%;">
-        <div class="terminal-titlebar">
-            <div class="terminal-dots">
-                <span class="terminal-dot red"></span>
-                <span class="terminal-dot yellow"></span>
-                <span class="terminal-dot green"></span>
+    <div class="container">
+        <div class="terminal-window">
+            <div class="terminal-titlebar">
+                <div class="terminal-dots">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-path">~/about/index.blade.php</span>
             </div>
-            <span class="terminal-path">~/about/index.blade.php</span>
-        </div>
-        <div class="terminal-content" style="text-align: center;">
-            <span class="section-eyebrow">// about_us</span>
-            <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 16px;">KONOK.IO</h1>
-            <p class="hero-subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-                <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">mission</span> = 
-                <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>;
-            </p>
+            <div class="terminal-content" style="text-align: center;">
+                <span class="section-eyebrow">// about_us</span>
+                <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 16px;">KONOK.IO</h1>
+                <p class="hero-subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">mission</span> = 
+                    <span style="color: var(--terminal-syntax-green);">"Key Of Next Online Knowledge"</span>;
+                </p>
+            </div>
         </div>
     </div>
 </section>
