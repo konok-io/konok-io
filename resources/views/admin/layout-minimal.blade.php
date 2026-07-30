@@ -113,19 +113,14 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
+        background: #ffffff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
-    .topbar-dot.close {
-        background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
-    }
-
-    .topbar-dot.minimize {
-        background: linear-gradient(135deg, #ffd93d, #f0c419);
-    }
-
+    .topbar-dot.close,
+    .topbar-dot.minimize,
     .topbar-dot.maximize {
-        background: linear-gradient(135deg, #6bcb77, #4ade80);
+        background: #ffffff;
     }
 
     .topbar-title {
@@ -546,19 +541,14 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
+        background: #ffffff;
         box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
-    .footer-dot.close {
-        background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
-    }
-
-    .footer-dot.minimize {
-        background: linear-gradient(135deg, #ffd93d, #f0c419);
-    }
-
+    .footer-dot.close,
+    .footer-dot.minimize,
     .footer-dot.maximize {
-        background: linear-gradient(135deg, #6bcb77, #4ade80);
+        background: #ffffff;
     }
 
     .footer-title {

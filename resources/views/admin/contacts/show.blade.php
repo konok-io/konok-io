@@ -64,11 +64,29 @@
 
 <!-- Footer -->
 <div class="footer">
-    <div class="footer-status">
-        <span class="dot"></span>
-        <span>System Online</span>
+    <div class="footer-window">
+        <div class="footer-dots">
+            <span class="footer-dot close"></span>
+            <span class="footer-dot minimize"></span>
+            <span class="footer-dot maximize"></span>
+        </div>
+        <span class="footer-title">KONOK.IO ADMIN TERMINAL</span>
     </div>
-    <span>Version 1.0.4</span>
-    <span>© {{ date('Y') }} KONOK.IO</span>
+    <div class="footer-body">
+        <div class="footer-prompt">
+            <span class="prompt-symbol">❯</span>
+            <span class="prompt-text">konok@admin:~$</span>
+            <span class="prompt-cursor"></span>
+            <div class="footer-status">
+                <span class="status-indicator"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </div>
+        <div class="footer-info">
+            <span>v1.0.4</span>
+            <span class="separator">•</span>
+            <span class="footer-brand"><span>©</span> {{ date('Y') }} KONOK.IO</span>
+        </div>
+    </div>
 </div>
 @endsection
