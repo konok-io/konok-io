@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="hero" style="padding: var(--space-2xl) 0; text-align: center;">
+<section class="hero" style="padding: var(--space-2xl) 0;">
     <div class="container">
         <div class="terminal-window">
             <div class="terminal-titlebar">
