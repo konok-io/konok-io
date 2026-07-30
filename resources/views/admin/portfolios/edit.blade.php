@@ -17,7 +17,7 @@
         <span class="window-title">edit-project.json</span>
     </div>
     <div class="window-body">
-        <form action="{{ route('admin.portfolios.update', $portfolio->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.projects.update', $portfolio->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -52,7 +52,7 @@
                 </select>
             </div>
             <div class="form-actions">
-                <a href="{{ route('admin.portfolios.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Cancel</a>
                 <button type="submit" class="btn btn-primary">Update Project</button>
             </div>
         </form>

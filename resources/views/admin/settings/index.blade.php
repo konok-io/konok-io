@@ -134,7 +134,7 @@
             </div>
             <div class="window-body">
                 <div class="pages-grid">
-                    <a href="{{ route('admin.portfolios.index') }}" class="page-card">
+                    <a href="{{ route('admin.projects.index') }}" class="page-card">
                         <span class="page-icon">📁</span>
                         <span class="page-name">Projects</span>
                         <span class="page-count">{{ App\Models\Portfolio::count() }} items</span>

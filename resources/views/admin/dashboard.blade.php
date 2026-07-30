@@ -175,7 +175,7 @@
                         <span class="terminal-dot green"></span>
                     </div>
                     <span class="terminal-path">partials/recent-portfolios.blade.php</span>
-                    <a href="{{ route('admin.portfolios.index') }}" class="terminal-action">&gt; view_all</a>
+                    <a href="{{ route('admin.projects.index') }}" class="terminal-action">&gt; view_all</a>
                 </div>
                 <div class="terminal-content" style="max-height: 180px; overflow-y: auto;">
                     @if($recentPortfolios->isEmpty())

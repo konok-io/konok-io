@@ -16,7 +16,7 @@
             <span class="window-dot"></span>
         </div>
         <span class="window-title">projects.json</span>
-        <a href="{{ route('admin.portfolios.create') }}" class="btn btn-primary btn-sm" style="margin-left: auto;">
+        <a href="{{ route('admin.projects.create') }}" class="btn btn-primary btn-sm" style="margin-left: auto;">
             + Add Project
         </a>
     </div>
@@ -47,8 +47,8 @@
                         </td>
                         <td>
                             <div class="table-actions">
-                                <a href="{{ route('admin.portfolios.edit', $portfolio->id) }}" class="btn btn-secondary btn-sm">Edit</a>
-                                <form action="{{ route('admin.portfolios.destroy', $portfolio->id) }}" method="POST" onsubmit="return confirm('Delete this project?')">
+                                <a href="{{ route('admin.projects.edit', $portfolio->id) }}" class="btn btn-secondary btn-sm">Edit</a>
+                                <form action="{{ route('admin.projects.destroy', $portfolio->id) }}" method="POST" onsubmit="return confirm('Delete this project?')">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-secondary btn-sm" style="color: #ef4444;">Delete</button>

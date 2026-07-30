@@ -34,7 +34,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
     
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('portfolios', App\Http\Controllers\Admin\PortfolioController::class);
+    Route::resource('projects', App\Http\Controllers\Admin\PortfolioController::class);
     Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
     Route::get('contacts', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('contacts.index');
     Route::get('contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('contacts.show');

@@ -17,7 +17,7 @@
         <span class="window-title">new-project.json</span>
     </div>
     <div class="window-body">
-        <form action="{{ route('admin.portfolios.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label class="form-label">// title</label>
@@ -51,7 +51,7 @@
                 </select>
             </div>
             <div class="form-actions">
-                <a href="{{ route('admin.portfolios.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Cancel</a>
                 <button type="submit" class="btn btn-primary">Save Project</button>
             </div>
         </form>

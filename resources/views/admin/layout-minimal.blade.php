@@ -18,9 +18,9 @@
                 <span class="prefix">01.</span>
                 <a href="{{ route('admin.dashboard') }}">Dashboard</a>
             </div>
-            <div class="topbar-tab {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
+            <div class="topbar-tab {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}">
                 <span class="prefix">02.</span>
-                <a href="{{ route('admin.portfolios.index') }}">Projects</a>
+                <a href="{{ route('admin.projects.index') }}">Projects</a>
             </div>
             <div class="topbar-tab {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
                 <span class="prefix">03.</span>

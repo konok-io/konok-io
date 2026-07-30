@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.portfolios.index') }}" class="nav-link {{ request()->routeIs('admin.portfolios.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.projects.index') }}" class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}">
                         <span class="nav-icon">$</span>
                         <span>portfolios</span>
                     </a>
