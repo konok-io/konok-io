@@ -132,6 +132,14 @@
                                 <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">03</span>
                                 <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary);">Discuss your project details</span>
                             </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-accent); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">04</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-text-secondary);">Share project proposal & quote</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--terminal-syntax-green); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px;">05</span>
+                                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--terminal-syntax-green);">Let's start building! 🚀</span>
+                            </div>
                         </div>
                     </div>
                 </div>
