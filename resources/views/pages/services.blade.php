@@ -6,7 +6,7 @@
 <!-- Page Header -->
 <section class="hero" style="padding: var(--space-2xl) 0; text-align: center;">
     <div class="container">
-        <div class="terminal-window" style="max-width: 700px; margin: 0 auto;">
+        <div class="terminal-window">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
                     <span class="terminal-dot red"></span>
@@ -16,11 +16,11 @@
                 <span class="terminal-path">~/services/index.blade.php</span>
             </div>
             <div class="terminal-content" style="text-align: center;">
-                <span class="section-eyebrow">// services</span>
-                <h1 class="hero-title" style="font-size: 2rem; text-align: center;">
+                <span class="section-eyebrow" style="display: block; text-align: center;">// services</span>
+                <h1 class="hero-title" style="font-size: 2rem; text-align: center; width: 100%;">
                     <span style="color: var(--terminal-syntax-purple);">const</span> <span style="color: var(--terminal-accent);">services</span> = [
                 </h1>
-                <p class="hero-subtitle" style="font-size: 1rem; text-align: center;">
+                <p class="hero-subtitle" style="font-size: 1rem; text-align: center; width: 100%;">
                     <span style="color: var(--terminal-syntax-green);">"Comprehensive solutions for your digital needs"</span>
                 </p>
             </div>
