@@ -13,15 +13,17 @@ class SettingsController extends Controller
     {
         try {
             $settings = Setting::pluck('value', 'key')->toArray();
+            \Log::info('Settings loaded: ' . json_encode($settings));
         } catch (\Exception $e) {
             $settings = [];
+            \Log::error('Settings load failed: ' . $e->getMessage());
         }
         return view('admin.settings.index', compact('settings'));
     }
 
     public function update(Request $request)
     {
-        // Validation rules - logo_image only validated if file is uploaded
+        // Validation rules
         $rules = [
             'site_logo' => 'required|string|max:100',
             'header_title' => 'required|string|max:255',
@@ -47,18 +49,23 @@ class SettingsController extends Controller
                 // Delete old logo if exists
                 $oldLogo = Setting::find('logo_image');
                 if ($oldLogo && $oldLogo->value) {
-                    Storage::disk('public')->delete($oldLogo->value);
+                    \Storage::disk('public')->delete($oldLogo->value);
                 }
 
                 // Store new logo
-                $logoPath = $request->file('logo_image')->store('logos', 'public');
+                $file = $request->file('logo_image');
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $logoPath = $file->storeAs('logos', $filename, 'public');
                 
+                // Force save to database
                 Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
+                
+                \Log::info('Logo uploaded successfully: ' . $logoPath);
             } catch (\Exception $e) {
-                \Log::error('Logo upload failed: ' . $e->getMessage());
+                \Log::error('Logo upload failed: ' . $e->getMessage() . ' - ' . $e->getTraceAsString());
                 return redirect()->back()
                     ->withInput()
                     ->withErrors(['logo_image' => 'Logo upload failed: ' . $e->getMessage()]);
