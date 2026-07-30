@@ -37,6 +37,13 @@
             </div>
             <div class="window-body">
                 <div class="form-group">
+                    <label class="form-label">// site_logo</label>
+                    <input type="text" name="site_logo" class="form-input" 
+                           value="{{ $settings['site_logo'] ?? 'KONOK' }}" 
+                           placeholder="Enter site logo text">
+                    <small style="color: #a3a3a3; font-size: 11px; margin-top: 4px; display: block;">This will appear in the header as your logo</small>
+                </div>
+                <div class="form-group">
                     <label class="form-label">// header_title</label>
                     <input type="text" name="header_title" class="form-input" 
                            value="{{ $settings['header_title'] ?? 'KONOK.IO' }}" 
@@ -136,11 +143,6 @@
                         <span class="page-icon">⚙</span>
                         <span class="page-name">Services</span>
                         <span class="page-count">{{ App\Models\Service::count() }} items</span>
-                    </a>
-                    <a href="{{ route('admin.skills.index') }}" class="page-card">
-                        <span class="page-icon">{...}</span>
-                        <span class="page-name">Skills</span>
-                        <span class="page-count">{{ App\Models\Skill::count() }} items</span>
                     </a>
                     <a href="{{ route('admin.contacts.index') }}" class="page-card">
                         <span class="page-icon">💬</span>

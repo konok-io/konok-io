@@ -21,6 +21,7 @@ class SettingsController extends Controller
     public function update(Request $request)
     {
         $request->validate([
+            'site_logo' => 'required|string|max:100',
             'header_title' => 'required|string|max:255',
             'header_subtitle' => 'required|string|max:255',
             'footer_copyright' => 'required|string|max:255',
@@ -34,7 +35,7 @@ class SettingsController extends Controller
 
         try {
             $fields = [
-                'header_title', 'header_subtitle',
+                'site_logo', 'header_title', 'header_subtitle',
                 'footer_copyright', 'footer_description',
                 'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
             ];

@@ -26,12 +26,8 @@
                 <span class="prefix">03.</span>
                 <a href="{{ route('admin.services.index') }}">Services</a>
             </div>
-            <div class="topbar-tab {{ request()->routeIs('admin.skills.*') ? 'active' : '' }}">
-                <span class="prefix">04.</span>
-                <a href="{{ route('admin.skills.index') }}">Skills</a>
-            </div>
             <div class="topbar-tab {{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
-                <span class="prefix">05.</span>
+                <span class="prefix">04.</span>
                 <a href="{{ route('admin.contacts.index') }}">
                     Contacts
                     @if(isset($unreadCount) && $unreadCount > 0)
@@ -40,7 +36,7 @@
                 </a>
             </div>
             <div class="topbar-tab {{ request()->routeIs('admin.settings*') ? 'active' : '' }}">
-                <span class="prefix">06.</span>
+                <span class="prefix">05.</span>
                 <a href="{{ route('admin.settings') }}">Settings</a>
             </div>
         </div>
