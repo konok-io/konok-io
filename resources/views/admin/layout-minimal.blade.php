@@ -50,6 +50,13 @@
                 <div class="topbar-avatar">KO</div>
                 <span class="topbar-username">Admin</span>
             </div>
+            <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
+                @csrf
+                <button type="submit" class="topbar-logout">
+                    <span>→</span>
+                    <span>logout</span>
+                </button>
+            </form>
         </div>
     </div>
 
@@ -205,6 +212,31 @@
     .topbar-username {
         font-size: 11px;
         color: #6b6b6b;
+    }
+
+    .logout-form {
+        margin: 0;
+    }
+
+    .topbar-logout {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #f5f5f5;
+        border: 1px solid #e5e5e5;
+        padding: 6px 12px;
+        font-size: 11px;
+        color: #6b6b6b;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+        transition: all 0.2s;
+    }
+
+    .topbar-logout:hover {
+        background: #fee2e2;
+        border-color: #ef4444;
+        color: #ef4444;
     }
 
     /* Main Content */
