@@ -120,84 +120,151 @@
                 </h3>
                 
                 <div class="grid grid-3" style="gap: 24px;">
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">🚀</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Fast Delivery</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            AI-assisted development ensures rapid prototyping and faster project completion without compromising quality.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ fast_delivery()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                AI-assisted development ensures rapid prototyping and faster project completion without compromising quality.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">💼</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Professional Quality</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            Enterprise-grade solutions with clean code, security best practices, and scalable architecture.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ quality_check()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                Enterprise-grade solutions with clean code, security best practices, and scalable architecture.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">🤝</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Dedicated Support</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            Ongoing maintenance, updates, and 24/7 support to keep your systems running smoothly.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ support_24x7()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                Ongoing maintenance, updates, and 24/7 support to keep your systems running smoothly.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">💰</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Cost Effective</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            Competitive pricing with transparent billing. No hidden costs or surprise charges.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ cost_effective()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                Competitive pricing with transparent billing. No hidden costs or surprise charges.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">🔒</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Secure Solutions</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            Security-first approach with SSL, encryption, and compliance with industry standards.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-red);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ secure_mode()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                Security-first approach with SSL, encryption, and compliance with industry standards.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div style="text-align: center; padding: 24px;">
-                        <div style="font-size: 2.5rem; margin-bottom: 16px;">🌍</div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent);">Global Reach</h4>
-                        <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
-                            Serving clients worldwide with remote collaboration and multilingual support.
-                        </p>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-body" style="padding: 32px;">
+                            <div style="margin-bottom: 16px;">
+                                <div class="terminal-dots" style="justify-content: center; gap: 6px;">
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-accent);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-cyan);"></span>
+                                    <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                                </div>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: var(--terminal-accent); font-family: var(--font-mono);">$ global_reach()</h4>
+                            <p style="font-size: 0.9rem; color: var(--terminal-text-secondary); line-height: 1.6;">
+                                Serving clients worldwide with remote collaboration and multilingual support.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Statistics -->
-        <div class="grid grid-4" style="gap: 24px; margin-bottom: 48px;">
-            <div class="card" style="text-align: center;">
-                <div class="card-body" style="padding: 32px;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px;">50+</div>
-                    <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">Projects Completed</div>
+        <div class="card" style="margin-bottom: 48px;">
+            <div class="card-header">
+                <div class="terminal-dots">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
                 </div>
+                <span class="terminal-path">statistics.json</span>
             </div>
-            
-            <div class="card" style="text-align: center;">
-                <div class="card-body" style="padding: 32px;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px;">30+</div>
-                    <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">Happy Clients</div>
-                </div>
-            </div>
-            
-            <div class="card" style="text-align: center;">
-                <div class="card-body" style="padding: 32px;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px;">5+</div>
-                    <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">Years Experience</div>
-                </div>
-            </div>
-            
-            <div class="card" style="text-align: center;">
-                <div class="card-body" style="padding: 32px;">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px;">24/7</div>
-                    <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">Support Available</div>
+            <div class="card-body" style="padding: 40px;">
+                <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: 32px; text-align: center;">
+                    <span style="color: var(--terminal-syntax-amber);">// Our Statistics</span>
+                </h3>
+                <div class="grid grid-4" style="gap: 24px;">
+                    <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
+                        <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-green);"></span>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">50+</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ projects_completed</div>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
+                        <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-amber);"></span>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">30+</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ happy_clients</div>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
+                        <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-purple);"></span>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">5+</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ years_experience</div>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 24px; background: var(--terminal-bg); border-radius: 8px;">
+                        <div class="terminal-dots" style="justify-content: center; gap: 6px; margin-bottom: 16px;">
+                            <span class="terminal-dot" style="width: 12px; height: 12px; background: var(--terminal-syntax-cyan);"></span>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--terminal-accent); margin-bottom: 8px; font-family: var(--font-mono);">24/7</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.875rem; color: var(--terminal-text-muted);">$ support_ready</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,35 +285,63 @@
                 </h3>
                 
                 <div class="grid grid-2" style="gap: 24px;">
-                    <div style="display: flex; align-items: flex-start; gap: 16px;">
-                        <span style="color: var(--terminal-syntax-green); font-size: 1.25rem;">✓</span>
-                        <div>
-                            <h4 style="font-size: 1rem; margin-bottom: 4px;">BSc in Computer Science</h4>
-                            <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Strong academic foundation in computing</p>
+                    <div class="card" style="background: var(--terminal-bg);">
+                        <div class="card-body" style="padding: 20px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-green);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-amber);"></span>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ BSc_ComputerScience()</h4>
+                                    <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Strong academic foundation in computing</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div style="display: flex; align-items: flex-start; gap: 16px;">
-                        <span style="color: var(--terminal-syntax-green); font-size: 1.25rem;">✓</span>
-                        <div>
-                            <h4 style="font-size: 1rem; margin-bottom: 4px;">CompTIA A+ Certified</h4>
-                            <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Industry-standard IT support certification</p>
+                    <div class="card" style="background: var(--terminal-bg);">
+                        <div class="card-body" style="padding: 20px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-purple);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-cyan);"></span>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ CompTIA_A_Plus()</h4>
+                                    <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Industry-standard IT support certification</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div style="display: flex; align-items: flex-start; gap: 16px;">
-                        <span style="color: var(--terminal-syntax-green); font-size: 1.25rem;">✓</span>
-                        <div>
-                            <h4 style="font-size: 1rem; margin-bottom: 4px;">Laravel Development</h4>
-                            <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Professional PHP framework expertise</p>
+                    <div class="card" style="background: var(--terminal-bg);">
+                        <div class="card-body" style="padding: 20px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-accent);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-green);"></span>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ Laravel_Dev()</h4>
+                                    <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Professional PHP framework expertise</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div style="display: flex; align-items: flex-start; gap: 16px;">
-                        <span style="color: var(--terminal-syntax-green); font-size: 1.25rem;">✓</span>
-                        <div>
-                            <h4 style="font-size: 1rem; margin-bottom: 4px;">AI-Assisted Development</h4>
-                            <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Modern AI tool integration</p>
+                    <div class="card" style="background: var(--terminal-bg);">
+                        <div class="card-body" style="padding: 20px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="terminal-dots" style="flex-direction: column; gap: 4px;">
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-amber);"></span>
+                                    <span class="terminal-dot" style="width: 8px; height: 8px; background: var(--terminal-syntax-red);"></span>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 4px; font-family: var(--font-mono);">$ AI_Assisted()</h4>
+                                    <p style="font-size: 0.875rem; color: var(--terminal-text-muted);">Modern AI tool integration</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
