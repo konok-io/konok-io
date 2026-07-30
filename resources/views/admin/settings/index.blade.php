@@ -90,27 +90,27 @@
                 <div class="form-group">
                     <label class="form-label">// menu_item_1 (Home)</label>
                     <input type="text" name="menu_item_1" class="form-input" 
-                           value="{{ $settings['menu_item_1'] ?? 'home()' }}">
+                           value="{{ $settings['menu_item_1'] ?? 'Home()' }}">
                 </div>
                 <div class="form-group">
                     <label class="form-label">// menu_item_2 (About)</label>
                     <input type="text" name="menu_item_2" class="form-input" 
-                           value="{{ $settings['menu_item_2'] ?? 'about()' }}">
+                           value="{{ $settings['menu_item_2'] ?? 'About()' }}">
                 </div>
                 <div class="form-group">
                     <label class="form-label">// menu_item_3 (Services)</label>
                     <input type="text" name="menu_item_3" class="form-input" 
-                           value="{{ $settings['menu_item_3'] ?? 'services()' }}">
+                           value="{{ $settings['menu_item_3'] ?? 'Services()' }}">
                 </div>
                 <div class="form-group">
                     <label class="form-label">// menu_item_4 (Projects)</label>
                     <input type="text" name="menu_item_4" class="form-input" 
-                           value="{{ $settings['menu_item_4'] ?? 'projects()' }}">
+                           value="{{ $settings['menu_item_4'] ?? 'Projects()' }}">
                 </div>
                 <div class="form-group">
                     <label class="form-label">// menu_item_5 (Contact)</label>
                     <input type="text" name="menu_item_5" class="form-input" 
-                           value="{{ $settings['menu_item_5'] ?? 'contact()' }}">
+                           value="{{ $settings['menu_item_5'] ?? 'Contact()' }}">
                 </div>
             </div>
         </div>

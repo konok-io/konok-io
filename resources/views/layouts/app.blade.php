@@ -41,27 +41,27 @@
             <ul class="navbar-nav" id="navbarNav">
                 <li class="nav-item">
                     <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
-                        <span class="nav-index">1.</span> home()
+                        <span class="nav-index">1.</span> Home()
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/about" class="nav-link {{ request()->is('about') ? 'active' : '' }}">
-                        <span class="nav-index">2.</span> about()
+                        <span class="nav-index">2.</span> About()
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/services" class="nav-link {{ request()->is('services') ? 'active' : '' }}">
-                        <span class="nav-index">3.</span> services()
+                        <span class="nav-index">3.</span> Services()
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/projects" class="nav-link {{ request()->is('projects') ? 'active' : '' }}">
-                        <span class="nav-index">4.</span> projects()
+                        <span class="nav-index">4.</span> Projects()
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/contact" class="nav-link {{ request()->is('contact') ? 'active' : '' }}">
-                        <span class="nav-index">5.</span> contact()
+                        <span class="nav-index">5.</span> Contact()
                     </a>
                 </li>
             </ul>
