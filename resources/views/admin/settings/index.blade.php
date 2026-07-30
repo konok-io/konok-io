@@ -41,7 +41,7 @@
                     <input type="file" name="logo_image" class="form-input" accept="image/*">
                     @if(isset($settings['logo_image']) && $settings['logo_image'])
                         <div style="margin-top: 12px; padding: 12px; background: #f5f5f5; border-radius: 6px; display: flex; align-items: center; gap: 12px;">
-                            <img src="{{ Storage::url($settings['logo_image']) }}" alt="Current Logo" style="max-height: 50px; max-width: 150px; object-fit: contain;">
+                            <img src="/storage/{{ $settings['logo_image'] }}" alt="Current Logo" style="max-height: 50px; max-width: 150px; object-fit: contain;">
                             <small style="color: #6b6b6b; font-size: 11px;">Current logo uploaded</small>
                         </div>
                     @else
