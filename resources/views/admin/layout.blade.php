@@ -357,7 +357,7 @@
     .admin-topbar {
         background: var(--terminal-bg-primary);
         border-bottom: 1px solid var(--terminal-border);
-        padding: var(--space-sm) var(--space-lg);
+        padding: var(--space-md) var(--space-lg);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -370,7 +370,7 @@
     .admin-topbar .topbar-breadcrumb .breadcrumb-current {
         background: var(--terminal-bg-tertiary);
         color: var(--terminal-accent);
-        padding: var(--space-xs) var(--space-md);
+        padding: var(--space-sm) var(--space-md);
         border-radius: var(--radius-md);
     }
     
