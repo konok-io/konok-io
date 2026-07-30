@@ -4,16 +4,16 @@
 
 @section('content')
 <!-- Page Header -->
-<section class="hero" style="padding: var(--space-2xl) 0;">
+<section class="hero" style="padding: var(--space-2xl) 0; text-align: center;">
     <div class="container">
-        <div class="terminal-window">
+        <div class="terminal-window" style="max-width: 700px; margin: 0 auto;">
             <div class="terminal-titlebar">
                 <div class="terminal-dots">
                     <span class="terminal-dot red"></span>
                     <span class="terminal-dot yellow"></span>
                     <span class="terminal-dot green"></span>
                 </div>
-                <span class="terminal-path">~/services.blade.php</span>
+                <span class="terminal-path">~/services/index.blade.php</span>
             </div>
             <div class="terminal-content" style="text-align: center;">
                 <span class="section-eyebrow">// services</span>
