@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Design 5: Retro Hacker Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+ Mono:wght@400;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #0f0f0f;
+            --text-primary: #00ff00;
+            --text-secondary: #00cc00;
+            --text-muted: #006600;
+            --text-dim: #003300;
+            --accent: #00ff00;
+            --accent-amber: #ffb000;
+            --accent-cyan: #00ffff;
+            --accent-red: #ff3333;
+            --border: #003300;
+            --scanline: rgba(0, 255, 0, 0.03);
+            --dot-color: #00ff00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* CRT Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                var(--scanline) 2px,
+                var(--scanline) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* Top Bar */
+        .topbar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            height: 48px;
+            position: relative;
+        }
+
+        .topbar::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--text-dim);
+        }
+
+        .topbar-section {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-right: 1px solid var(--border);
+        }
+
+        .topbar-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .topbar-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dot-color);
+            box-shadow: 0 0 8px var(--text-primary);
+        }
+
+        .topbar-dot:nth-child(2) {
+            animation: pulse 2s infinite;
+        }
+
+        .topbar-dot:nth-child(3) {
+            animation: pulse 2s infinite 0.5s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--text-primary); }
+            50% { opacity: 0.5; box-shadow: 0 0 4px var(--text-primary); }
+        }
+
+        .topbar-title {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-left: 16px;
+        }
+
+        .topbar-tabs {
+            display: flex;
+            align-items: stretch;
+            flex: 1;
+        }
+
+        .topbar-tab {
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            border-right: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.1s;
+            text-transform: uppercase;
+        }
+
+        .topbar-tab:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-shadow: 0 0 10px var(--text-primary);
+        }
+
+        .topbar-tab.active {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-shadow: 0 0 10px var(--text-primary);
+            border-bottom: 2px solid var(--text-primary);
+        }
+
+        .topbar-tab .prefix {
+            color: var(--text-dim);
+        }
+
+        .topbar-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .topbar-clock {
+            font-size: 12px;
+            color: var(--accent-amber);
+            text-shadow: 0 0 8px var(--accent-amber);
+        }
+
+        .topbar-user {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .topbar-user .status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--text-primary);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 24px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Terminal Window */
+        .terminal-window {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        .terminal-header {
+            background: var(--bg-secondary);
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dot-color);
+            box-shadow: 0 0 6px var(--text-primary);
+        }
+
+        .terminal-title {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .terminal-body {
+            padding: 20px;
+        }
+
+        /* Boot Sequence */
+        .boot-sequence {
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .boot-line {
+            display: flex;
+            gap: 8px;
+        }
+
+        .boot-line .prompt {
+            color: var(--accent-cyan);
+        }
+
+        .boot-line .command {
+            color: var(--text-primary);
+        }
+
+        .boot-line .output {
+            color: var(--text-secondary);
+        }
+
+        .boot-line .success {
+            color: var(--accent);
+            text-shadow: 0 0 8px var(--text-primary);
+        }
+
+        .boot-line .warning {
+            color: var(--accent-amber);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background: var(--text-primary);
+            animation: blink 0.7s infinite;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .stat-header {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-secondary);
+        }
+
+        .stat-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .stat-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .stat-title {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+
+        .stat-body {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-shadow: 0 0 20px var(--text-primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .stat-label::before {
+            content: '// ';
+            color: var(--text-dim);
+        }
+
+        /* Data Panels */
+        .data-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .data-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .data-panel-header {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-secondary);
+        }
+
+        .data-panel-dots .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .data-panel-title {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .data-panel-action {
+            font-size: 10px;
+            color: var(--accent-cyan);
+            margin-left: auto;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .data-panel-action:hover {
+            text-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        .data-panel-body {
+            padding: 14px;
+        }
+
+        /* Matrix List */
+        .matrix-list {
+            list-style: none;
+            font-size: 11px;
+        }
+
+        .matrix-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+            display: grid;
+            grid-template-columns: 40px 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .matrix-list li:last-child {
+            border-bottom: none;
+        }
+
+        .matrix-list .index {
+            color: var(--text-dim);
+        }
+
+        .matrix-list .data {
+            color: var(--text-secondary);
+        }
+
+        .matrix-list .value {
+            color: var(--accent-cyan);
+            text-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        .matrix-list .badge {
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 9px;
+            text-transform: uppercase;
+        }
+
+        .matrix-list .badge.new {
+            background: rgba(0, 255, 0, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .matrix-list .badge.pending {
+            background: rgba(255, 176, 0, 0.1);
+            color: var(--accent-amber);
+            border: 1px solid var(--accent-amber);
+        }
+
+        /* System Status */
+        .system-status {
+            margin-top: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px 20px;
+            font-size: 11px;
+        }
+
+        .status-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 6px 0;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--text-primary);
+        }
+
+        .status-indicator.warning {
+            background: var(--accent-amber);
+            box-shadow: 0 0 8px var(--accent-amber);
+        }
+
+        .status-label {
+            color: var(--text-secondary);
+        }
+
+        .status-value {
+            color: var(--text-primary);
+        }
+
+        .status-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: auto;
+        }
+
+        .progress-bar {
+            width: 100px;
+            height: 4px;
+            background: var(--bg-secondary);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--text-primary);
+            box-shadow: 0 0 8px var(--text-primary);
+        }
+
+        .progress-fill.warning {
+            background: var(--accent-amber);
+            box-shadow: 0 0 8px var(--accent-amber);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 24px;
+            padding: 12px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 10px;
+            color: var(--text-dim);
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-left span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .glitch {
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-2px, 1px); }
+            94% { transform: translate(2px, -1px); }
+            96% { transform: translate(-1px, -1px); }
+            98% { transform: translate(1px, 1px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-section">
+            <div class="topbar-dots">
+                <span class="topbar-dot"></span>
+                <span class="topbar-dot"></span>
+                <span class="topbar-dot"></span>
+            </div>
+            <span class="topbar-title">KONOK.IO // ADMIN TERMINAL v1.0.4</span>
+        </div>
+
+        <div class="topbar-tabs">
+            <div class="topbar-tab active">
+                <span class="prefix">></span>
+                <span>dashboard</span>
+            </div>
+            <div class="topbar-tab">
+                <span class="prefix">></span>
+                <span>portfolios</span>
+            </div>
+            <div class="topbar-tab">
+                <span class="prefix">></span>
+                <span>services</span>
+            </div>
+            <div class="topbar-tab">
+                <span class="prefix">></span>
+                <span>contacts</span>
+            </div>
+            <div class="topbar-tab">
+                <span class="prefix">></span>
+                <span>system</span>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+            <div class="topbar-clock" id="clock">00:00:00</div>
+            <div class="topbar-user">
+                <span class="status"></span>
+                <span>root@konok</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Boot Terminal -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="terminal-dot"></span>
+                </div>
+                <span class="terminal-title">system-boot.log</span>
+            </div>
+            <div class="terminal-body">
+                <div class="boot-sequence">
+                    <div class="boot-line">
+                        <span class="prompt">$</span>
+                        <span class="command">init.d/start --level=3</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="output">[OK] Loading kernel modules</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="output">[OK] Mounting filesystems</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="output">[OK] Starting network services</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="prompt">$</span>
+                        <span class="command">konok-admin start --mode=full</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="success">[✓] All systems operational</span>
+                    </div>
+                    <div class="boot-line">
+                        <span class="prompt">$</span>
+                        <span class="command">status --verbose</span>
+                        <span class="cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-dots">
+                        <span class="stat-dot"></span>
+                    </div>
+                    <span class="stat-title">projects.db</span>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">total_projects</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-dots">
+                        <span class="stat-dot"></span>
+                    </div>
+                    <span class="stat-title">published.log</span>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">published</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-dots">
+                        <span class="stat-dot"></span>
+                    </div>
+                    <span class="stat-title">services.cfg</span>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">active_services</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-dots">
+                        <span class="stat-dot"></span>
+                    </div>
+                    <span class="stat-title">contacts.db</span>
+                </div>
+                <div class="stat-body">
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">total_messages</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Panels -->
+        <div class="data-panels">
+            <!-- Recent Contacts -->
+            <div class="data-panel">
+                <div class="data-panel-header">
+                    <div class="data-panel-dots">
+                        <span class="dot"></span>
+                    </div>
+                    <span class="data-panel-title">recent-contacts.json</span>
+                    <span class="data-panel-action">view_all</span>
+                </div>
+                <div class="data-panel-body">
+                    <ul class="matrix-list">
+                        <li>
+                            <span class="index">[01]</span>
+                            <span class="data">Rashid Ahmed</span>
+                            <span class="badge new">New</span>
+                        </li>
+                        <li>
+                            <span class="index">[02]</span>
+                            <span class="data">Fatima Hassan</span>
+                            <span class="badge pending">Pending</span>
+                        </li>
+                        <li>
+                            <span class="index">[03]</span>
+                            <span class="data">Karim Rahman</span>
+                            <span class="badge new">New</span>
+                        </li>
+                        <li>
+                            <span class="index">[04]</span>
+                            <span class="data">Nadia Islam</span>
+                            <span class="badge pending">Pending</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="data-panel">
+                <div class="data-panel-header">
+                    <div class="data-panel-dots">
+                        <span class="dot"></span>
+                    </div>
+                    <span class="data-panel-title">activity.log</span>
+                    <span class="data-panel-action">view_all</span>
+                </div>
+                <div class="data-panel-body">
+                    <ul class="matrix-list">
+                        <li>
+                            <span class="index">></span>
+                            <span class="value">E-commerce deployed</span>
+                            <span class="badge new">2h</span>
+                        </li>
+                        <li>
+                            <span class="index">></span>
+                            <span class="value">New contact received</span>
+                            <span class="badge new">2h</span>
+                        </li>
+                        <li>
+                            <span class="index">></span>
+                            <span class="value">Portfolio V2 updated</span>
+                            <span class="badge pending">5h</span>
+                        </li>
+                        <li>
+                            <span class="index">></span>
+                            <span class="value">Service section edit</span>
+                            <span class="badge pending">1d</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div class="system-status">
+            <div class="status-row">
+                <div class="status-item">
+                    <span class="status-indicator"></span>
+                    <span class="status-label">SYSTEM</span>
+                    <span class="status-value">ONLINE</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-indicator"></span>
+                    <span class="status-label">DATABASE</span>
+                    <span class="status-value">CONNECTED</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-indicator"></span>
+                    <span class="status-label">UPTIME</span>
+                    <span class="status-value">99.9%</span>
+                </div>
+                <div class="status-bar">
+                    <span class="status-label">CPU:</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 23%;"></div>
+                    </div>
+                    <span>23%</span>
+                </div>
+                <div class="status-bar">
+                    <span class="status-label">MEM:</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill warning" style="width: 67%;"></div>
+                    </div>
+                    <span>67%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-left">
+                <span class="glitch">KONOK.IO</span>
+                <span>|</span>
+                <span>Version: 1.0.4</span>
+                <span>|</span>
+                <span>Build: 2024.07.30</span>
+            </div>
+            <span>© 2024 Key Of Next Online Knowledge</span>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

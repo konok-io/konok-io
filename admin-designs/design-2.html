@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Design 2: VS Code Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-sidebar: #161b22;
+            --bg-header: #21262d;
+            --bg-card: #0d1117;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #a371f7;
+            --accent-orange: #f0883e;
+            --accent-red: #f85149;
+            --border: #30363d;
+            --dot-red: #ff5f56;
+            --dot-yellow: #ffbd2e;
+            --dot-green: #28ca41;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 60px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 0;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .sidebar-logo {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-purple);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
+
+        .sidebar-item {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-item:hover {
+            background: var(--bg-header);
+            color: var(--text-primary);
+        }
+
+        .sidebar-item.active {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .sidebar-bottom {
+            margin-top: auto;
+        }
+
+        /* Main Area */
+        .main-area {
+            flex: 1;
+            margin-left: 60px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--bg-sidebar);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            height: 52px;
+        }
+
+        .top-tabs {
+            display: flex;
+            gap: 0;
+            height: 100%;
+        }
+
+        .top-tab {
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-right: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .top-tab:hover {
+            background: var(--bg-header);
+        }
+
+        .top-tab.active {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .top-tab .icon {
+            font-size: 14px;
+        }
+
+        .top-tab .close {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-left: 8px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .top-tab:hover .close {
+            opacity: 1;
+        }
+
+        .top-tab.active .close {
+            opacity: 1;
+        }
+
+        .top-actions {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .top-search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .top-search kbd {
+            background: var(--bg-header);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Content */
+        .content {
+            padding: 24px;
+        }
+
+        /* Window Frame */
+        .window-frame {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .window-titlebar {
+            background: var(--bg-header);
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .window-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .window-dot.red { background: var(--dot-red); }
+        .window-dot.yellow { background: var(--dot-yellow); }
+        .window-dot.green { background: var(--dot-green); }
+
+        .window-title {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-left: 8px;
+        }
+
+        .window-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 8px;
+        }
+
+        .window-action {
+            font-size: 12px;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .window-action:hover {
+            background: var(--bg-sidebar);
+            color: var(--text-primary);
+        }
+
+        .window-body {
+            padding: 16px;
+        }
+
+        /* Prompt Bar */
+        .prompt-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-header);
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .prompt-bar .user {
+            color: var(--accent-green);
+        }
+
+        .prompt-bar .at {
+            color: var(--text-muted);
+        }
+
+        .prompt-bar .host {
+            color: var(--accent-blue);
+        }
+
+        .prompt-bar .path {
+            color: var(--accent-purple);
+        }
+
+        .prompt-bar .symbol {
+            color: var(--accent-green);
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .stat-box.blue::before { background: var(--accent-blue); }
+        .stat-box.green::before { background: var(--accent-green); }
+        .stat-box.purple::before { background: var(--accent-purple); }
+        .stat-box.orange::before { background: var(--accent-orange); }
+        .stat-box.red::before { background: var(--accent-red); }
+
+        .stat-box-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .stat-box-header .dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .stat-box-header .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+        }
+
+        .stat-box-header .label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .stat-box-value {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-box-meta {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: var(--bg-header);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-header .dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        .code-header .filename {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .code-content {
+            padding: 16px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .code-content .comment { color: var(--text-muted); }
+        .code-content .keyword { color: var(--accent-purple); }
+        .code-content .string { color: var(--accent-green); }
+        .code-content .number { color: var(--accent-orange); }
+        .code-content .property { color: var(--accent-blue); }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 10px 12px;
+            font-size: 11px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+            font-weight: 500;
+        }
+
+        .data-table td {
+            padding: 10px 12px;
+            font-size: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table tr:hover {
+            background: var(--bg-header);
+        }
+
+        .data-table .name {
+            color: var(--accent-blue);
+        }
+
+        .data-table .badge {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        .data-table .badge.success {
+            background: rgba(63, 185, 80, 0.15);
+            color: var(--accent-green);
+        }
+
+        .data-table .badge.warning {
+            background: rgba(240, 136, 62, 0.15);
+            color: var(--accent-orange);
+        }
+
+        .data-table .badge.danger {
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--accent-red);
+        }
+
+        /* Footer Bar */
+        .footer-bar {
+            margin-top: 24px;
+            padding: 10px 16px;
+            background: var(--bg-header);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer-bar .branch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-bar .branch svg {
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-logo">K</div>
+        <div class="sidebar-nav">
+            <div class="sidebar-item active" title="Dashboard">⚡</div>
+            <div class="sidebar-item" title="Projects">📁</div>
+            <div class="sidebar-item" title="Services">⚙</div>
+            <div class="sidebar-item" title="Messages">💬</div>
+            <div class="sidebar-item" title="Analytics">📊</div>
+        </div>
+        <div class="sidebar-bottom">
+            <div class="sidebar-item" title="Settings">⚙</div>
+        </div>
+    </div>
+
+    <!-- Main Area -->
+    <div class="main-area">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-tabs">
+                <div class="top-tab active">
+                    <span class="icon">⚡</span>
+                    <span>dashboard</span>
+                    <span class="close">×</span>
+                </div>
+                <div class="top-tab">
+                    <span class="icon">📁</span>
+                    <span>portfolios</span>
+                    <span class="close">×</span>
+                </div>
+                <div class="top-tab">
+                    <span class="icon">⚙</span>
+                    <span>services</span>
+                    <span class="close">×</span>
+                </div>
+                <div class="top-tab">
+                    <span class="icon">💬</span>
+                    <span>contacts</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="top-actions">
+                <div class="top-search">
+                    <span>Search...</span>
+                    <kbd>⌘K</kbd>
+                </div>
+                <div class="user-avatar">KO</div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Prompt Bar -->
+            <div class="prompt-bar">
+                <span class="user">admin</span>
+                <span class="at">@</span>
+                <span class="host">konok</span>
+                <span class="path">~/dashboard</span>
+                <span class="symbol">$</span>
+                <span>status --watch</span>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-box blue">
+                    <div class="stat-box-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="label">// projects.json</span>
+                    </div>
+                    <div class="stat-box-value">24</div>
+                    <div class="stat-box-meta">total_projects</div>
+                </div>
+                <div class="stat-box green">
+                    <div class="stat-box-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="label">// published.json</span>
+                    </div>
+                    <div class="stat-box-value">18</div>
+                    <div class="stat-box-meta">published</div>
+                </div>
+                <div class="stat-box purple">
+                    <div class="stat-box-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="label">// services.json</span>
+                    </div>
+                    <div class="stat-box-value">8</div>
+                    <div class="stat-box-meta">active_services</div>
+                </div>
+                <div class="stat-box orange">
+                    <div class="stat-box-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="label">// contacts.json</span>
+                    </div>
+                    <div class="stat-box-value">156</div>
+                    <div class="stat-box-meta">total_messages</div>
+                </div>
+                <div class="stat-box red">
+                    <div class="stat-box-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="label">// unread.json</span>
+                    </div>
+                    <div class="stat-box-value">12</div>
+                    <div class="stat-box-meta">unread</div>
+                </div>
+            </div>
+
+            <!-- Two Column -->
+            <div class="two-col">
+                <!-- Recent Contacts -->
+                <div class="code-block">
+                    <div class="code-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="filename">recent-contacts.json</span>
+                    </div>
+                    <div class="code-content">
+                        <pre class="code-block-content">
+<span class="comment">// Recent Contact Inquiries</span>
+<span class="property">"contacts"</span>: [
+  { <span class="property">"name"</span>: <span class="string">"Rashid Ahmed"</span>,
+    <span class="property">"email"</span>: <span class="string">"rashid@tech.io"</span>,
+    <span class="property">"status"</span>: <span class="string">"new"</span> },
+  { <span class="property">"name"</span>: <span class="string">"Fatima K."</span>,
+    <span class="property">"email"</span>: <span class="string">"fatima@webdev.com"</span>,
+    <span class="property">"status"</span>: <span class="string">"pending"</span> },
+  { <span class="property">"name"</span>: <span class="string">"Karim H."</span>,
+    <span class="property">"email"</span>: <span class="string">"karim@startup.io"</span>,
+    <span class="property">"status"</span>: <span class="string">"replied"</span> }
+]
+                        </pre>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="code-block">
+                    <div class="code-header">
+                        <div class="dots">
+                            <span class="dot"></span>
+                        </div>
+                        <span class="filename">quick-actions.sh</span>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name">New Project Added</td>
+                                <td><span class="badge success">Live</span></td>
+                                <td>2h ago</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Contact Reply</td>
+                                <td><span class="badge warning">Pending</span></td>
+                                <td>5h ago</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Service Update</td>
+                                <td><span class="badge danger">Draft</span></td>
+                                <td>1d ago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer Bar -->
+            <div class="footer-bar">
+                <div class="branch">
+                    <svg viewBox="0 0 16 16"><path fill="currentColor" d="M11.75 2.5a.25.25 0 0 1 .25.25v1.5c0 .138.112.25.25.25h1.5a.25.25 0 0 1 .25.25v3.879a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L8 8.146a.25.25 0 0 1-.174-.217l-2.5-1.25A.25.25 0 0 1 4.5 7.75V6.75a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L2.75 9.084V6.75A.25.25 0 0 1 3 6.5h1.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L.75 9.596V6.75a.25.25 0 0 1 .25-.25H3.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L0 9.596V6.75A.25.25 0 0 1 .25 6.5h1.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L-.174 9.217V6.75a.25.25 0 0 1 .424-.177l2.5 1.25a.25.25 0 0 1 .174.177V6.75a.25.25 0 0 1-.25-.25H3.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25H4.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L.75 7.146V4.5a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.174.217l-2.5 1.25a.25.25 0 0 1-.156 0L-.174 6.767V3.75a.25.25 0 0 1 .424-.177l2.5 1.25A.25.25 0 0 1 3.5 3.75V2.75A.25.25 0 0 1 3.5 2.5H11.75z"/></svg>
+                    <span>main</span>
+                </div>
+                <span>Last push: 2 hours ago • v1.0.4</span>
+                <span>© 2024 KONOK.IO</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
