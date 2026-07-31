@@ -14,13 +14,15 @@ class SettingsController extends Controller
         // Validate tab
         $validTabs = ['general', 'header', 'footer', 'contact', 'social', 'menu', 'content', 'pages'];
         $tab = in_array($tab, $validTabs) ? $tab : 'general';
-        
+
         try {
             $settings = Setting::pluck('value', 'key')->toArray();
+            \Log::info('Settings loaded for tab: ' . $tab, $settings);
         } catch (\Exception $e) {
             $settings = [];
+            \Log::error('Settings load failed: ' . $e->getMessage());
         }
-        
+
         return view('admin.settings.index', compact('settings', 'tab'));
     }
 
@@ -29,7 +31,9 @@ class SettingsController extends Controller
         // Validate tab
         $validTabs = ['general', 'header', 'footer', 'contact', 'social', 'menu', 'content', 'pages'];
         $tab = in_array($tab, $validTabs) ? $tab : 'general';
-        
+
+        \Log::info('Updating settings for tab: ' . $tab);
+
         // Validation rules
         $rules = [
             'site_logo' => 'nullable|string|max:100',
@@ -77,24 +81,38 @@ class SettingsController extends Controller
 
         // Handle logo image upload
         if ($request->hasFile('logo_image')) {
+            \Log::info('Logo file detected, processing upload...');
+            
             try {
                 // Delete old logo if exists
                 $oldLogo = Setting::where('key', 'logo_image')->first();
                 if ($oldLogo && $oldLogo->value) {
-                    \Storage::disk('public')->delete($oldLogo->value);
+                    \Log::info('Deleting old logo: ' . $oldLogo->value);
+                    Storage::disk('public')->delete($oldLogo->value);
                 }
 
-                // Store new logo
+                // Store new logo in public storage
                 $file = $request->file('logo_image');
                 $filename = time() . '_' . $file->getClientOriginalName();
+                
+                \Log::info('Original filename: ' . $file->getClientOriginalName());
+                \Log::info('Generated filename: ' . $filename);
+                
                 $logoPath = $file->storeAs('logos', $filename, 'public');
                 
+                \Log::info('Logo stored at path: ' . $logoPath);
+                \Log::info('File exists check: ' . (Storage::disk('public')->exists($logoPath) ? 'YES' : 'NO'));
+
                 // Save to database
-                Setting::updateOrCreate(
+                $setting = Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
+                
+                \Log::info('Logo setting saved to DB - Key: ' . $setting->key . ', Value: ' . $setting->value);
+                
             } catch (\Exception $e) {
+                \Log::error('Logo upload failed: ' . $e->getMessage() . ' - ' . $e->getTraceAsString());
                 return redirect()->back()
                     ->withInput()
                     ->withErrors(['logo_image' => 'Logo upload failed: ' . $e->getMessage()]);
@@ -116,14 +134,18 @@ class SettingsController extends Controller
             'contact_title', 'contact_subtitle',
         ];
 
+        $savedCount = 0;
         foreach ($fields as $field) {
             if ($request->has($field)) {
                 Setting::updateOrCreate(
                     ['key' => $field],
                     ['value' => $request->$field]
                 );
+                $savedCount++;
             }
         }
+        
+        \Log::info('Saved ' . $savedCount . ' other settings');
 
         // Redirect to the same tab
         return redirect()->route('admin.settings.tab', $tab)->with('success', 'Settings updated successfully!');
