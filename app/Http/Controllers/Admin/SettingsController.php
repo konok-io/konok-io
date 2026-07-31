@@ -71,24 +71,30 @@ class SettingsController extends Controller
         // Handle logo image upload
         if ($request->hasFile('logo_image')) {
             try {
+                \Log::info('Logo upload started');
+                
                 // Delete old logo if exists
                 $oldLogo = Setting::where('key', 'logo_image')->first();
                 if ($oldLogo && $oldLogo->value) {
+                    \Log::info('Deleting old logo: ' . $oldLogo->value);
                     \Storage::disk('public')->delete($oldLogo->value);
                 }
 
                 // Store new logo
                 $file = $request->file('logo_image');
                 $filename = time() . '_' . $file->getClientOriginalName();
+                \Log::info('Storing logo as: ' . $filename);
+                
                 $logoPath = $file->storeAs('logos', $filename, 'public');
+                \Log::info('Logo stored at: ' . $logoPath);
                 
                 // Force save to database
                 Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
+                \Log::info('Logo saved to database');
                 
-                \Log::info('Logo uploaded successfully: ' . $logoPath);
             } catch (\Exception $e) {
                 \Log::error('Logo upload failed: ' . $e->getMessage() . ' - ' . $e->getTraceAsString());
                 return redirect()->back()
@@ -134,7 +140,11 @@ class SettingsController extends Controller
         // Get current tab from request or default to general
         $currentTab = $request->input('current_tab', 'general');
         
-        return redirect()->to('#' . $currentTab)->with('success', 'Settings updated successfully!');
+        // Redirect back with hash using session flash data
+        return redirect()->route('admin.settings')->with([
+            'success' => 'Settings updated successfully!',
+            'active_tab' => $currentTab
+        ]);
     }
 
     public function pages()

@@ -603,10 +603,14 @@
             });
         });
         
-        // Check URL hash on page load and switch to that tab
+        // Check URL hash OR session flash data on page load and switch to that tab
         const hash = window.location.hash.substring(1);
+        const activeTab = "{{ session('active_tab', 'general') }}";
+        
         if (hash) {
             switchTab(hash);
+        } else if (activeTab && activeTab !== '') {
+            switchTab(activeTab);
         }
     });
 </script>
