@@ -9,20 +9,27 @@ use Illuminate\Support\Facades\Storage;
 
 class SettingsController extends Controller
 {
-    public function index()
+    public function index($tab = 'general')
     {
+        // Validate tab
+        $validTabs = ['general', 'header', 'footer', 'contact', 'social', 'menu', 'content', 'pages'];
+        $tab = in_array($tab, $validTabs) ? $tab : 'general';
+        
         try {
             $settings = Setting::pluck('value', 'key')->toArray();
-            \Log::info('Settings loaded: ' . json_encode($settings));
         } catch (\Exception $e) {
             $settings = [];
-            \Log::error('Settings load failed: ' . $e->getMessage());
         }
-        return view('admin.settings.index', compact('settings'));
+        
+        return view('admin.settings.index', compact('settings', 'tab'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $tab = 'general')
     {
+        // Validate tab
+        $validTabs = ['general', 'header', 'footer', 'contact', 'social', 'menu', 'content', 'pages'];
+        $tab = in_array($tab, $validTabs) ? $tab : 'general';
+        
         // Validation rules
         $rules = [
             'site_logo' => 'nullable|string|max:100',
@@ -71,32 +78,23 @@ class SettingsController extends Controller
         // Handle logo image upload
         if ($request->hasFile('logo_image')) {
             try {
-                \Log::info('Logo upload started');
-                
                 // Delete old logo if exists
                 $oldLogo = Setting::where('key', 'logo_image')->first();
                 if ($oldLogo && $oldLogo->value) {
-                    \Log::info('Deleting old logo: ' . $oldLogo->value);
                     \Storage::disk('public')->delete($oldLogo->value);
                 }
 
                 // Store new logo
                 $file = $request->file('logo_image');
                 $filename = time() . '_' . $file->getClientOriginalName();
-                \Log::info('Storing logo as: ' . $filename);
-                
                 $logoPath = $file->storeAs('logos', $filename, 'public');
-                \Log::info('Logo stored at: ' . $logoPath);
                 
-                // Force save to database
+                // Save to database
                 Setting::updateOrCreate(
                     ['key' => 'logo_image'],
                     ['value' => $logoPath]
                 );
-                \Log::info('Logo saved to database');
-                
             } catch (\Exception $e) {
-                \Log::error('Logo upload failed: ' . $e->getMessage() . ' - ' . $e->getTraceAsString());
                 return redirect()->back()
                     ->withInput()
                     ->withErrors(['logo_image' => 'Logo upload failed: ' . $e->getMessage()]);
@@ -105,26 +103,16 @@ class SettingsController extends Controller
 
         // Save other settings
         $fields = [
-            // General
             'site_name', 'site_tagline', 'email', 'phone',
-            // Header
             'site_logo', 'header_title', 'header_subtitle',
-            // Footer
             'footer_copyright', 'footer_description',
-            // Contact
             'address', 'city', 'country', 'google_map_embed',
-            // Social Media
             'facebook', 'twitter', 'linkedin', 'github',
             'instagram', 'youtube', 'whatsapp', 'whatsapp_message',
-            // Menu
             'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
-            // Content - Hero
             'hero_title', 'hero_subtitle', 'hero_button_text',
-            // Content - About
             'about_title', 'about_description',
-            // Content - Services
             'services_title', 'services_subtitle',
-            // Content - Contact
             'contact_title', 'contact_subtitle',
         ];
 
@@ -137,14 +125,8 @@ class SettingsController extends Controller
             }
         }
 
-        // Get current tab from request or default to general
-        $currentTab = $request->input('current_tab', 'general');
-        
-        // Redirect back with hash using session flash data
-        return redirect()->route('admin.settings')->with([
-            'success' => 'Settings updated successfully!',
-            'active_tab' => $currentTab
-        ]);
+        // Redirect to the same tab
+        return redirect()->route('admin.settings.tab', $tab)->with('success', 'Settings updated successfully!');
     }
 
     public function pages()

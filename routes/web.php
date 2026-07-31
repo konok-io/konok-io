@@ -41,8 +41,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('contacts/{contact}/read', [App\Http\Controllers\Admin\ContactController::class, 'markAsRead'])->name('contacts.read');
     Route::delete('contacts/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('contacts.destroy');
     Route::resource('skills', App\Http\Controllers\Admin\SkillController::class);
+    
+    // Settings - Each tab is a separate route
     Route::get('settings', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('settings');
-    Route::post('settings', [App\Http\Controllers\Admin\SettingsController::class, 'update'])->name('settings.update');
+    Route::get('settings/{tab}', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('settings.tab');
+    Route::post('settings/{tab}', [App\Http\Controllers\Admin\SettingsController::class, 'update'])->name('settings.update');
     Route::get('settings/pages', [App\Http\Controllers\Admin\SettingsController::class, 'pages'])->name('settings.pages');
 });
 

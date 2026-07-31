@@ -16,24 +16,23 @@
 </div>
 @endif
 
-<!-- Settings Tabs -->
+<!-- Settings Tabs - URL Based -->
 <div class="settings-tabs">
-    <button class="settings-tab active" data-tab="general">📋 General</button>
-    <button class="settings-tab" data-tab="header">🎨 Header</button>
-    <button class="settings-tab" data-tab="footer">📄 Footer</button>
-    <button class="settings-tab" data-tab="contact">📍 Contact</button>
-    <button class="settings-tab" data-tab="social">🔗 Social Media</button>
-    <button class="settings-tab" data-tab="menu">📑 Menu</button>
-    <button class="settings-tab" data-tab="content">✏️ Content</button>
-    <button class="settings-tab" data-tab="pages">📦 Pages</button>
+    <a href="{{ route('admin.settings.tab', 'general') }}" class="settings-tab {{ $tab == 'general' ? 'active' : '' }}">📋 General</a>
+    <a href="{{ route('admin.settings.tab', 'header') }}" class="settings-tab {{ $tab == 'header' ? 'active' : '' }}">🎨 Header</a>
+    <a href="{{ route('admin.settings.tab', 'footer') }}" class="settings-tab {{ $tab == 'footer' ? 'active' : '' }}">📄 Footer</a>
+    <a href="{{ route('admin.settings.tab', 'contact') }}" class="settings-tab {{ $tab == 'contact' ? 'active' : '' }}">📍 Contact</a>
+    <a href="{{ route('admin.settings.tab', 'social') }}" class="settings-tab {{ $tab == 'social' ? 'active' : '' }}">🔗 Social Media</a>
+    <a href="{{ route('admin.settings.tab', 'menu') }}" class="settings-tab {{ $tab == 'menu' ? 'active' : '' }}">📑 Menu</a>
+    <a href="{{ route('admin.settings.tab', 'content') }}" class="settings-tab {{ $tab == 'content' ? 'active' : '' }}">✏️ Content</a>
+    <a href="{{ route('admin.settings.tab', 'pages') }}" class="settings-tab {{ $tab == 'pages' ? 'active' : '' }}">📦 Pages</a>
 </div>
 
-<form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data" id="settingsForm">
+<form action="{{ route('admin.settings.update', $tab) }}" method="POST" enctype="multipart/form-data" id="settingsForm">
     @csrf
-    <input type="hidden" name="current_tab" id="currentTab" value="general">
 
     <!-- General Settings -->
-    <div class="settings-panel active" id="general">
+    <div class="settings-panel {{ $tab == 'general' ? 'active' : '' }}" id="general">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -73,7 +72,7 @@
     </div>
 
     <!-- Header Settings -->
-    <div class="settings-panel" id="header">
+    <div class="settings-panel {{ $tab == 'header' ? 'active' : '' }}" id="header">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -117,7 +116,7 @@
     </div>
 
     <!-- Footer Settings -->
-    <div class="settings-panel" id="footer">
+    <div class="settings-panel {{ $tab == 'footer' ? 'active' : '' }}" id="footer">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -142,7 +141,7 @@
     </div>
 
     <!-- Contact Settings -->
-    <div class="settings-panel" id="contact">
+    <div class="settings-panel {{ $tab == 'contact' ? 'active' : '' }}" id="contact">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -182,7 +181,7 @@
     </div>
 
     <!-- Social Media Settings -->
-    <div class="settings-panel" id="social">
+    <div class="settings-panel {{ $tab == 'social' ? 'active' : '' }}" id="social">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -252,7 +251,7 @@
     </div>
 
     <!-- Menu Builder -->
-    <div class="settings-panel" id="menu">
+    <div class="settings-panel {{ $tab == 'menu' ? 'active' : '' }}" id="menu">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -291,7 +290,7 @@
     </div>
 
     <!-- Content Settings -->
-    <div class="settings-panel" id="content">
+    <div class="settings-panel {{ $tab == 'content' ? 'active' : '' }}" id="content">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -365,7 +364,7 @@
     </div>
 
     <!-- Pages Settings -->
-    <div class="settings-panel" id="pages">
+    <div class="settings-panel {{ $tab == 'pages' ? 'active' : '' }}" id="pages">
         <div class="window-card">
             <div class="window-header">
                 <div class="window-dots">
@@ -474,7 +473,8 @@
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         color: #6b6b6b;
-        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
         transition: all 0.2s;
     }
 
@@ -579,39 +579,5 @@
 @endpush
 
 @push('scripts')
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to switch tab
-        function switchTab(tabId) {
-            document.querySelectorAll('.settings-tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.settings-panel').forEach(panel => panel.classList.remove('active'));
-            
-            const tab = document.querySelector(`.settings-tab[data-tab="${tabId}"]`);
-            const panel = document.getElementById(tabId);
-            
-            if (tab) tab.classList.add('active');
-            if (panel) panel.classList.add('active');
-            
-            document.getElementById('currentTab').value = tabId;
-        }
-        
-        // Handle tab click
-        document.querySelectorAll('.settings-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                switchTab(tabId);
-            });
-        });
-        
-        // Check URL hash OR session flash data on page load and switch to that tab
-        const hash = window.location.hash.substring(1);
-        const activeTab = "{{ session('active_tab', 'general') }}";
-        
-        if (hash) {
-            switchTab(hash);
-        } else if (activeTab && activeTab !== '') {
-            switchTab(activeTab);
-        }
-    });
-</script>
+{{-- Tab switching is now handled by URL routes - no JavaScript needed --}}
 @endpush
