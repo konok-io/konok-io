@@ -28,8 +28,9 @@
     <button class="settings-tab" data-tab="pages">📦 Pages</button>
 </div>
 
-<form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data" id="settingsForm">
     @csrf
+    <input type="hidden" name="current_tab" id="currentTab" value="general">
 
     <!-- General Settings -->
     <div class="settings-panel active" id="general">
@@ -579,19 +580,34 @@
 
 @push('scripts')
 <script>
-    document.querySelectorAll('.settings-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Remove active from all tabs
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to switch tab
+        function switchTab(tabId) {
             document.querySelectorAll('.settings-tab').forEach(t => t.classList.remove('active'));
-            // Add active to clicked tab
-            this.classList.add('active');
-
-            // Hide all panels
             document.querySelectorAll('.settings-panel').forEach(panel => panel.classList.remove('active'));
-            // Show selected panel
-            const targetId = this.getAttribute('data-tab');
-            document.getElementById(targetId).classList.add('active');
+            
+            const tab = document.querySelector(`.settings-tab[data-tab="${tabId}"]`);
+            const panel = document.getElementById(tabId);
+            
+            if (tab) tab.classList.add('active');
+            if (panel) panel.classList.add('active');
+            
+            document.getElementById('currentTab').value = tabId;
+        }
+        
+        // Handle tab click
+        document.querySelectorAll('.settings-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                switchTab(tabId);
+            });
         });
+        
+        // Check URL hash on page load and switch to that tab
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            switchTab(hash);
+        }
     });
 </script>
 @endpush

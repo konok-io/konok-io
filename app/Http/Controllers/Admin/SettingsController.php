@@ -131,7 +131,10 @@ class SettingsController extends Controller
             }
         }
 
-        return redirect()->back()->with('success', 'Settings updated successfully!');
+        // Get current tab from request or default to general
+        $currentTab = $request->input('current_tab', 'general');
+        
+        return redirect()->to('#' . $currentTab)->with('success', 'Settings updated successfully!');
     }
 
     public function pages()
