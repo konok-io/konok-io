@@ -244,6 +244,13 @@ a:hover {
     gap: var(--space-sm);
 }
 
+/* Logo Image - Max height 50px */
+.navbar-logo-img {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 /* Navbar Header Dots - 232F40 */
 .navbar-brand .terminal-dots .terminal-dot {
     width: 12px;
