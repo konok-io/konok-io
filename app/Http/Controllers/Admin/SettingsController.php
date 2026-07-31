@@ -25,16 +25,41 @@ class SettingsController extends Controller
     {
         // Validation rules
         $rules = [
-            'site_logo' => 'required|string|max:100',
-            'header_title' => 'required|string|max:255',
-            'header_subtitle' => 'required|string|max:255',
-            'footer_copyright' => 'required|string|max:255',
-            'footer_description' => 'required|string|max:500',
-            'menu_item_1' => 'required|string|max:100',
-            'menu_item_2' => 'required|string|max:100',
-            'menu_item_3' => 'required|string|max:100',
-            'menu_item_4' => 'required|string|max:100',
-            'menu_item_5' => 'required|string|max:100',
+            'site_logo' => 'nullable|string|max:100',
+            'header_title' => 'nullable|string|max:255',
+            'header_subtitle' => 'nullable|string|max:255',
+            'footer_copyright' => 'nullable|string|max:255',
+            'footer_description' => 'nullable|string|max:500',
+            'menu_item_1' => 'nullable|string|max:100',
+            'menu_item_2' => 'nullable|string|max:100',
+            'menu_item_3' => 'nullable|string|max:100',
+            'menu_item_4' => 'nullable|string|max:100',
+            'menu_item_5' => 'nullable|string|max:100',
+            'site_name' => 'nullable|string|max:255',
+            'site_tagline' => 'nullable|string|max:255',
+            'email' => 'nullable|email|max:255',
+            'phone' => 'nullable|string|max:50',
+            'address' => 'nullable|string|max:500',
+            'city' => 'nullable|string|max:100',
+            'country' => 'nullable|string|max:100',
+            'google_map_embed' => 'nullable|string',
+            'facebook' => 'nullable|url|max:255',
+            'twitter' => 'nullable|url|max:255',
+            'linkedin' => 'nullable|url|max:255',
+            'github' => 'nullable|url|max:255',
+            'instagram' => 'nullable|url|max:255',
+            'youtube' => 'nullable|url|max:255',
+            'whatsapp' => 'nullable|string|max:50',
+            'whatsapp_message' => 'nullable|string|max:255',
+            'hero_title' => 'nullable|string|max:255',
+            'hero_subtitle' => 'nullable|string|max:255',
+            'hero_button_text' => 'nullable|string|max:100',
+            'about_title' => 'nullable|string|max:255',
+            'about_description' => 'nullable|string',
+            'services_title' => 'nullable|string|max:255',
+            'services_subtitle' => 'nullable|string|max:255',
+            'contact_title' => 'nullable|string|max:255',
+            'contact_subtitle' => 'nullable|string|max:255',
         ];
 
         if ($request->hasFile('logo_image')) {
@@ -47,7 +72,7 @@ class SettingsController extends Controller
         if ($request->hasFile('logo_image')) {
             try {
                 // Delete old logo if exists
-                $oldLogo = Setting::find('logo_image');
+                $oldLogo = Setting::where('key', 'logo_image')->first();
                 if ($oldLogo && $oldLogo->value) {
                     \Storage::disk('public')->delete($oldLogo->value);
                 }
@@ -74,16 +99,36 @@ class SettingsController extends Controller
 
         // Save other settings
         $fields = [
+            // General
+            'site_name', 'site_tagline', 'email', 'phone',
+            // Header
             'site_logo', 'header_title', 'header_subtitle',
+            // Footer
             'footer_copyright', 'footer_description',
+            // Contact
+            'address', 'city', 'country', 'google_map_embed',
+            // Social Media
+            'facebook', 'twitter', 'linkedin', 'github',
+            'instagram', 'youtube', 'whatsapp', 'whatsapp_message',
+            // Menu
             'menu_item_1', 'menu_item_2', 'menu_item_3', 'menu_item_4', 'menu_item_5',
+            // Content - Hero
+            'hero_title', 'hero_subtitle', 'hero_button_text',
+            // Content - About
+            'about_title', 'about_description',
+            // Content - Services
+            'services_title', 'services_subtitle',
+            // Content - Contact
+            'contact_title', 'contact_subtitle',
         ];
 
         foreach ($fields as $field) {
-            Setting::updateOrCreate(
-                ['key' => $field],
-                ['value' => $request->$field]
-            );
+            if ($request->has($field)) {
+                Setting::updateOrCreate(
+                    ['key' => $field],
+                    ['value' => $request->$field]
+                );
+            }
         }
 
         return redirect()->back()->with('success', 'Settings updated successfully!');
